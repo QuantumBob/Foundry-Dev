@@ -1,0 +1,26 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "target": "esnext",
+    "types": [
+      "fvtt-types"
+    ],
+    "module": "esnext",
+    "checkJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "foundry/*": [
+        "node_modules/fvtt-types/src/foundry/*"
+      ]
+    },
+    "sourceMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "auto",
+    "skipLibCheck": true,
+  }
+}

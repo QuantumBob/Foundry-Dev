@@ -1,0 +1,5 @@
+node_modules
+foundry/client
+foundry/common
+foundry/lang
+foundry/tsconfig.json

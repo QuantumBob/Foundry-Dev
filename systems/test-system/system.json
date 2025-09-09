@@ -1,0 +1,20 @@
+{
+    "id": "test-system",
+    "title": "Test System",
+    "description": "An simple system to to see what we need",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": 12,
+        "verified": 13
+    },
+    "authors": [
+        {
+            "name": "rwk"
+        }
+    ],
+    "languages": [],
+    "esmodules": [
+        "./dist/test-system.mjs"
+    ],
+    "styles": []
+}

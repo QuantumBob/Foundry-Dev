@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+    {
+        "label": "Build Current System",
+        "type": "shell",
+        "command": "node",
+        "args": [
+            "${workspaceFolder}/tsconfig.no-sourcemaps.json",
+            "--system",
+            "${fileDirnameBasename}"
+        ],
+        "group": "build",
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+            "panel": "dedicated"
+        }
+    },
+    {
+        "label": "Watch Current System",
+        "type": "shell",
+        "command": "node",
+        "args": [
+            "${workspaceFolder}/tsconfig.json",
+            "--system",
+            "${fileDirnameBasename}",
+            "--watch"
+        ],
+        "isBackground": true,
+        "group": "build",
+        "problemMatcher": []
+    }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "rwk-rmc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --no-source-map styles/:styles/",
+    "sass:watch": "sass --no-source-map --watch src/scss:dist/css",
+    "lint": "eslint . --ext .ts,.tsx, .mts"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  },
+  "include": [
+    "./module/rmc.mjs",
+    "../foundry/client/client.mjs",
+    "../foundry/client/global.d.mts",
+    "../foundry/common/primitives/global.d.mts",
+    "./module/global.d.ts"
+  ]
+}

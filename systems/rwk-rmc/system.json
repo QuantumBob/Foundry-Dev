@@ -1,0 +1,227 @@
+{
+    "id": "rwk-rmc",
+    "title": "RoleMaster Classic",
+    "description": "Implimentation of the the Iron Crown RoleMaster Classic system",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": 12,
+        "verified": 13
+    },
+    "authors": [
+        {
+            "name": "rwk"
+        }
+    ],
+    "background": "",
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "./lang/en.json"
+        }
+    ],
+    "esmodules": [
+        "./module/rmc.mjs"
+    ],
+    "styles": [
+        "./styles/rmc.css"
+    ],
+    "grid": {
+        "distance": 5,
+        "units": "ft"
+    },
+    "socket": false,
+    "documentTypes": {
+        "Actor": {
+            "character": {
+                "htmlFields": [
+                    "details.biography.value",
+                    "details.biography.public",
+                    "bastion.description"
+                ]
+            },
+            "hero": {
+                "htmlFields": [
+                    "details.biography.value",
+                    "details.biography.public",
+                    "bastion.description"
+                ]
+            },
+            "encounter": {
+                "htmlFields": [
+                    "description.full",
+                    "description.summary"
+                ]
+            },
+            "group": {
+                "htmlFields": [
+                    "description.full",
+                    "description.summary"
+                ]
+            },
+            "npc": {
+                "htmlFields": [
+                    "details.biography.value",
+                    "details.biography.public"
+                ]
+            },
+            "vehicle": {
+                "htmlFields": [
+                    "details.biography.value",
+                    "details.biography.public"
+                ]
+            }
+        },
+        "Item": {
+            "weapon": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "equipment": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "consumable": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "tool": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "loot": {
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "race": {
+                "filePathFields": {
+                    "advancement.*.icon": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "background": {
+                "filePathFields": {
+                    "advancement.*.icon": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "class": {
+                "filePathFields": {
+                    "advancement.*.icon": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "subclass": {
+                "filePathFields": {
+                    "advancement.*.icon": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "spell": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "feat": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ],
+                    "advancement.*.icon": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            },
+            "container": {
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "backpack": {
+                "htmlFields": [
+                    "description.value",
+                    "description.chat",
+                    "unidentified.description"
+                ]
+            },
+            "facility": {
+                "filePathFields": {
+                    "activities.*.img": [
+                        "IMAGE"
+                    ]
+                },
+                "htmlFields": [
+                    "description.value",
+                    "description.chat"
+                ]
+            }
+        }
+    }
+}
