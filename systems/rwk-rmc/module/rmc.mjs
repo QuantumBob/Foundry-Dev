@@ -28,9 +28,6 @@ Hooks.once("init", () => {
   // Add custom constants for configuration.
   globalThis.rmc = game.rmc = Object.assign(game.system, rmc);
 
-  const test = 0;
-
-
   CONFIG.RMC = RMC;
   CONFIG.ActiveEffect.legacyTransferral = false;
   // config Documents and Data Models

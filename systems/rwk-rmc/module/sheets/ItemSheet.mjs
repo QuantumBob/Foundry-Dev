@@ -3,7 +3,7 @@ const { ItemSheetV2 } = foundry.applications.sheets;
 
 
 export class RMCItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
-     constructor(...args: any) {
+     constructor(...args) {
         super(...args);
     }
     static DEFAULT_OPTIONS = {

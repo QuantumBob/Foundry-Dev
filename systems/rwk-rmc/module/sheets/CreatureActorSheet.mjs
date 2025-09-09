@@ -53,7 +53,7 @@ export class CreatureActorSheet extends HandlebarsApplicationMixin(ActorSheetV2)
   // }
 
   /** @override */
-  async _prepareContext(options: any) {
+  async _prepareContext(options) {
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's

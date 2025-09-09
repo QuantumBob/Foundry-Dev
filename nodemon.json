@@ -1,0 +1,8 @@
+{
+  "watch": ["F:/RPG/Foundry/Foundry-Dev/systems/rwk-rmc"],
+  "ext": "mjs,js,json,hbs,scss",
+  "exec": "node F:/RPG/Foundry/FoundryVTT-13/main.js --dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data",
+  "events": {
+    "restart": "kill-port 30000" 
+  }
+}

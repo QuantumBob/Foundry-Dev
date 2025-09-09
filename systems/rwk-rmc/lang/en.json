@@ -2,6 +2,7 @@
     "RMC.SheetClass.Character": "Default RMC Character Sheet",
     "RMC.SheetClass.Item": "Default RMC Item Sheet",
     "ACTOR.TypeNPC": "NPC",
+    "TYPES.Actor.Character": "Character",
     "TYPES.Actor.Party": "Party",
     "TYPES.Actor.Player": "Player",
     "TYPES.Actor.NPC": "NPC",

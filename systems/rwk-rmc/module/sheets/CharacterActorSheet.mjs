@@ -20,7 +20,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     },
     window: {
       resizable: true,
-      title: 'RMC.SheetClass.Character'
+      title: 'RMC.Character'
     },
     // actions: {
     //   configureActor: this.#configureActor
@@ -28,7 +28,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   }
 
   static PARTS = {
-    header: { template: `systems/rwk-rmc/templates/actor-${this.DEFAULT_OPTIONS.actor.type}-sheet.hbs`},
+    header: { template: `systems/rwk-rmc/templates/actor-${this.options.actor.type}-sheet.hbs`},
     // header: { template: `systems/rwk-rmc/templates/actor-character-sheet.hbs` },
     tabs: { template: 'systems/rwk-rmc/templates/actor-partial-tabs.hbs' },
     character: { template: 'systems/rwk-rmc/templates/actor-partial-pc-common.hbs' },
