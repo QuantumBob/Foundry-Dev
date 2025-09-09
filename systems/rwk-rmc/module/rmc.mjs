@@ -8,6 +8,7 @@ import { CharacterActorSheet } from "./sheets/CharacterActorSheet.mjs";
 import { HeroActorSheet } from "./sheets/HeroActorSheet.mjs";
 import { CreatureActorSheet } from "./sheets/CreatureActorSheet.mjs";
 import { RMCItemSheet } from "./sheets/ItemSheet.mjs";
+// import Hooks from "@client/helpers/hooks.mjs";
 
 globalThis.rmc = {
   //   applications,
@@ -25,11 +26,13 @@ globalThis.rmc = {
 
 Hooks.once("init", () => {
   // Add custom constants for configuration.
-  globalThis.rmc = game.rmc = Object.assign(game.system, globalThis.rmc);
+  globalThis.rmc = game.rmc = Object.assign(game.system, rmc);
+
+  const test = 0;
+
+
   CONFIG.RMC = RMC;
   CONFIG.ActiveEffect.legacyTransferral = false;
-  const test = "foo";
-
   // config Documents and Data Models
   CONFIG.Actor.documentClass = BaseActor;
   // Object.assign(CONFIG.Actor.dataModels, {
