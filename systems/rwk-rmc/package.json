@@ -16,12 +16,5 @@
     "include": [
       "jquery"
     ]
-  },
-  "include": [
-    "./module/rmc.mjs",
-    "../foundry/client/client.mjs",
-    "../foundry/client/global.d.mts",
-    "../foundry/common/primitives/global.d.mts",
-    "./module/global.d.ts"
-  ]
+  }
 }

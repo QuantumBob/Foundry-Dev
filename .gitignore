@@ -1,5 +1,8 @@
 node_modules
+foundry-config.yaml
+foundry
 foundry/client
 foundry/common
 foundry/lang
 foundry/tsconfig.json
+systems/dnd5e-5.1.x

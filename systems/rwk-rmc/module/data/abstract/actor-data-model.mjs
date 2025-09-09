@@ -8,7 +8,6 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
                 required: true,
                 nullable: true,
                 initial: null,
-                default: null,
                 gmOnly: true,
                 hint: 'Version of the data model',
                 label: 'Version',
@@ -19,7 +18,6 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
                 nullable: false,
                 required: true,
                 initial: false,
-                default: false,
                 gmOnly: true,
             }),
         };

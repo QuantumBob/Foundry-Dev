@@ -1,13 +1,17 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "extends": "../../jsconfig.base.json",
   "compilerOptions": {
     "sourceMap": true
   },
   "include": [
-    "./**/*"
+    "./**/*",
+    "./module/rmc.mjs",
+    "./module/gobals.d.ts",
+    "./../../foundry/client/client.mjs",
+    "./../../foundry/client/global.d.mts",
+    "./../../foundry/common/primitives/global.d.mts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "typeAcquisition": {
+    "include": ["jquery"]
+  }
 }

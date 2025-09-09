@@ -9,9 +9,7 @@
     // "module": "nodenext",
     // "moduleResolution": "nodenext",
     "target": "esnext",
-    "types": [
-      "fvtt-types"
-    ],
+    "types": [],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],

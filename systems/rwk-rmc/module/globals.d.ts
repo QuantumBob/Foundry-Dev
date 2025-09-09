@@ -1,10 +1,3 @@
-// import * as  foundry from "./foundry/client/_module.mjs"
-// import "./src/module/_types";
-// import "@client/global.mjs";
-// import "@common/primitives/global.mjs";
-// import "@client/helpers/hooks.mjs"
-
-// export {};
 declare global {
   // not a real extension of course but simplest way for this to work with the intellisense.
   /**

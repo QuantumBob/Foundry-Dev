@@ -1,11 +1,7 @@
 import RMC from "./helpers/config.mjs";
 import { BaseActor } from "./documents/BaseActor.mjs";
 import { BaseItem } from "./documents/BaseItem.mjs";
-import {
-  CharacterDataModel,
-  HeroDataModel,
-  CreatureDataModel,
-} from "./data/abstract/actor-data-model.mjs";
+import { CharacterDataModel, HeroDataModel, CreatureDataModel, } from "./data/abstract/actor-data-model.mjs";
 import { WeaponDataModel } from "./data/abstract/item-data-model.mjs";
 import { SpellDataModel } from "./data/abstract/item-data-model.mjs";
 import { CharacterActorSheet } from "./sheets/CharacterActorSheet.mjs";
