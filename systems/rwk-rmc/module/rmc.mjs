@@ -1,7 +1,11 @@
 import RMC from "./helpers/config.mjs";
 import { BaseActor } from "./documents/BaseActor.mjs";
 import { BaseItem } from "./documents/BaseItem.mjs";
-import { CharacterDataModel, HeroDataModel, CreatureDataModel, } from "./data/abstract/actor-data-model.mjs";
+import {
+  CharacterDataModel,
+  HeroDataModel,
+  CreatureDataModel,
+} from "./data/abstract/actor-data-model.mjs";
 import { WeaponDataModel } from "./data/abstract/item-data-model.mjs";
 import { SpellDataModel } from "./data/abstract/item-data-model.mjs";
 import { CharacterActorSheet } from "./sheets/CharacterActorSheet.mjs";
@@ -63,7 +67,7 @@ Hooks.once("init", () => {
   DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", CharacterActorSheet, {
     types: ["character"],
     makeDefault: true,
-    label: "RMC.Character",
+    label: "RMC.SheetClass.Character",
   });
   DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", HeroActorSheet, {
     types: ["hero"],

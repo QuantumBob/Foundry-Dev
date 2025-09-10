@@ -1,21 +1,46 @@
 <section class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
 
-    {{!-- Sheet Header --}}
-    <header class="sheet-header">
-        {{!-- Header stuff goes here --}}
-        <img class="profile-img" src="{{actor.img}}" data-action="editImage" data-field="img" alt="Portrait" title="{{actor.name}}" height="100" width="100"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            <div class="resources grid grid-2col">{{!-- resources here --}}</div>
-            <div class="abilities grid grid-3col">{{!-- abilities here --}}</div>
-            <div class="resource flex-group-center">
-                <label for="system.hitpoints.value" class="resource-label">Stamina</label>
-                <div class="resource-content flexrow flex-center flex-between">
-                    <input id= "system.hitpoints.value" type="text" name="system.hitpoints.value" value="{{system.hitpoints.value}}" data-dtype="Number"/>
-                    <span> / </span>
-                    <input type="text" name="system.hitpoints.max" value="{{system.hitpoints.max}}" data-dtype="Number"/>
-                </div>
-            </div>
+  {{! Sheet Header }}
+  <header class="sheet-header">
+    {{! Header stuff goes here }}
+    <img
+      class="profile-img"
+      src="{{actor.img}}"
+      data-action="editImage"
+      data-field="img"
+      alt="Portrait"
+      title="{{actor.name}}"
+      height="100"
+      width="100"
+    />
+    <div class="header-fields">
+      <h1 class="charname"><input
+          name="name"
+          type="text"
+          value="{{actor.name}}"
+          placeholder="Name"
+        /></h1>
+      <div class="resources grid grid-2col">{{! resources here }}</div>
+      <div class="abilities grid grid-3col">{{! abilities here }}</div>
+      <div class="resource flex-group-center">
+        <label for="system.hitpoints.value" class="resource-label">Stamina</label>
+        <div class="resource-content flexrow flex-center flex-between">
+          <input
+            id="system.hitpoints.value"
+            type="text"
+            name="system.hitpoints.value"
+            value="{{system.hitpoints.value}}"
+            data-dtype="Number"
+          />
+          <span> / </span>
+          <input
+            type="text"
+            name="system.hitpoints.max"
+            value="{{system.hitpoints.max}}"
+            data-dtype="Number"
+          />
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 </section>

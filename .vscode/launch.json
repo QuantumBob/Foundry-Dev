@@ -8,6 +8,55 @@
       "url": "http://localhost:30000",
       "webRoot": "${workspaceFolder}",
       "sourceMaps": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run FoundryVTT Dev",
+      "program": "F:/RPG/Foundry/FoundryVTT-13/main.js",
+      "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug FoundryVTT Dev",
+      "program": "F:/RPG/Foundry/FoundryVTT-13/main.js",
+      "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
+      "console": "integratedTerminal",
+      "preLaunchTask": "Run FoundryVTT Dev"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run FoundryVTT Dev Laptop",
+      "program": "F:/Foundry VTT 13/main.js",
+      "args": ["--dataPath=C:/FoundryVTT"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug FoundryVTT Dev Laptop Old",
+      "program": "C:/Foundry VTT 13/main.js",
+      "args": ["--dataPath=C:/FoundryVTT"],
+      "console": "integratedTerminal",
+      "preLaunchTask": "Run FoundryVTT Dev Laptop"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug FoundryVTT Dev Laptop",
+      "program": "C:/Foundry VTT 13/main.js",
+      "args": ["--dataPath=C:/FoundryVTT"],
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug FoundryVTT (Server + Client)",
+      "configurations": ["Debug FoundryVTT Dev Laptop", "Debug Foundry Client"],
+      "stopAll": true
     }
   ]
 }
