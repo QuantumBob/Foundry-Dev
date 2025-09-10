@@ -7,3 +7,4 @@ foundry/lang
 foundry/tsconfig.json
 systems/dnd5e-5.1.x
 systems/boilerplate
+.vscode-chrome

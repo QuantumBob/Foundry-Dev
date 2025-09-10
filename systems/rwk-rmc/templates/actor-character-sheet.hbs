@@ -5,11 +5,11 @@
     {{! Header stuff goes here }}
     <img
       class="profile-img"
-      src="{{actor.img}}"
+      src="{{document.img}}"
       data-action="editImage"
       data-field="img"
       alt="Portrait"
-      title="{{actor.name}}"
+      title="{{document.name}}"
       height="100"
       width="100"
     />
@@ -17,13 +17,15 @@
       <h1 class="charname"><input
           name="name"
           type="text"
-          value="{{actor.name}}"
+          value="{{document.name}}"
           placeholder="Name"
         /></h1>
       <div class="resources grid grid-2col">{{! resources here }}</div>
       <div class="abilities grid grid-3col">{{! abilities here }}</div>
       <div class="resource flex-group-center">
-        <label for="system.hitpoints.value" class="resource-label">{{localize "RMC.Hitpoints"}}</label>
+        <label for="system.hitpoints.value" class="resource-label">{{localize
+            "RMC.Hitpoints"
+          }}</label>
         <div class="resource-content flexrow flex-center flex-between">
           <input
             id="system.hitpoints.value"

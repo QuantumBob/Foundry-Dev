@@ -12,7 +12,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     },
     form: {
       handler: CharacterActorSheet.#onSubmitForm,
-      submitOnChange: true
+      submitOnChange: true,
     },
     actor: {
       type: "character",
@@ -22,12 +22,17 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
       title: "RMC.SheetClass.Character",
     },
     actions: {
-      configureActor: this.#configureActor
-    }
+      configureActor: this.#configureActor,
+      showPortraitArtwork: this.#showPortraitArtwork,
+      showTokenArtwork: this.#showTokenArtwork,
+      editImage: this.#editImage,
+    },
   };
 
   static PARTS = {
-    header: { template: `systems/rwk-rmc/templates/actor-${this.DEFAULT_OPTIONS.actor.type}-sheet.hbs` },
+    header: {
+      template: `systems/rwk-rmc/templates/actor-${this.DEFAULT_OPTIONS.actor.type}-sheet.hbs`,
+    },
     // tabs: { template: "systems/rwk-rmc/templates/actor-partial-tabs.hbs" },
     // character: { template: "systems/rwk-rmc/templates/actor-partial-pc-common.hbs" },
     // equipment: { template: 'systems/rwk-rmc/templates/actor-partial-pc-equipment.hbs' },
@@ -57,12 +62,12 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     const actorData = context.source;
 
     // Add the actor's data to context.data for easier access, as well as flags.
-    context.system = actorData.system;
-    context.flags = actorData.flags;
+    context.system = this.actor.system;
+    context.flags = this.actor.flags;
 
     // Prepare character data and items.
-    if (actorData.type == 'character') {
-        this._prepareCharacterData(context);
+    if (actorData.type == "character") {
+      this._prepareCharacterData(context);
     }
 
     // Add roll data for TinyMCE editors.
@@ -75,13 +80,20 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     //     this.actor.allApplicableEffects()
     // );
 
-  
     return context;
   }
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    console.log(context);
+  }
+
   /** @override */
-  // _onChangeForm(formConfig, event){
-  //   super._onChangeForm(formConfig, event);
-  // }
+  _onChangeForm(formConfig, event) {
+    super._onChangeForm(formConfig, event);
+  }
+  _onClose(options) {
+    super._onClose(options);
+  }
 
   get title() {
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
@@ -95,10 +107,10 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-      // Handle translation for ability scores.
-      // for (let [k, v] of Object.entries(context.system.abilities)) {
-      //     v.label = game.i18n.localize(CONFIG.RMC.abilities[k]) ?? k;
-      // }
+    // Handle translation for ability scores.
+    // for (let [k, v] of Object.entries(context.system.abilities)) {
+    //     v.label = game.i18n.localize(CONFIG.RMC.abilities[k]) ?? k;
+    // }
   }
 
   /*#######  ACTIONS  #######*/
@@ -108,24 +120,36 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
    * @param {PointerEvent} event
    * @returns {Promise<void>}
    */
-  static async #configureActor (event) {
-    event.preventDefault()
+  static async #configureActor(event) {
+    event.preventDefault();
     await new CharacterActorSheet({
       document: this.actor,
       position: {
         top: this.position.top + 40,
-        left: this.position.left + (this.position.width - 400) / 2
-      }
-    }).render(true)
+        left: this.position.left + (this.position.width - 400) / 2,
+      },
+    }).render(true);
   }
-  static async #onSubmitForm(event, form, formData) {
-    event.preventDefault();
+  static async #onSubmitForm(event, form, formData, options) {
+    // event.preventDefault();
     await this.document.update(formData.object);
+    // this.document.img = "";
 
     const settings = foundry.utils.expandObject(formData.object);
     // await Promise.all(
     //     Object.entries(settings)
     //         .map(([key, value]) => game.settings.set("foo", key, value))
     // );
+  }
+  static #showTokenArtwork(event) {
+    console.log(event);
+  }
+  static #showPortraitArtwork(event) {
+    console.log(event);
+  }
+  static async #editImage(event, target) {
+    super.editImage(event, target);
+    console.log(event);
+    console.log(target);
   }
 }
