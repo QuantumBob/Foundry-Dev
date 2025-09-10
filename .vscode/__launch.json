@@ -27,10 +27,79 @@
       "program": "${workspaceFolder}/scripts/watch.js",
       "restart": true,
       "console": "integratedTerminal"
+    },
+
+
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://127.0.0.1:30000",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${workspaceFolder}/.vscode-chrome"
+      ]
+    },
+    {
+      "name": "Watch & Reload",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/watch.mjs",
+      "restart": true,
+      "runtimeArgs": ["--experimental-specifier-resolution=node"],
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start Server",
+      "program": "F:/RPG/Foundry/FoundryVTT-13/main.js",
+      "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": ["--experimental-specifier-resolution=node"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run FVTT",
+      "program": "F:/RPG/Foundry/FoundryVTT-13/main.js",
+      "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug FVTT Laptop",
+      "program": "C:/Foundry VTT 13/main.js",
+      "args": ["--dataPath=C:/FoundryVTT"],
+      "console": "integratedTerminal"
     }
   ],
   "compounds": [
+     {
+      "name": "Debug FVTT (Serv + Clnt)",
+      "configurations": ["Start Server", "Launch Chrome"],
+      "stopAll": true
+    },
     {
+      "name": "Debug FVTT (Serv + Clnt) Laptop",
+      "configurations": ["Debug FVTT Laptop", "Launch Chrome"],
+      "stopAll": true
+    },
+    {
+      "name": "Debug and Watch FVTT (Serv + Clnt)",
+      "configurations": [
+        "Start Server",
+        "Launch Chrome", 
+        "Watch & Reload"
+      ],
+      "stopAll": true
+    },
+     {
       "name": "Dev: Foundry + Auto Reload",
       "configurations": [
         "Start Foundry Server",

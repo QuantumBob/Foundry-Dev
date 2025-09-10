@@ -14,16 +14,6 @@
       ]
     },
     {
-      "name": "Watch & Reload",
-      "type": "node",
-      "request": "launch",
-      "program": "${workspaceFolder}/scripts/watch.mjs",
-      "restart": true,
-      "runtimeArgs": ["--experimental-specifier-resolution=node"],
-      "console": "integratedTerminal",
-      "autoAttachChildProcesses": true
-    },
-    {
       "type": "node",
       "request": "launch",
       "name": "Start Server",
@@ -59,15 +49,6 @@
     {
       "name": "Debug FVTT (Serv + Clnt) Laptop",
       "configurations": ["Debug FVTT Laptop", "Launch Chrome"],
-      "stopAll": true
-    },
-    {
-      "name": "Debug and Watch FVTT (Serv + Clnt)",
-      "configurations": [
-        "Start Server",
-        "Launch Chrome", 
-        "Watch & Reload"
-      ],
       "stopAll": true
     }
   ]
