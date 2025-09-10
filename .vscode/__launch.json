@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start Foundry Server",
+      "type": "node",
+      "request": "launch",
+      "program": "F:/RPG/Foundry/FoundryVTT-13/main.js",
+      "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome for Foundry",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:30000",
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--user-data-dir=${workspaceFolder}/.vscode-chrome"
+      ]
+    },
+    {
+      "name": "Watch & Reload Foundry",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/watch.js",
+      "restart": true,
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Dev: Foundry + Auto Reload",
+      "configurations": [
+        "Start Foundry Server",
+        "Launch Chrome for Foundry",
+        "Watch & Reload Foundry"
+      ]
+    }
+  ]
+}

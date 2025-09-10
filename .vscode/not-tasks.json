@@ -30,6 +30,138 @@
         "isBackground": true,
         "group": "build",
         "problemMatcher": []
+    },
+    {
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FoundryVTT Dev",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "F:/RPG/Foundry/FoundryVTT-13/main.js",
+        "--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run FoundryVTT Dev Laptop",
+      "type": "shell",
+      "command": "node",
+      "args": ["C:/Foundry VTT 13/main.js", "--dataPath=C:/FoundryVTT"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Restart Foundry",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "F:/RPG/Foundry/Foundry-Dev/scripts/restart-foundry.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "build fvtt-setup",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build tsc: no sourcemaps and sass"],
+      "options": {
+        "cwd": "${workspaceFolder}/systems/fvtt-setup"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "watch fvtt-setup",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "watch tsc and sass"],
+      "options": {
+        "cwd": "${workspaceFolder}/systems/fvtt-setup"
+      },
+      "problemMatcher": "$tsc-watch"
+    },
+    {
+      "label": "build rwk-rmc",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build tsc: no sourcemaps and sass"],
+      "options": {
+        "cwd": "${workspaceFolder}/systems/rwk-rmc"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "watch rwk-rmc",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "watch tsc and sass"],
+      "options": {
+        "cwd": "${workspaceFolder}/systems/rwk-rmc"
+      },
+      "problemMatcher": "$tsc-watch"
+    },
+    {
+      "label": "build typescript",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "watch typescript",
+      "type": "shell",
+      "command": "npx tsc --watch",
+      "isBackground": false,
+      "problemMatcher": "$tsc-watch"
+    },
+    {
+      "label": "build typescript and sass",
+      "type": "npm",
+      "script": "build tsc and sass",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "build typescript (no maps) and sass",
+      "type": "npm",
+      "script": "build tsc: no sourcemaps and sass",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "watch typescript and sass",
+      "type": "npm",
+      "script": "watch tsc and sass",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": "$tsc"
     }
+  ]
+}
+
     ]
 }

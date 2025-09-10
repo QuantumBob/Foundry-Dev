@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "createSymlinks": "node ./scripts/create-symlinks.mjs"
   },
@@ -16,5 +17,8 @@
     "globals": "^16.3.0",
     "js-yaml": "^4.1.0",
     "sass": "^1.92.1"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
   }
 }

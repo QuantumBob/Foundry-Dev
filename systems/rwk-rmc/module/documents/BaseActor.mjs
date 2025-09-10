@@ -4,15 +4,17 @@ export class BaseActor extends Actor {
     // Prepare data for the actor. Calling the super version of this executes
     // the following, in order: data reset (to clear active effects),
     // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
-    // prepareDerivedData().
+    const hitpoints = this.system.hitpoints;
+    this.system.hitpoints.value = Math.clamp(hitpoints.value, hitpoints.min, hitpoints.max);
     super.prepareData();
+    console.log("system hitpoints: " + this.system.hitpoints);
   }
 
-  prepareDerivedData() {
-    // Clamp health within the appropriate range.
-    const hitpoints = this.system.hitpoints;
-    this.system.hitpoints.value = Math.min(Math.max(hitpoints.value, hitpoints.min), hitpoints.max);
-  }
+  // prepareDerivedData() {
+  //   // Clamp health within the appropriate range.
+  //   const hitpoints = this.system.hitpoints;
+  //   this.system.hitpoints.value = Math.min(Math.max(hitpoints.value, hitpoints.min), hitpoints.max);
+  // }
 
   async applyDamage(damage) {
     // Always take a minimum of 1 damage, and round to the nearest integer.

@@ -52,12 +52,12 @@ export class CharacterDataModel extends ActorDataModel {
         };
     }
 
-//     prepareDerivedData() {
-//         super.prepareDerivedData();
+    prepareDerivedData() {
+        super.prepareDerivedData();
 
-//         // Determine the hero's current level.
-//         this.level = Math.floor(this.progress / 5);
-//   }
+        // Determine the hero's current level.
+        this.level = Math.floor(this.progress / 5);
+  }
 }
 
 export class HeroDataModel extends CharacterDataModel {

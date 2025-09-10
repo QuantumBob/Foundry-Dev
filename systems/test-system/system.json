@@ -14,7 +14,7 @@
     ],
     "languages": [],
     "esmodules": [
-        "./dist/test-system.mjs"
+        "./test-system.mjs"
     ],
     "styles": []
 }
