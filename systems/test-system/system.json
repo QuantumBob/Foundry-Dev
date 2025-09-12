@@ -23,17 +23,10 @@
   "styles": ["./styles/test-system.css"],
   "documentTypes": {
     "Actor": {
-      "character": {
-        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
-      }
+      "character": {}
     },
     "Item": {
-      "weapon": {
-        "filePathFields": {
-          "activities.*.img": ["IMAGE"]
-        },
-        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
-      }
+      "weapon": {}
     }
   }
 }
