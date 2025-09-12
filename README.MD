@@ -1,6 +1,9 @@
 # Foundry VTT VSCode Dev Setup
 Basic steps to set up Foundry VTT with VSCode
 
+## Kill server
+npx kill-port 30000
+
 ## symbolic links
 mklink /D link target
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems" "F:\RPG\Foundry\Foundry-Dev\systems"

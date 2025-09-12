@@ -1,4 +1,4 @@
-export class BaseActor extends Actor {
+export class RMCActor extends Actor {
   /** @override */
   prepareData() {
     // Prepare data for the actor. Calling the super version of this executes

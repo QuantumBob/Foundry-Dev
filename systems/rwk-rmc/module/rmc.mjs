@@ -1,6 +1,6 @@
 import RMC from "./helpers/config.mjs";
-import { BaseActor } from "./documents/BaseActor.mjs";
-import { BaseItem } from "./documents/BaseItem.mjs";
+import { RMCActor } from "./documents/RMCActor.mjs";
+import { RMCItem } from "./documents/RMCItem.mjs";
 import {
   CharacterDataModel,
   HeroDataModel,
@@ -27,22 +27,33 @@ globalThis.rmc = {
   //   registry,
   //   utils
 };
-
+/*
+DEBUG | Calling preUpdateActor hook with args:
+(4) [BaseActor, {…}, {…}, 'Hy4d0Yn4nJd6BfnX']
+DEBUG | Calling closeFilePicker hook with args:
+(1) [FilePicker]
+DEBUG | Calling closeHandlebarsApplication hook with args:
+(1) [FilePicker]
+DEBUG | Calling closeApplicationV2 hook with args:
+(1) [FilePicker]
+*/
 Hooks.once("init", () => {
+  // debug status
+  CONFIG.debug.hooks = true;
   // Add custom constants for configuration.
   globalThis.rmc = game.rmc = Object.assign(game.system, rmc);
 
   CONFIG.RMC = RMC;
   CONFIG.ActiveEffect.legacyTransferral = false;
   // config Documents and Data Models
-  CONFIG.Actor.documentClass = BaseActor;
+  CONFIG.Actor.documentClass = RMCActor;
   // Object.assign(CONFIG.Actor.dataModels, {
   CONFIG.Actor.dataModels = {
     character: CharacterDataModel,
     hero: HeroDataModel,
     creature: CreatureDataModel,
   };
-  CONFIG.Item.documentClass = BaseItem;
+  CONFIG.Item.documentClass = RMCItem;
   CONFIG.Item.dataModels = {
     weapon: WeaponDataModel,
     spell: SpellDataModel,

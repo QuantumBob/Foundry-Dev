@@ -1,37 +1,23 @@
+import { _getDatasets } from "../helpers/helpers.mjs";
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
-  //* @override */
+
   static DEFAULT_OPTIONS = {
     classes: ["rmc"],
-    tag: "form",
     position: {
       width: 600,
       height: 600,
     },
-    form: {
-      handler: CharacterActorSheet.#onSubmitForm,
-      submitOnChange: true,
-    },
-    actor: {
-      type: "character",
-    },
-    window: {
-      resizable: true,
-      title: "RMC.SheetClass.Character",
-    },
     actions: {
-      configureActor: this.#configureActor,
-      showPortraitArtwork: this.#showPortraitArtwork,
-      showTokenArtwork: this.#showTokenArtwork,
-      editImage: this.#editImage,
+      configureActor: this.#configureActor
     },
   };
 
   static PARTS = {
     header: {
-      template: `systems/rwk-rmc/templates/actor-${this.DEFAULT_OPTIONS.actor.type}-sheet.hbs`,
+      template: `systems/rwk-rmc/templates/actor-character-sheet.hbs`,
     },
     // tabs: { template: "systems/rwk-rmc/templates/actor-partial-tabs.hbs" },
     // character: { template: "systems/rwk-rmc/templates/actor-partial-pc-common.hbs" },
@@ -50,25 +36,30 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     },
   };
 
-  /** @override */
+  /** @inheritdoc */
   async _prepareContext(options) {
+    const context = await super._prepareContext(options);
+    Object.assign(context, {
+      datasets: _getDatasets(),
+    });
+    return context;
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
-    const context = await super._prepareContext(options);
+    //const context = await super._prepareContext(options);
 
     // Use a safe clone of the actor data for further operations.
-    const actorData = context.source;
+    //const actorData = context.source;
 
     // Add the actor's data to context.data for easier access, as well as flags.
-    context.system = this.actor.system;
-    context.flags = this.actor.flags;
+    //context.system = this.actor.system;
+    //context.flags = this.actor.flags;
 
     // Prepare character data and items.
-    if (actorData.type == "character") {
-      this._prepareCharacterData(context);
-    }
+    // if (actorData.type == "character") {
+    //   this._prepareCharacterData(context);
+    // }
 
     // Add roll data for TinyMCE editors.
     // context.rollData = context.actor.getRollData();
@@ -80,19 +71,12 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     //     this.actor.allApplicableEffects()
     // );
 
-    return context;
+    //return context;
   }
+
   async _onRender(context, options) {
     await super._onRender(context, options);
     console.log(context);
-  }
-
-  /** @override */
-  _onChangeForm(formConfig, event) {
-    super._onChangeForm(formConfig, event);
-  }
-  _onClose(options) {
-    super._onClose(options);
   }
 
   get title() {
@@ -129,27 +113,5 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
         left: this.position.left + (this.position.width - 400) / 2,
       },
     }).render(true);
-  }
-  static async #onSubmitForm(event, form, formData, options) {
-    // event.preventDefault();
-    await this.document.update(formData.object);
-    // this.document.img = "";
-
-    const settings = foundry.utils.expandObject(formData.object);
-    // await Promise.all(
-    //     Object.entries(settings)
-    //         .map(([key, value]) => game.settings.set("foo", key, value))
-    // );
-  }
-  static #showTokenArtwork(event) {
-    console.log(event);
-  }
-  static #showPortraitArtwork(event) {
-    console.log(event);
-  }
-  static async #editImage(event, target) {
-    super.editImage(event, target);
-    console.log(event);
-    console.log(target);
   }
 }

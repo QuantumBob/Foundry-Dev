@@ -7,4 +7,6 @@ foundry/lang
 foundry/tsconfig.json
 systems/dnd5e-5.1.x
 systems/boilerplate
+systems/draw-steel
+systems/test-boiler
 .vscode-chrome
