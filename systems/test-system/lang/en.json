@@ -1,0 +1,65 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  },
+  "TESTSYS": {
+    "SheetClass": {
+      "Character": "Default RMC Character Sheet",
+      "Item": "Default RMC Item Sheet"
+    },
+    "TYPES.Actor": {
+      "Party": "Party",
+      "Player": "Player"
+    },
+    "TYPES.Item": {
+      "ammunition": "Ammunition",
+      "armor": "Armor",
+      "equipment": "Equipment",
+      "level": "Level",
+      "mount": "Mount",
+      "skill": "Skill",
+      "treasure": "Treasure",
+      "weapon": "Weapon"
+    },
+    "Ability": {
+      "Ability": "Ability",
+      "Agility": "Agility",
+      "AgilityShort": "Agi",
+      "Check": "Ability Check",
+      "Intelligence": "Intelligence",
+      "IntelligenceShort": "Int",
+      "Luck": "Luck",
+      "LuckShort": "Lck",
+      "Mod": "Ability Mod",
+      "Personality": "Personality",
+      "PersonalityShort": "Per",
+      "Stamina": "Stamina",
+      "StaminaShort": "Sta",
+      "Strength": "Strength",
+      "StremgthShort": "Str"
+    },
+    "Notes": "Notes",
+    "Roll": "Roll",
+    "ItemEdit": "Edit Item",
+    "ItemDelete": "Delete Item",
+    "MeleeWeapons": "Melee Weapons",
+    "Equipped": "Equipped",
+    "Name": "Name",
+    "ToHit": "To Hit",
+    "Damage": "Damage",
+    "ItemCreate": "Create Item",
+    "Add": "Add",
+    "Hitpoints": "Hitpoints",
+    "Max": "Max",
+    "Min": "Min",
+    "Value": "Value"
+  }
+}

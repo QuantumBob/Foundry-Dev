@@ -7,19 +7,30 @@
       class="profile-img"
       src="{{document.img}}"
       data-action="editImage"
-      data-field="img"
+      data-edit="img"
+      data-type="Image"
       alt="Portrait"
       title="{{document.name}}"
       height="100"
       width="100"
     />
+    <img src="{{ portrait.src }}" 
+      data-action="editImage"
+      data-edit="img"
+      data-type="Image"
+      alt="Portrait" >
+      {{!-- alt="{{ @root.actor.name }}"> --}}
+
     <div class="header-fields">
-      <h1 class="charname"><input
+      <div class="document-name">{{ actor.name }}</div>
+      <h1 class="charname">
+        <input
           name="name"
           type="text"
-          value="{{document.name}}"
+          value="{{actor.name}}"
           placeholder="Name"
-        /></h1>
+        />
+      </h1>
       <div class="resources grid grid-2col">{{! resources here }}</div>
       <div class="abilities grid grid-3col">{{! abilities here }}</div>
       <div class="resource flex-group-center">

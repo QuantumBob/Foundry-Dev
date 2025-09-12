@@ -1,20 +1,39 @@
 {
-    "id": "test-system",
-    "title": "Test System",
-    "description": "An simple system to to see what we need",
-    "version": "0.0.1",
-    "compatibility": {
-        "minimum": 12,
-        "verified": 13
+  "id": "test-system",
+  "title": "Test System",
+  "description": "An simple system to to see what we need",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 13
+  },
+  "authors": [
+    {
+      "name": "rwk"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "./lang/en.json"
+    }
+  ],
+  "esmodules": ["./test-system.mjs"],
+  "styles": ["./styles/test-system.css"],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+      }
     },
-    "authors": [
-        {
-            "name": "rwk"
-        }
-    ],
-    "languages": [],
-    "esmodules": [
-        "./test-system.mjs"
-    ],
-    "styles": []
+    "Item": {
+      "weapon": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      }
+    }
+  }
 }

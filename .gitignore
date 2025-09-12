@@ -5,7 +5,7 @@ foundry/client
 foundry/common
 foundry/lang
 foundry/tsconfig.json
-systems/dnd5e-5.1.x
+systems/dnd5e
 systems/boilerplate
 systems/draw-steel
 systems/test-boiler

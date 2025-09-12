@@ -3,23 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "sass": "sass --no-source-map src/scss:dist/css",
-    "sass:watch": "sass --no-source-map --watch src/scss:dist/css",
-    "build tsc and sass": "tsc && sass --no-source-map src/scss:dist/css",
-    "watch tsc and sass": "tsc --watch && sass --no-source-map --watch src/scss:dist/css",
-    "lint": "eslint . --ext .ts,.tsx, .mts"
+    "sass": "sass --no-source-map styles/test-system.scss:styles/test-system.css",
+    "sass:watch": "sass --no-source-map --watch src/scss:dist/css"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "include": [
-    "./module/rmc.mjs",
-    "../foundry/client/client.mjs",
-    "../foundry/client/global.d.mts",
-    "../foundry/common/primitives/global.d.mts"
-  ]
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  }
 }

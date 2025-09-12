@@ -3,15 +3,18 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
-
   static DEFAULT_OPTIONS = {
     classes: ["rmc"],
     position: {
       width: 600,
       height: 600,
     },
+    form: {
+      submitOnChange: true,
+    },
     actions: {
-      configureActor: this.#configureActor
+      configureActor: this.#configureActor,
+      editImage: this.#editImage,
     },
   };
 
@@ -74,10 +77,10 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     //return context;
   }
 
-  async _onRender(context, options) {
-    await super._onRender(context, options);
-    console.log(context);
-  }
+  // async _onRender(context, options) {
+  //   await super._onRender(context, options);
+  //   console.log(context);
+  // }
 
   get title() {
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;

@@ -21,8 +21,7 @@
       "args": ["--dataPath=F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data"],
       "cwd": "${workspaceFolder}",
       "runtimeArgs": ["--experimental-specifier-resolution=node"],
-      "console": "integratedTerminal",
-      "preLaunchTask": "Stop Server"
+      "console": "integratedTerminal"
     },
     {
       "type": "node",
@@ -38,8 +37,7 @@
       "name": "Debug FVTT Laptop",
       "program": "C:/Foundry VTT 13/main.js",
       "args": ["--dataPath=C:/FoundryVTT"],
-      "console": "integratedTerminal",
-      "preLaunchTask": "Stop Server"
+      "console": "integratedTerminal"
     }
   ],
   "compounds": [
