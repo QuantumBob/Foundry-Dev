@@ -1,5 +1,7 @@
 import { BaseItemDataModel } from "./base-item-data-model.mjs";
 
+const { NumberField, StringField } = foundry.data.fields;
+
 export class WeaponItemDataModel extends BaseItemDataModel {
   static defineSchema() {
     return {

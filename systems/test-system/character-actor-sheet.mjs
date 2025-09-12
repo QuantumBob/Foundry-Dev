@@ -15,7 +15,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
 
   static PARTS = {
     header: {
-      template: `systems/rwk-rmc/templates/actor-character-sheet.hbs`,
+      template: `systems/test-system/character-header.hbs`,
     },
   };
 

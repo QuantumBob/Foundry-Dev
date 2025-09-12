@@ -216,7 +216,7 @@ class DnDMethods {
     }, {});
   }
 
-  /** @inheritDoc */ //BaseAvtorSheet
+  /** @inheritDoc */ //BaseActorSheet
   async _prepareContext(options) {
     const context = {
       ...(await super._prepareContext(options)),
