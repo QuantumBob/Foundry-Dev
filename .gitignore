@@ -6,3 +6,9 @@ foundry/common
 foundry/lang
 foundry/tsconfig.json
 systems/dnd5e-5.1.x
+systems/draw-steel
+systems/dnd5e
+systems/universal-tabletop-system
+systems/boilerplate
+Foundry-Dev.code-workspace
+.vscode-chrome
