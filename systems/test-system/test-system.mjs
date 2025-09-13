@@ -1,13 +1,15 @@
-import { CharacterActorDataModel } from "./character-actor-data-model.mjs";
-import { WeaponItemDataModel } from "./weapon-item-data-model.mjs";
+import { CharacterActorDataModel } from "./data-models/character-actor-data-model.mjs";
+import { WeaponItemDataModel } from "./data-models/weapon-item-data-model.mjs";
 
-import { CharacterActorSheet } from "./character-actor-sheet.mjs";
-import { WeaponItemSheet } from "./weapon-item-sheet.mjs";
+import { CharacterActorSheet } from "./sheets/character-actor-sheet.mjs";
+import { WeaponItemSheet } from "./sheets/weapon-item-sheet.mjs";
 
 Hooks.on("init", () => {
   // debug status
+  CONFIG.debug.applications = true;
+  CONFIG.debug.documents = true;
   CONFIG.debug.hooks = true;
-  console.log("test-system: in init");
+  console.log("test-system: in init hook");
 
   // register data models
   CONFIG.Actor.dataModels = {
@@ -19,10 +21,15 @@ Hooks.on("init", () => {
 
   // register V2 Actor sheets
   const DocumentSheetConfig = foundry.applications.apps.DocumentSheetConfig;
-  DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.applications.sheets.ActorSheetV2);
+  // DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.applications.sheets.ActorSheetV2);
   DocumentSheetConfig.registerSheet(Actor, "test-system", CharacterActorSheet, {
     types: ["character"],
     makeDefault: true,
     label: "Test System Character",
   });
+});
+
+Hooks.on("ready", () => {
+  console.log("in ready");
+  CONFIG.CharacterActorSheet.render();
 });

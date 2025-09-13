@@ -41,7 +41,7 @@
     }
   ],
   "compounds": [
-     {
+    {
       "name": "Debug FVTT (Serv + Clnt)",
       "configurations": ["Start Server", "Launch Chrome"],
       "stopAll": true

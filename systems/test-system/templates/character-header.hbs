@@ -3,24 +3,25 @@
   {{! Sheet Header }}
   <header class="sheet-header">
     {{! Header stuff goes here }}
-    <img
-      class="profile-img"
-      src="{{document.img}}"
-      data-action="editImage"
-      data-edit="img"
-      data-type="Image"
-      alt="Portrait"
-      title="{{document.name}}"
-      height="100"
-      width="100"
-    />
-    {{! Name }}
-    {{#if editable}}
-      <input type="text" name="name" class="document-name uninput" value="{{actor._source.name}}" />
-    {{else}}
-      <div class="document-name">{{actor.name}}</div>
-    {{/if}}
-
+    <div class="left">
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        {{#if editable}}data-action="editImage"{{/if}}
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      {{! Name }}
+      {{#if editable}}
+        <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
+      {{else}}
+        <div class="document-name">{{actor.name}}</div>
+      {{/if}}
+    </div>
     <div class="header-fields">
       <div class="resources grid grid-2col">{{! resources here }}</div>
       <div class="abilities grid grid-3col">{{! abilities here }}</div>

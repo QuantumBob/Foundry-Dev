@@ -19,11 +19,4 @@ export class CharacterActorDataModel extends BaseActorDataModel {
       }),
     };
   }
-
-  // prepareDerivedData() {
-  //   super.prepareDerivedData();
-
-  //   // Determine the hero's current level.
-  //   this.level = Math.floor(this.progress / 5);
-  // }
 }

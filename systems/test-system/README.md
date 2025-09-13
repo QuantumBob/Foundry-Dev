@@ -70,7 +70,7 @@ export class BaseActorDataModel extends foundry.abstract.TypeDataModel {
 }
 ```
 
-### Create character-actor-data-model.json
+### Create character-actor-data-model.mjs
 
 ```
 import { BaseActorDataModel } from "./base-actor-data-model.mjs";
