@@ -14,12 +14,13 @@ The variable-based rendering of handlebars is handled by \_prepareContext, an as
 In Application V1 terms, this is functionally equivalent to its getData call, with the only functional change that this is always asynchronous.
 
 _Inside your handlebars template, you'll only have access to the data setup in \_prepareContext, so if you need to include information such as CONFIG.MYSYSTEM you'll want to include a pointer to it in the returned object._
+```
+Note
 
-    Note
+The disconnect between the data provided to the template via _prepareContext and the way that DocumentSheetV2 stores data to the document via the name="" field can cause some confusion. It's common practice to store the document's system data in a system key in the context, which means that you can usually do value="{{system.attribute.value}}" and name="system.attribute.value" in an actor/item sheet and stuff works.
 
-    The disconnect between the data provided to the template via _prepareContext and the way that DocumentSheetV2 stores data to the document via the name="" field can cause some confusion. It's common practice to store the document's system data in a system key in the context, which means that you can usually do value="{{system.attribute.value}}" and name="system.attribute.value" in an actor/item sheet and stuff works.
-
-    However, under the hood, the {{}} is pulling stuff from the context object that the _prepareContext returns while the name="" is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
+However, under the hood, the {{}} is pulling stuff from the context object that the _prepareContext returns while the name="" is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
+```
 
 In \_prepareContext this refers to the sheet ie MySheet above. It has a member actor which has a member 'system' which is the datamodel ie MyDataModel. Within this is another member \_source which should be used in the handlebars of the template when the sheet is editable. Otherwise use this.actor.system directly.
 
@@ -35,20 +36,22 @@ Note that the Document class is abstract and is an extension of the base DataMod
 
 ## Interface ActorData
 
+```
 interface ActorData {
-\_id: null | string;
-\_stats: DocumentStats; (https://foundryvtt.com/api/v13/interfaces/foundry.data.types.DocumentStats.html)
-effects: ActiveEffectData[]; (https://foundryvtt.com/api/v13/interfaces/foundry.documents.types.ActiveEffectData.html)
-flags: DocumentFlags; (https://foundryvtt.com/api/v13/types/foundry.data.types.DocumentFlags.html)
-img?: string;
-items: ItemData[]; (https://foundryvtt.com/api/v13/interfaces/foundry.documents.types.ItemData.html)
-name: string;
-ownership: object;
-prototypeToken: PrototypeTokenData; (https://foundryvtt.com/api/v13/types/foundry.documents.types.PrototypeTokenData.html)
-sort: number;
-system: object;
-type: string;
-}
+    \_id: null | string;
+    \_stats: DocumentStats; (https://foundryvtt.com/api/v13/interfaces/foundry.data.types.DocumentStats.html)
+    effects: ActiveEffectData[]; (https://foundryvtt.com/api/v13/interfaces/foundry.documents.types.ActiveEffectData.html)
+    flags: DocumentFlags; (https://foundryvtt.com/api/v13/types/foundry.data.types.DocumentFlags.html)
+    img?: string;
+    items: ItemData[]; (https://foundryvtt.com/api/v13/interfaces/foundry.documents.types.ItemData.html)
+    name: string;
+    ownership: object;
+    prototypeToken: PrototypeTokenData; (https://foundryvtt.com/api/v13/types/foundry.documents.types.PrototypeTokenData.html)
+    sort: number;
+    system: object;
+    type: string;
+    }
+```
 
 # DEFAULT_OPTIONS
 
@@ -56,101 +59,143 @@ Each one overrides the previous
 
 ## ApplicationV2
 
+```
 static DEFAULT_OPTIONS = {
-id: "app-{id}",
-classes: [],
-tag: "div",
-window: {
-frame: true,
-positioned: true,
-title: "",
-icon: "",
-controls: [],
-minimizable: true,
-resizable: false,
-contentTag: "section",
-contentClasses: []
-},
-actions: {},
-form: {
-handler: undefined,
-submitOnChange: false,
-closeOnSubmit: false
-},
-position: {
-width: "auto",
-height: "auto"
-}
+    id: "app-{id}",
+    classes: [],
+    tag: "div",
+    window: {
+        frame: true,
+        positioned: true,
+        title: "",
+        icon: "",
+        controls: [],
+        minimizable: true,
+        resizable: false,
+        contentTag: "section",
+        contentClasses: []
+    },
+    actions: {},
+    form: {
+        handler: undefined,
+        submitOnChange: false,
+        closeOnSubmit: false
+    },
+  position: {
+    width: "auto",
+    height: "auto"
+    }
 };
+```
 
 ## DocumentSheetV2
 
+```
 static DEFAULT_OPTIONS = {
-id: "{id}",
-classes: ["sheet"],
-tag: "form", // Document sheets are forms by default
-document: null,
-viewPermission: DOCUMENT_OWNERSHIP_LEVELS.LIMITED,
-editPermission: DOCUMENT_OWNERSHIP_LEVELS.OWNER,
-canCreate: false,
-sheetConfig: true,
-actions: {
-configureSheet: DocumentSheetV2.#onConfigureSheet,
-copyUuid: {handler: DocumentSheetV2.#onCopyUuid, buttons: [0, 2]},
-editImage: DocumentSheetV2.#onEditImage,
-importDocument: DocumentSheetV2.#onImportDocument
+    id: "{id}",
+    classes: ["sheet"],
+    tag: "form", // Document sheets are forms by default
+    document: null,
+    viewPermission: DOCUMENT_OWNERSHIP_LEVELS.LIMITED,
+    editPermission: DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+    canCreate: false,
+    sheetConfig: true,
+    actions: {
+        configureSheet: DocumentSheetV2.#onConfigureSheet,
+        copyUuid: {handler: DocumentSheetV2.#onCopyUuid, buttons: [0, 2]},
+        editImage: DocumentSheetV2.#onEditImage,
+        importDocument: DocumentSheetV2.#onImportDocument
+    },
+    form: {
+        handler: this.#onSubmitDocumentForm,
+        submitOnChange: false,
+        closeOnSubmit: false
+    },
+    window: {
+        controls: [{
+        icon: "fa-solid fa-gear",
+        label: "SHEETS.ConfigureSheet",
+        action: "configureSheet",
+        visible: DocumentSheetV2.#canConfigureSheet
+        }]
+    }
+};
+```
+
+  ## ActorSheetV2
+
+```
+static DEFAULT_OPTIONS = {
+    position: {width: 600},
+    window: {
+    controls: [
+    {
+        action: "configureToken",
+        icon: "fa-regular fa-circle-user",
+        label: "DOCUMENT.Token",
+        ownership: "OWNER"
+    },
+    {
+        action: "configurePrototypeToken",
+        icon: "fa-solid fa-circle-user",
+        label: "TOKEN.TitlePrototype",
+        ownership: "OWNER"
+    },
+    {
+        action: "showPortraitArtwork",
+        icon: "fa-solid fa-image",
+        label: "SIDEBAR.CharArt",
+        ownership: "OWNER"
+    },
+    {
+        action: "showTokenArtwork",
+        icon: "fa-solid fa-image",
+        label: "SIDEBAR.TokenArt",
+        ownership: "OWNER"
+    }
+    ]
 },
-form: {
-handler: this.#onSubmitDocumentForm,
-submitOnChange: false,
-closeOnSubmit: false
-},
-window: {
-controls: [{
-icon: "fa-solid fa-gear",
-label: "SHEETS.ConfigureSheet",
-action: "configureSheet",
-visible: DocumentSheetV2.#canConfigureSheet
-}]
-}
+    actions: {
+        configurePrototypeToken: ActorSheetV2.#onConfigurePrototypeToken,
+        configureToken: ActorSheetV2.#onConfigureToken,
+        showPortraitArtwork: ActorSheetV2.#onShowPortraitArtwork,
+        showTokenArtwork: ActorSheetV2.#onShowTokenArtwork
+    }
 };
 
-## ActorSheetV2
+```
 
-static DEFAULT_OPTIONS = {
-position: {width: 600},
-window: {
-controls: [
-{
-action: "configureToken",
-icon: "fa-regular fa-circle-user",
-label: "DOCUMENT.Token",
-ownership: "OWNER"
-},
-{
-action: "configurePrototypeToken",
-icon: "fa-solid fa-circle-user",
-label: "TOKEN.TitlePrototype",
-ownership: "OWNER"
-},
-{
-action: "showPortraitArtwork",
-icon: "fa-solid fa-image",
-label: "SIDEBAR.CharArt",
-ownership: "OWNER"
-},
-{
-action: "showTokenArtwork",
-icon: "fa-solid fa-image",
-label: "SIDEBAR.TokenArt",
-ownership: "OWNER"
-}
-]
-},
-actions: {
-configurePrototypeToken: ActorSheetV2.#onConfigurePrototypeToken,
-configureToken: ActorSheetV2.#onConfigureToken,
-showPortraitArtwork: ActorSheetV2.#onShowPortraitArtwork,
-showTokenArtwork: ActorSheetV2.#onShowTokenArtwork
-}
+# PARTS
+
+Used to create the templates for the ActorSheetV2 and its children.
+Each PART is defined in Interface HandlebarsTemplatePart (https://foundryvtt.com/api/v13/interfaces/foundry.HandlebarsTemplatePart.html)
+  
+The PARTS object in the HandlebarsApplication class is a Record ie
+PARTS: Record<string, HandlebarsTemplatePart> = {}, with the string being the key to each PART
+  
+example
+
+
+```
+static PARTS = {
+    header: {
+        template: `${this.DEFAULT_OPTIONS.templatePath}character-header.hbs`,
+    },
 };
+
+interface HandlebarsTemplatePart {
+    classes?: string[];
+    forms?: Record<string, ApplicationFormConfiguration>;
+    id?: string;
+    root?: boolean;
+    scrollable?: string[];
+    template: string;
+    templates?: string[];
+}
+
+interface ApplicationFormConfiguration {
+    closeOnSubmit: boolean;
+    handler: ApplicationFormSubmission;
+    submitOnChange: boolean;
+}
+```

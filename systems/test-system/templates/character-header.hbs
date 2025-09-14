@@ -2,19 +2,38 @@
 
   {{! Sheet Header }}
   <header class="sheet-header">
+
+    {{#if editable}}
+      <div><label>Edit Mode</label></div>
+    {{/if}}
+
     {{! Header stuff goes here }}
     <div class="left">
-      <img
-        class="profile-img"
-        src="{{document.img}}"
-        {{#if editable}}data-action="editImage"{{/if}}
-        data-edit="img"
-        data-type="Image"
-        alt="Portrait"
-        title="{{document.name}}"
-        height="100"
-        width="100"
-      />
+      {{#if editable}}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action="editImage"
+          data-edit="img"
+          data-type="Image"
+          alt="Portrait"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+      {{else}}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action=""
+          data-edit="img"
+          data-type="Image"
+          alt="Portrait"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+      {{/if}}
       {{! Name }}
       {{#if editable}}
         <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />

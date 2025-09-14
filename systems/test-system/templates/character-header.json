@@ -1,0 +1,26 @@
+{
+  "cssClass": "Example Value",
+  "actor": {
+    "type": "Example Value",
+    "name": "Example Value"
+  },
+  "Sheet": "Example Value",
+  "Header": "Example Value",
+  "stuff": "Example Value",
+  "goes": "Example Value",
+  "here": "Example Value",
+  "document": {
+    "img": "Example Value",
+    "name": "Example Value"
+  },
+  "Name": "Example Value",
+  "resources": "Example Value",
+  "abilities": "Example Value",
+  "": "Example Value",
+  "system": {
+    "hitpoints": {
+      "value": "Example Value",
+      "max": "Example Value"
+    }
+  }
+}

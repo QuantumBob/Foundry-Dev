@@ -60,6 +60,9 @@
     "Hitpoints": "Hitpoints",
     "Max": "Max",
     "Min": "Min",
-    "Value": "Value"
+    "Value": "Value",
+    "EditMode": "Edit mode",
+    "ModeEdit": "Edit",
+    "ModePlay": "Play"
   }
 }

@@ -29,7 +29,8 @@ Hooks.on("init", () => {
   });
 });
 
-Hooks.on("ready", () => {
+Hooks.on("ready", async () => {
   console.log("in ready");
-  CONFIG.CharacterActorSheet.render();
+  let actor = game.actors.get("XKY7wKivePzpdZ2N");
+  actor.sheet.render(true);
 });
