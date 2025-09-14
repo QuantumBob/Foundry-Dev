@@ -15,11 +15,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "include": [
     "./module/rmc.mjs",
     "../foundry/client/client.mjs",
     "../foundry/client/global.d.mts",
     "../foundry/common/primitives/global.d.mts"
-  ]
+  ],
+  "description": ""
 }
