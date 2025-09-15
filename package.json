@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "createSymlinks": "node ./scripts/create-symlinks.mjs"
+    "createSymlinks": "node ./scripts/create-symlinks.mjs",
+    "get-methods": "node ./scripts/get-methods.cjs"
   },
   "keywords": [],
   "author": "",

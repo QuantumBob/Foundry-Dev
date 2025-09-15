@@ -1,0 +1,207 @@
+_renderHTML(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+addEventListener(type, listener, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+bringToFront() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+changeTab(tab, group, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+close(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+dispatchEvent(event) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+maximize() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+minimize() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+removeEventListener(type, listener) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+render(options, _options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+setPosition(position) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+submit(submitOptions) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+toggleControls(expanded, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_attachFrameListeners() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_canRender(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_configureRenderOptions(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_createContextMenu(handler) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_getHeaderControls() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_getTabsConfig(group) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_headerControlButtons() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_initializeApplicationOptions(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_insertElement(element) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onChangeForm(formConfig, event) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onClickAction(event, target) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onClickTab(event) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onClose(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onFirstRender(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onPosition(position) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onRender(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onSubmitForm(formConfig, event) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_postRender(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_preClose(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_preFirstRender(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_prepareContext(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_prepareTabs(group) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_prePosition(position) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_preRender(context, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_removeElement(element) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_renderFrame(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_renderHeaderControl(control) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_replaceHTML(result, content, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_tearDown(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_updateFrame(options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_updatePosition(position) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+inheritanceChain() {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+parseCSSDimension(style, parentDimension) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+waitForImages(element) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_onRevealSecret(event) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_prepareSubmitData(event, form, formData, updateData) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_processFormData(event, form, formData) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_processSubmitData(event, form, submitData, options) {
+    console.log(`RWK: ${this.document.documentName}`);
+};
+
+_toggleDisabled(disabled) {
+    console.log(`RWK: ${this.document.documentName}`);
+};

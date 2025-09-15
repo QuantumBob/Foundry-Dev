@@ -11,6 +11,8 @@ Hooks.on("init", () => {
   CONFIG.debug.hooks = true;
   console.log("test-system: in init hook");
 
+  CONFIG.rwkCount = 1;
+
   // register data models
   CONFIG.Actor.dataModels = {
     character: CharacterActorDataModel,

@@ -87,6 +87,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   /** @override */
   async _prepareContext(options) {
     /* see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs */
+    console.log(`RWK: ${this.document.documentName ?? "undefined"} index: ${CONFIG.rwkCount++}`);
     const context = {
       ...(await super._prepareContext(options)),
       actor: this.actor,
