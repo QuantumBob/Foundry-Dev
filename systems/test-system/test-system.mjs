@@ -32,7 +32,7 @@ Hooks.on("init", () => {
 });
 
 Hooks.on("ready", async () => {
-  console.log("in ready");
+  console.log("RWK: in ready");
   let actor = game.actors.get("XKY7wKivePzpdZ2N");
   actor.sheet.render(true);
 });

@@ -199,3 +199,16 @@ interface ApplicationFormConfiguration {
     submitOnChange: boolean;
 }
 ```
+# Data Models
+
+## Paths and inheritance of data model structure
+
+```
+F:\RPG\Foundry\Foundry-Dev\foundry\common\abstract\type-data.mjs
+F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\abstract\system-data-model.mjs
+F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\abstract\actor-data-model.mjs
+F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\actor\templates\common.mjs
+F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\actor\templates\creature.mjs
+F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\actor\character.mjs
+foundry.abstract.TypeDataModel -> SystemDataModel -> ActorDataModel -> CommonTemplate -> CreatureTemplate -> CharacterData
+```

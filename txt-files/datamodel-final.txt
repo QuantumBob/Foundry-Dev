@@ -1,0 +1,279 @@
+_configure(options) {
+    console.log(`RWK: _configure - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._configure(options);
+};
+
+_initializationOrder() {
+    console.log(`RWK: _initializationOrder - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._initializationOrder();
+};
+
+_initialize(options) {
+    console.log(`RWK: _initialize - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._initialize(options);
+};
+
+_initializeSource(data, options) {
+    console.log(`RWK: _initializeSource - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._initializeSource(data, options);
+};
+
+_onCreate(data, options, userId) {
+    console.log(`RWK: _onCreate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onCreate(data, options, userId);
+};
+
+async _onCreateOperation(documents, operation, user) {
+    console.log(`RWK: _onCreateOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onCreateOperation(documents, operation, user);
+};
+
+_onDelete(options, userId) {
+    console.log(`RWK: _onDelete - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onDelete(options, userId);
+};
+
+async _onDeleteOperation(documents, operation, user) {
+    console.log(`RWK: _onDeleteOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onDeleteOperation(documents, operation, user);
+};
+
+_onUpdate(changed, options, userId) {
+    console.log(`RWK: _onUpdate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onUpdate(changed, options, userId);
+};
+
+async _onUpdateOperation(documents, operation, user) {
+    console.log(`RWK: _onUpdateOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onUpdateOperation(documents, operation, user);
+};
+
+async _preCreate(data, options, user) {
+    console.log(`RWK: _preCreate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preCreate(data, options, user);
+};
+
+async _preCreateOperation(documents, operation, user) {
+    console.log(`RWK: _preCreateOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preCreateOperation(documents, operation, user);
+};
+
+async _preDelete(options, user) {
+    console.log(`RWK: _preDelete - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preDelete(options, user);
+};
+
+async _preDeleteOperation(documents, operation, user) {
+    console.log(`RWK: _preDeleteOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preDeleteOperation(documents, operation, user);
+};
+
+async _preUpdate(changes, options, user) {
+    console.log(`RWK: _preUpdate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preUpdate(changes, options, user);
+};
+
+async _preUpdateOperation(documents, operation, user) {
+    console.log(`RWK: _preUpdateOperation - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._preUpdateOperation(documents, operation, user);
+};
+
+canUserCreate(user) {
+    console.log(`RWK: canUserCreate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.canUserCreate(user);
+};
+
+canUserModify(user, action, data) {
+    console.log(`RWK: canUserModify - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.canUserModify(user, action, data);
+};
+
+cleanData(source, options) {
+    console.log(`RWK: cleanData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.cleanData(source, options);
+};
+
+clone(data, context) {
+    console.log(`RWK: clone - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.clone(data, context);
+};
+
+create(data) {
+    console.log(`RWK: create - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.create(data);
+};
+
+createDocuments(data) {
+    console.log(`RWK: createDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.createDocuments(data);
+};
+
+async createEmbeddedDocuments(embeddedName, data, operation) {
+    console.log(`RWK: createEmbeddedDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.createEmbeddedDocuments(embeddedName, data, operation);
+};
+
+defineSchema() {
+    console.log(`RWK: defineSchema - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.defineSchema();
+};
+
+async delete(operation) {
+    console.log(`RWK: delete - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.delete(operation);
+};
+
+async deleteDocuments(ids, operation) {
+    console.log(`RWK: deleteDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.deleteDocuments(ids, operation);
+};
+
+async deleteEmbeddedDocuments(embeddedName, ids, operation) {
+    console.log(`RWK: deleteEmbeddedDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.deleteEmbeddedDocuments(embeddedName, ids, operation);
+};
+
+fromJSON(json) {
+    console.log(`RWK: fromJSON - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.fromJSON(json);
+};
+
+fromSource(source, context) {
+    console.log(`RWK: fromSource - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.fromSource(source, context);
+};
+
+get(documentId, operation) {
+    console.log(`RWK: get - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.get(documentId, operation);
+};
+
+getCollectionName(name) {
+    console.log(`RWK: getCollectionName - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getCollectionName(name);
+};
+
+getDefaultArtwork(actorData) {
+    console.log(`RWK: getDefaultArtwork - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getDefaultArtwork(actorData);
+};
+
+getEmbeddedCollection(embeddedName) {
+    console.log(`RWK: getEmbeddedCollection - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getEmbeddedCollection(embeddedName);
+};
+
+getEmbeddedDocument(embeddedName, id, options) {
+    console.log(`RWK: getEmbeddedDocument - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getEmbeddedDocument(embeddedName, id, options);
+};
+
+getFlag(scope, key) {
+    console.log(`RWK: getFlag - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getFlag(scope, key);
+};
+
+getUserLevel(user) {
+    console.log(`RWK: getUserLevel - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.getUserLevel(user);
+};
+
+migrateData(source) {
+    console.log(`RWK: migrateData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.migrateData(source);
+};
+
+migrateDataSafe(source) {
+    console.log(`RWK: migrateDataSafe - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.migrateDataSafe(source);
+};
+
+migrateSystemData() {
+    console.log(`RWK: migrateSystemData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.migrateSystemData();
+};
+
+prepareBaseData(){
+    console.log(`RWK: prepareBaseData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.prepareBaseData();
+};
+
+prepareDerivedData(){
+    console.log(`RWK: prepareDerivedData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.prepareDerivedData();
+};
+
+reset() {
+    console.log(`RWK: reset - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.reset();
+};
+
+async setFlag(scope, key, value) {
+    console.log(`RWK: setFlag - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.setFlag(scope, key, value);
+};
+
+shimData(data, options) {
+    console.log(`RWK: shimData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.shimData(data, options);
+};
+
+testUserPermission(user, permission, options) {
+    console.log(`RWK: testUserPermission - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.testUserPermission(user, permission, options);
+};
+
+async toEmbed(config, options) {
+    console.log(`RWK: toEmbed - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.toEmbed(config, options);
+}
+
+toJSON() {
+    console.log(`RWK: toJSON - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.toJSON();
+};
+
+toObject(source) {
+    console.log(`RWK: toObject - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.toObject(source);
+};
+
+traverseEmbeddedDocuments(_parentPath) {
+    console.log(`RWK: traverseEmbeddedDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.traverseEmbeddedDocuments(_parentPath);
+};
+
+async unsetFlag(scope, key) {
+    console.log(`RWK: unsetFlag - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.unsetFlag(scope, key);
+};
+
+async update(data, operation) {
+    console.log(`RWK: update - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.update(data, operation);
+};
+
+async updateDocuments(updates, operation) {
+    console.log(`RWK: updateDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.updateDocuments(updates, operation);
+};
+
+async updateEmbeddedDocuments(embeddedName, updates, operation) {
+    console.log(`RWK: updateEmbeddedDocuments - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.updateEmbeddedDocuments(embeddedName, updates, operation);
+};
+
+updateSource(changes, options) {
+    console.log(`RWK: updateSource - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.updateSource(changes, options);
+};
+
+validate(options) {
+    console.log(`RWK: validate - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.validate(options);
+};
+
+validateJoint(data) {
+    console.log(`RWK: validateJoint - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super.validateJoint(data);
+};
