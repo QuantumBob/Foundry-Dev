@@ -33,6 +33,6 @@ Hooks.on("init", () => {
 
 Hooks.on("ready", async () => {
   console.log("RWK: in ready");
-  let actor = game.actors.get("XKY7wKivePzpdZ2N");
-  actor.sheet.render(true);
+  let actor = game.actors.getName("Bob");
+  await actor.sheet.render(true);
 });
