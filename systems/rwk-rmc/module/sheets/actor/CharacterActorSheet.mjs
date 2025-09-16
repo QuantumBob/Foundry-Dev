@@ -19,25 +19,33 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
 
   static PARTS = {
     header: {
-      // template: `${this.DEFAULT_OPTIONS.templatePath}/actor/actor-character-sheet.hbs`,
-      template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
+      template: `${this.DEFAULT_OPTIONS.templatePath}/actor/actor-character-sheet.hbs`,
+      // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
     },
-    // tabs: { template: "systems/rwk-rmc/templates/actor-partial-tabs.hbs" },
-    // character: { template: "systems/rwk-rmc/templates/actor-partial-pc-common.hbs" },
-    // equipment: { template: 'systems/rwk-rmc/templates/actor-partial-pc-equipment.hbs' },
-    // notes: { template: "systems/rwk-rmc/templates/actor-partial-pc-notes.hbs" },
+    tabs: {
+      template: "systems/rwk-rmc/templates/actor/actor-partial-tabs.hbs",
+    },
+    character: {
+      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-common.hbs",
+    },
+    equipment: {
+      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-equipment.hbs",
+    },
+    notes: {
+      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-notes.hbs",
+    },
   };
 
-  // static TABS = {
-  //   sheet: {
-  //     tabs: [
-  //       { id: "character", group: "sheet", label: "RMC.SheetClass.Character" },
-  //       // { id: 'equipment', group: 'sheet', label: 'RMC.Equipment' },
-  //       { id: "notes", group: "sheet", label: "RMC.SheetClass.Item" },
-  //     ],
-  //     initial: "character",
-  //   },
-  // };
+  static TABS = {
+    sheet: {
+      tabs: [
+        { id: "character", group: "sheet", label: "RMC.TabClass.Character" },
+        { id: "equipment", group: "sheet", label: "RMC.TabClass.Equipment" },
+        { id: "notes", group: "sheet", label: "RMC.TabClass.Notes" },
+      ],
+      initial: "character",
+    },
+  };
 
   /* -------------------------------------------- */
   //#region Actions
@@ -79,15 +87,15 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
   //#region Methods
 
-  // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
+  // see \systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
   /** @override */
   async _prepareContext(options) {
     console.log(
       `RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
     );
-    /*
-    * Foundrys _prepareContext
 
+    //#region Foundrys _prepareContext
+    /*
     async _prepareContext(options) {
       const context = await super._prepareContext(options);
       const document = this.document;
@@ -100,6 +108,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
         rootId: document.collection?.has(document.id) ? this.id : foundry.utils.randomID()
       });
     }*/
+    //#endregion
 
     // Retrieve the data structure from the base sheet.
     // You can inspect or log the context variable to see the structure.
@@ -109,6 +118,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       ...(await super._prepareContext(options)),
       actor: this.actor,
       editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
+      tabs: this._prepareTabs("sheet"),
     };
 
     // Add the actor's data to context.xyz for easier access, as well as flags.
@@ -123,7 +133,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     // }
 
     // Add roll data for TinyMCE editors.
-    // context.rollData = context.actor.getRollData();
+    context.rollData = context.actor.getRollData();
 
     // Prepare active effects
     // context.effects = prepareActiveEffectCategories(
@@ -132,6 +142,25 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     //     this.actor.allApplicableEffects()
     // );
 
+    return context;
+  }
+
+  async _preparePartContext(partId, context) {
+    switch (partId) {
+      case "header":
+        console.log("RWK: _preparePartContext - header");
+        break;
+      case "tabs":
+        console.log("RWK: _preparePartContext - tabs");
+        break;
+      case "character":
+        break;
+      case "equipment":
+        break;
+      case "notes":
+        break;
+      default:
+    }
     return context;
   }
 

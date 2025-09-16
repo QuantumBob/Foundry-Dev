@@ -18,6 +18,11 @@
       "Creature": "Default RMC Creature Sheet",
       "Humanoid": "Default RMC Humanoid Sheet"
     },
+    "TabClass": {
+      "Character": "Character",
+      "Equipment": "Equipment",
+      "Notes": "Notes"
+    },
     "TYPES.Actor": {
       "Party": "Party",
       "Player": "Player"

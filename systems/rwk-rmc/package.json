@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --no-source-map styles/scss:styles/css",
-    "sass:watch": "sass --no-source-map --watch src/scss:dist/css"
+    "sass": "sass --no-source-map styles/rmc.scss:styles/rmc.css",
+    "sass:watch": "sass --no-source-map --watch styles/rmc.scss:styles/rmc.css"
   },
   "type": "module",
   "keywords": [],

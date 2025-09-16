@@ -1,0 +1,32 @@
+{{! Character Tab }}
+<section
+  class="tab {{tabs.character.id}} {{tabs.character.cssClass}}"
+  data-tab="{{tabs.character.id}}"
+  data-group="{{tabs.character.group}}"
+  id="character"
+>
+  <div class="character-grid">
+    <input
+      style="grid-area: 1/2"
+      id="system.hitpoints.value"
+      name="system.hitpoints.value"
+      value="{{system.hitpoints.value}}"
+      data-dtype="Number"
+    />
+    <label for="system.hitpoints.value" style="grid-row: 2">{{localize "RMC.Hitpoints"}}</label>
+    <div class="grid-tpl-max-auto" style="grid-area: 3/2; font-size: 13px; margin-bottom: 0;">
+      <label style="font-size: 14px; line-height: 16px;" for="system.hitpoints.max">{{localize
+          "RMC.Max"
+        }}:</label>
+      <input
+        style="font-size: 14px; border-bottom: 1px solid rgba(0, 0, 0, 0.5)"
+        id="system.hitpoints.max"
+        name="system.hitpoints.max"
+        value="{{system.hitpoints.max}}"
+        size="3"
+        data-dtype="Number"
+      />
+    </div>
+  </div>
+  {{! End Character Tab }}
+</section>

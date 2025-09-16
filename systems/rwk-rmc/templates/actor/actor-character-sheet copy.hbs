@@ -1,0 +1,81 @@
+<section class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{! Sheet Header }}
+  <header class="sheet-header">
+
+    {{! Header stuff goes here }}
+    {{#if editable}}
+      <div><label>Edit Mode</label></div>
+      <div class="left">
+        {{! Portrait}}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action="editImage"
+          data-edit="img"
+          data-type="Image"
+          alt="Portrait"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+        {{! Name }}
+        <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
+      </div>
+      {{! Hitpoints }}
+      <div class="header-fields">
+        <div class="resource flex-group-center">
+          <label for="system.hitpoints.value" class="resource-label">{{localize
+              "RMC.Hitpoints"
+            }}</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              id="system.hitpoints.value"
+              type="text"
+              name="system.hitpoints.value"
+              value="{{system.hitpoints.value}}"
+              data-dtype="Number"
+            />
+            <span> / </span>
+            <input
+              type="text"
+              name="system.hitpoints.max"
+              value="{{system.hitpoints.max}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="left">
+        {{! Portrait }}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action=""
+          data-edit="img"
+          data-type="Image"
+          alt="Portrait"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+        {{! Name }}
+        <div class="document-name">{{actor.name}}</div>
+      </div>
+      {{! Hitpoints }}
+      <div class="header-fields">
+        <div class="resource flex-group-center">
+          <div class="resource-label">
+            {{localize "RMC.Hitpoints"}}
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            {{system.hitpoints.value}}
+            <span> / </span>
+            {{system.hitpoints.max}}
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  </header>
+</section>

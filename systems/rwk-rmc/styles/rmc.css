@@ -3,22 +3,54 @@
   height: 100px;
   margin-right: 10px;
 }
-
 .rmc .sheet-header .header-fields {
   flex: 1;
 }
-
 .rmc .sheet-header h1.charname {
   height: 50px;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
-
 .rmc .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+.rmc .resource-label {
+  font-weight: bold;
+}
+.rmc .sheet-tabs {
+  flex: 0;
+}
+.rmc .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+.rmc .items-list .item:last-child {
+  border-bottom: none;
+}
+.rmc .items-list .item .item-name {
+  color: #191813;
+}
+.rmc .items-list .item .item-name .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+.rmc .effects .item .effect-source,
+.rmc .effects .item .effect-duration,
+.rmc .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.rmc .effects .item .effect-controls {
+  border: none;
 }
 
 .grid,
@@ -36,6 +68,36 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.character-flex {
+  display: flex;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.tab-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flex-right {
+  align-items: end;
+}
+
+.tabs2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 2.5;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid var(--color-tabs-border);
+  border-bottom: 1px solid var(--color-tabs-border);
+}
+
+.tab2[data-tab]:not(.active) {
+  display: none;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -44,49 +106,6 @@
   text-align: center;
 }
 
-.rmc .resource-label {
-  font-weight: bold;
-}
-
 .flex-between {
   justify-content: space-between;
-}
-
-.rmc .sheet-tabs {
-  flex: 0;
-}
-
-.rmc .items-list .item {
-  align-items: center;
-  padding: 0 2px;
-  border-bottom: 1px solid #c9c7b8;
-}
-
-.rmc .items-list .item:last-child {
-  border-bottom: none;
-}
-
-.rmc .items-list .item .item-name {
-  color: #191813;
-}
-
-.rmc .items-list .item .item-name .item-image {
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
-}
-
-.rmc .effects .item .effect-source,
-.rmc .effects .item .effect-duration,
-.rmc .effects .item .effect-controls {
-  text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
-  font-size: 12px;
-}
-
-.rmc .effects .item .effect-controls {
-  border: none;
 }
