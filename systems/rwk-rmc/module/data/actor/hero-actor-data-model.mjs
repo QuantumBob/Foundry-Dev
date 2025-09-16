@@ -1,0 +1,161 @@
+import { CharacterActorDataModel } from "./character-actor-data-model.mjs";
+
+const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
+
+export class HeroActorDataModel extends CharacterActorDataModel {
+  static defineSchema() {
+    return this.mergeSchema(super.defineSchema(), {
+      stats: new SchemaField({}),
+      languages: new SchemaField({}),
+      defensiveBonus: new SchemaField({
+        armourType: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        aromourTypeCode: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        quicknessBonus: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        magicBonus: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        maBonus: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        shieldBonus: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        otherBonus: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        total: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+      }),
+      weapon: new SchemaField({
+        name: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        bonus: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        atSeventeentoTwenty: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        atThirteentoSixteen: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        atNinetoTwelve: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        atFivetoEight: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        atOnetoFour: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+      }),
+      martialArts: new SchemaField({
+        name: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        defensiveBonus: new NumberField({
+          required: true,
+          integer: true,
+          min: 1,
+          max: 9,
+          initial: 1,
+        }),
+        sw: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        th: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        rankOne: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        rankTwo: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        rankThree: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        rankFour: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+      }),
+      resistanceRolls: new SchemaField({
+        essence: new SchemaField({
+          race: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          stat: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          item: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          special: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          misc: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        }),
+        channeling: new SchemaField({
+          race: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          stat: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          item: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          special: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          misc: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        }),
+        mentalism: new SchemaField({
+          race: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          stat: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          item: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          special: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          misc: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        }),
+        disease: new SchemaField({
+          race: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          stat: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          item: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          special: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          misc: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        }),
+        poison: new SchemaField({
+          race: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          stat: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          item: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          special: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+          misc: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+        }),
+      }),
+      equipment: new SchemaField({
+        name: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        location: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        weight: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+      }),
+      bmr: new NumberField({ required: true, integer: true, min: 1, max: 9, initial: 1 }),
+      weightAllowance: new NumberField({
+        required: true,
+        integer: true,
+        min: 1,
+        max: 9,
+        initial: 1,
+      }),
+      encumberance: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+      treasure: new SchemaField({
+        mp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        pp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        gp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        sp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        bp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        cp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        tp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        other: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+      }),
+      skills: new SchemaField({
+        name: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        cost: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        rank: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        rankBonus: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        statBonus: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        levelBonus: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        item: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        special: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        special2: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        misc: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+      }),
+      spells: new SchemaField({
+        name: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+        level: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+        chance: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+      }),
+    });
+  }
+}

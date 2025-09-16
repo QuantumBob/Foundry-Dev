@@ -1,0 +1,4178 @@
+{
+  "document": {
+    "name": "Bob",
+    "img": "assets/Gregor.png",
+    "type": "character",
+    "system": {
+      "version": "",
+      "migrate": false,
+      "profession": "",
+      "race": "",
+      "realm": "",
+      "xp": 0,
+      "level": 1,
+      "sex": "",
+      "age": 15,
+      "appearance": "",
+      "hair": "",
+      "height": 0,
+      "weight": 0,
+      "hitpoints": {
+        "min": 0,
+        "max": 2,
+        "value": 2
+      },
+      "powerpoints": {
+        "min": 0,
+        "value": 1,
+        "max": 3
+      }
+    },
+    "prototypeToken": {
+      "name": "Bob",
+      "displayName": 0,
+      "actorLink": false,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "assets/Gregor.png",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "offsetX": 0,
+        "offsetY": 0,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "tint": {
+        },
+        "alphaThreshold": 0.75
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": null
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": [
+      ],
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 0,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        },
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "flags": {
+      },
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false
+    },
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "Hy4d0Yn4nJd6BfnX": 3
+    },
+    "flags": {
+    },
+    "_stats": {
+      "coreVersion": "13.348",
+      "systemId": "rwk-rmc",
+      "systemVersion": "0.0.1",
+      "createdTime": 1758019117814,
+      "modifiedTime": 1758031607284,
+      "lastModifiedBy": "Hy4d0Yn4nJd6BfnX",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    },
+    "overrides": {
+    },
+    "statuses": {
+    },
+  },
+  "source": {
+    "name": "Bob",
+    "type": "character",
+    "_id": "eTIfZTIuBBAcDo1y",
+    "img": "assets/Gregor.png",
+    "system": {
+      "hitpoints": {
+        "value": 2,
+        "max": 2,
+        "min": 0
+      },
+      "version": "",
+      "migrate": false,
+      "profession": "",
+      "race": "",
+      "realm": "",
+      "xp": 0,
+      "level": 0,
+      "sex": "",
+      "age": 15,
+      "appearance": "",
+      "hair": "",
+      "height": 0,
+      "weight": 0,
+      "powerpoints": {
+        "min": 0,
+        "value": 1,
+        "max": 3
+      },
+    },
+    "prototypeToken": {
+      "name": "Bob",
+      "displayName": 0,
+      "actorLink": false,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "assets/Gregor.png",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "offsetX": 0,
+        "offsetY": 0,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "tint": "#ffffff",
+        "alphaThreshold": 0.75
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": null
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": [
+      ],
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 0,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "flags": {
+      },
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false
+    },
+    "items": [
+    ],
+    "effects": [
+    ],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "Hy4d0Yn4nJd6BfnX": 3
+    },
+    "flags": {
+    },
+    "_stats": {
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null,
+      "coreVersion": "13.348",
+      "systemId": "rwk-rmc",
+      "systemVersion": "0.0.1",
+      "createdTime": 1758019117814,
+      "modifiedTime": 1758031607284,
+      "lastModifiedBy": "Hy4d0Yn4nJd6BfnX"
+    }
+  },
+  "fields": {
+    "_id": {
+      "name": "_id",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"]
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": true,
+      "initial": "undefined",
+      "readonly": true,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid Document ID string",
+      "blank": false,
+      "trim": true,
+      "choices": "undefined",
+      "textSearch": false
+    },
+    "name": {
+      "name": "name",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"]
+      },
+      "options": {
+        "required": true,
+        "blank": false,
+        "textSearch": true
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "Name",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "blank": false,
+      "trim": true,
+      "choices": "undefined",
+      "textSearch": true
+    },
+    "img": {
+      "name": "img",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"]
+      },
+      "options": {
+        "categories": [
+          "IMAGE"
+        ],
+        "initial": "data => {return this.implementation.getDefaultArtwork(data).img;}"
+      },
+      "required": false,
+      "nullable": true,
+      "initial":" data => {return this.implementation.getDefaultArtwork(data).img;}",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "Image Path",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "blank": false,
+      "trim": true,
+      "choices": "undefined",
+      "textSearch": false,
+      "categories": [
+        "IMAGE"
+      ],
+      "base64": false,
+      "wildcard": false,
+      "virtual": false
+    },
+    "type": {
+      "name": "type",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"]
+      },
+      "options": {
+        "choices": "() => documentClass.TYPES",
+        "validationError": "is not a valid type for the Actor Document class"
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "Type",
+      "hint": "",
+      "validationError": "is not a valid type for the Actor Document class",
+      "blank": false,
+      "trim": true,
+      "choices": "() => documentClass.TYPES",
+      "textSearch": false
+    },
+    "system": {
+      "name": "system",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"]
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "document": class BaseActor extends Document {
+        /* -------------------------------------------- */
+        /*  Model Configuration                         */
+        /* -------------------------------------------- */
+        /** @inheritdoc */
+        static metadata = Object.freeze(mergeObject(super.metadata, {
+          "name": "Actor",
+          "collection": "actors",
+          "indexed": true,
+          "compendiumIndexFields": ["_id", "name", "img", "type", "sort", "folder"],
+          "embedded": {"ActiveEffect": "effects", "Item": "items"},
+          "hasTypeData": true,
+          "label": "DOCUMENT.Actor",
+          "labelPlural": "DOCUMENT.Actors",
+          "permissions": {
+            "create": this.#canCreate,
+            "update": this.#canUpdate
+          },
+          "schemaVersion": "13.341"
+        }, {"inplace": false}));
+        /* ---------------------------------------- */
+        /** @inheritdoc */
+        static defineSchema() {
+          const {BaseItem, BaseActiveEffect, BaseFolder} = foundry.documents;
+          return {
+            "_id": new DocumentIdField(),
+            "name": new StringField({"required": true, "blank": false, "textSearch": true}),
+            "img": new FilePathField({"categories": ["IMAGE"], "initial": data => {
+              return this.implementation.getDefaultArtwork(data).img;
+            }}),
+            "type": new DocumentTypeField(this),
+            "system": new TypeDataField(this),
+            "prototypeToken": new EmbeddedDataField(PrototypeToken),
+            "items": new EmbeddedCollectionField(BaseItem),
+            "effects": new EmbeddedCollectionField(BaseActiveEffect),
+            "folder": new ForeignDocumentField(BaseFolder),
+            "sort": new IntegerSortField(),
+            "ownership": new DocumentOwnershipField(),
+            "flags": new DocumentFlagsField(),
+            "_stats": new DocumentStatsField()
+          };
+        }
+        /* ---------------------------------------- */
+        /**
+         * The default icon used for newly created Actor documents.
+         * @type {string}
+         */
+        static DEFAULT_ICON = DEFAULT_TOKEN;
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * Determine default artwork based on the provided actor data.
+         * @param {ActorData} actorData                      The source actor data.
+         * @returns {{"img": string, "texture": {"src": string}}}  Candidate actor image and prototype token artwork.
+         */
+        static getDefaultArtwork(actorData) {
+          return {
+            "img": this.DEFAULT_ICON,
+            "texture": {
+              "src": this.DEFAULT_ICON
+            }
+          };
+        }
+        
+        /* ---------------------------------------- */
+        
+        /** @inheritdoc */
+        _initializeSource(source, options) {
+          source = super._initializeSource(source, options);
+          source.prototypeToken.name = source.prototypeToken.name || source.name;
+          source.prototypeToken.texture.src = source.prototypeToken.texture.src || source.img;
+          return source;
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        _initialize(options) {
+          super._initialize(options);
+          DocumentStatsField._shimDocument(this);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @override */
+        static canUserCreate(user) {
+          return user.hasPermission("ACTOR_CREATE");
+        }
+        
+        /* ---------------------------------------- */
+        
+        /**
+         * Is a user able to create this actor?
+         * @type {DocumentPermissionTest}
+         */
+        static #canCreate(user, doc) {
+          if ( !user.hasPermission("ACTOR_CREATE") ) return false;      // User cannot create actors at all
+          if ( doc._source.prototypeToken.randomImg && !user.hasPermission("FILES_BROWSE") ) return false;
+          return true;
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * Is a user able to update an existing actor?
+         * @type {DocumentPermissionTest}
+         */
+        static #canUpdate(user, doc, data) {
+          if ( !doc.testUserPermission(user, "OWNER") ) return false; // Ownership is required.
+        
+          // Users can only enable token wildcard images if they have FILES_BROWSE permission.
+          const tokenChange = data?.prototypeToken || {};
+          const enablingRandomImage = tokenChange.randomImg === true;
+          if ( enablingRandomImage ) return user.hasPermission("FILES_BROWSE");
+        
+          // Users can only change a token wildcard path if they have FILES_BROWSE permission.
+          const randomImageEnabled = doc._source.prototypeToken.randomImg && (tokenChange.randomImg !== false);
+          const changingRandomImage = ("img" in tokenChange) && randomImageEnabled;
+          if ( changingRandomImage ) return user.hasPermission("FILES_BROWSE");
+          return true;
+        }
+        
+        /* ---------------------------------------- */
+        
+        /** @inheritDoc */
+        async _preCreate(data, options, user) {
+          const allowed = await super._preCreate(data, options, user);
+          if ( allowed === false ) return false;
+          if ( !this.prototypeToken.name ) this.prototypeToken.updateSource({"name": this.name});
+          if ( !this.prototypeToken.texture.src || (this.prototypeToken.texture.src === DEFAULT_TOKEN)) {
+            const { texture } = this.constructor.getDefaultArtwork(this.toObject());
+            this.prototypeToken.updateSource("img" in data ? { "texture": { "src": this.img } } : { texture });
+          }
+        }
+        
+        /* ---------------------------------------- */
+        
+        /** @inheritDoc */
+        async _preUpdate(changed, options, user) {
+          const allowed = await super._preUpdate(changed, options, user);
+          if ( allowed === false ) return false;
+          if ( changed.img && !getProperty(changed, "prototypeToken.texture.src") ) {
+            const { texture } = this.constructor.getDefaultArtwork(foundry.utils.mergeObject(this.toObject(), changed));
+            if ( !this.prototypeToken.texture.src || (this.prototypeToken.texture.src === texture?.src) ) {
+              setProperty(changed, "prototypeToken.texture.src", changed.img);
+            }
+          }
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        static migrateData(source) {
+          DocumentStatsField._migrateData(this, source);
+          return super.migrateData(source);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        static shimData(source, options) {
+          DocumentStatsField._shimData(this, source, options);
+          return super.shimData(source, options);
+        }
+      },
+    },
+    "prototypeToken": {
+      "name": "prototypeToken",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "fields": {
+        "name": {
+          "name": "name",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "blank": true,
+            "textSearch": false,
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Token Name",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": true,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+        },
+        "displayName": {
+          "name": "displayName",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "initial": 0,
+            "choices": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+            ],
+            "validationError": "must be a value in CONST.TOKEN_DISPLAY_MODES",
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 0,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Display Name",
+          "hint": "",
+          "validationError": "must be a value in CONST.TOKEN_DISPLAY_MODES",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+          ],
+        },
+        "actorLink": {
+          "name": "actorLink",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": false,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Link Actor Data",
+          "hint": "",
+          "validationError": "is not a valid value",
+        },
+        "width": {
+          "name": "width",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "nullable": false,
+            "positive": true,
+            "initial": 1,
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 1,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Width",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": true,
+          "choices": "undefined",
+        },
+        "height": {
+          "name": "height",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "nullable": false,
+            "positive": true,
+            "initial": 1,
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 1,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Height",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": true,
+          "choices": "undefined",
+        },
+        "texture": {
+          "name": "texture",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "src": {
+              "name": "src",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "categories": [
+                  "IMAGE",
+                  "VIDEO",
+                ],
+                "initial": () => this.DEFAULT_ICON,
+                "label": "",
+                "virtual": false,
+                "wildcard": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": () => this.DEFAULT_ICON,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Image Path",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+              "categories": [
+                "IMAGE",
+                "VIDEO",
+              ],
+              "base64": false,
+              "wildcard": true,
+              "virtual": false,
+            },
+            "anchorX": {
+              "name": "anchorX",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0.5,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.5,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "X",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "anchorY": {
+              "name": "anchorY",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0.5,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.5,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Y",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "offsetX": {
+              "name": "offsetX",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": true,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "offsetY": {
+              "name": "offsetY",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": true,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "fit": {
+              "name": "fit",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "initial": "contain",
+                "choices": [
+                  "fill",
+                  "contain",
+                  "cover",
+                  "width",
+                  "height",
+                ],
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "contain",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Image Fit Mode",
+              "hint": "Adjust how the image is fit to the size of the Token.",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": [
+                "fill",
+                "contain",
+                "cover",
+                "width",
+                "height",
+              ],
+              "textSearch": false,
+            },
+            "scaleX": {
+              "name": "scaleX",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "scaleY": {
+              "name": "scaleY",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "rotation": {
+              "name": "rotation",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a number between 0 and 360",
+              "min": 0,
+              "max": 360,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+              "normalize": true,
+            },
+            "tint": {
+              "name": "tint",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": "#ffffff",
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "#ffffff",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Tint Color",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "alphaThreshold": {
+              "name": "alphaThreshold",
+              "parent": ["Circular"],
+              "options": {
+                "nullable": false,
+                "initial": 0.75,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.75,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a number between 0 and 1",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+          },
+        },
+        "lockRotation": {
+          "name": "lockRotation",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": false,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Lock Artwork Rotation",
+          "hint": "Prevent this Token's rotation angle from being rendered on the Canvas.",
+          "validationError": "is not a valid value",
+        },
+        "rotation": {
+          "name": "rotation",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 0,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Rotation",
+          "hint": "",
+          "validationError": "is not a number between 0 and 360",
+          "min": 0,
+          "max": 360,
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": "undefined",
+          "normalize": true,
+        },
+        "alpha": {
+          "name": "alpha",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 1,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Token Opacity",
+          "hint": "",
+          "validationError": "is not a number between 0 and 1",
+          "min": 0,
+          "max": 1,
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": "undefined",
+        },
+        "disposition": {
+          "name": "disposition",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "choices": [
+              -2,
+              -1,
+              0,
+              1,
+            ],
+            "initial": -1,
+            "validationError": "must be a value in CONST.TOKEN_DISPOSITIONS",
+          },
+          "required": true,
+          "nullable": false,
+          "initial": -1,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Token Disposition",
+          "hint": "",
+          "validationError": "must be a value in CONST.TOKEN_DISPOSITIONS",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": [
+            -2,
+            -1,
+            0,
+            1,
+          ],
+        },
+        "displayBars": {
+          "name": "displayBars",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "choices": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+            ],
+            "initial": 0,
+            "validationError": "must be a value in CONST.TOKEN_DISPLAY_MODES",
+          },
+          "required": true,
+          "nullable": false,
+          "initial": 0,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Display Bars",
+          "hint": "",
+          "validationError": "must be a value in CONST.TOKEN_DISPLAY_MODES",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+          ],
+        },
+        "bar1": {
+          "name": "bar1",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "attribute": {
+              "name": "attribute",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": true,
+                "blank": false,
+                "initial": () => game?.system.primaryTokenAttribute || null,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": () => game?.system.primaryTokenAttribute || null,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Bar 1 Attribute",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+          },
+        },
+        "bar2": {
+          "name": "bar2",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "attribute": {
+              "name": "attribute",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": true,
+                "blank": false,
+                "initial": () => game?.system.secondaryTokenAttribute || null,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": () => game?.system.secondaryTokenAttribute || null,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Bar 2 Attribute",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+          },
+        },
+        "light": {
+          "name": "light",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "negative": {
+              "name": "negative",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": false,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Is Darkness Source",
+              "hint": "A darkness source blocks light and vision and suppresses lights or vision sources which are inside its area of effect.",
+              "validationError": "is not a valid value",
+            },
+            "priority": {
+              "name": "priority",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Priority",
+              "hint": "Determines how light and darkness sources interact. Higher-priority light repels lower-priority darkness, but if priorities match, darkness prevails.",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": "undefined",
+              "step": "undefined",
+              "integer": true,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "alpha": {
+              "name": "alpha",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 0.5,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.5,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Color Intensity",
+              "hint": "Modify the intensity of color emitted by this light source.",
+              "validationError": "is not a number between 0 and 1",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "angle": {
+              "name": "angle",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 360,
+                "normalize": false,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 360,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Emission Angle",
+              "hint": "Limit the angle of emission for this light source, and configure its rotation.",
+              "validationError": "is not a number between 0 and 360",
+              "min": 0,
+              "max": 360,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+              "normalize": false,
+            },
+            "bright": {
+              "name": "bright",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": 0,
+                "step": 0.01,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Bright",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": "undefined",
+              "step": 0.01,
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "color": {
+              "name": "color",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": false,
+              "nullable": true,
+              "initial": null,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Light Color",
+              "hint": "Apply coloration to this light source and configure its intensity.",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "coloration": {
+              "name": "coloration",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "integer": true,
+                "initial": 1,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": 1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Coloration Technique",
+              "hint": "The coloration technique applied to the light source contributes additive blending to the resulting appearance.",
+              "validationError": "is not a valid value",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": true,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "dim": {
+              "name": "dim",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": 0,
+                "step": 0.01,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Dim",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": "undefined",
+              "step": 0.01,
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "attenuation": {
+              "name": "attenuation",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 0.5,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.5,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Attenuation",
+              "hint": "Transition illumination gradually between bright, dim, and dark.",
+              "validationError": "is not a number between 0 and 1",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "luminosity": {
+              "name": "luminosity",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0.5,
+                "min": 0,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.5,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Luminosity",
+              "hint": "Adjust the brightness of this light source. More luminous lights are less diminished by darkness. The default value for a standard light source is 0.5.",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "saturation": {
+              "name": "saturation",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": -1,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Saturation",
+              "hint": "Adjust the saturation of surfaces that are illuminated by this light source. The default value for a standard light source is 0.",
+              "validationError": "is not a valid value",
+              "min": -1,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "contrast": {
+              "name": "contrast",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": -1,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Contrast",
+              "hint": "Adjust the contrast of surfaces that are illuminated by this light source. The default value for a standard light source is 0.",
+              "validationError": "is not a valid value",
+              "min": -1,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "shadows": {
+              "name": "shadows",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": 0,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Shadows",
+              "hint": "Enhance or the intensity of dark colors illuminated by this light source. The default value for a standard light source is 0.",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "animation": {
+              "name": "animation",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Light Animation",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "fields": {
+                "type": {
+                  "name": "type",
+                  "parent": ["Circular"],
+                  "options": {
+                    "nullable": true,
+                    "blank": false,
+                    "initial": null,
+                  },
+                  "required": false,
+                  "nullable": true,
+                  "initial": null,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Light Animation Type",
+                  "hint": "",
+                  "validationError": "is not a valid value",
+                  "blank": false,
+                  "trim": true,
+                  "choices": "undefined",
+                  "textSearch": false,
+                },
+                "speed": {
+                  "name": "speed",
+                  "parent": ["Circular"],
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0,
+                    "max": 10,
+                    "validationError": "Light animation speed must be an integer between 0 and 10",
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": 5,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Animation Speed",
+                  "hint": "Increases to animation speed make the animation play faster.",
+                  "validationError": "Light animation speed must be an integer between 0 and 10",
+                  "min": 0,
+                  "max": 10,
+                  "step": "undefined",
+                  "integer": true,
+                  "positive": false,
+                  "choices": "undefined",
+                },
+                "intensity": {
+                  "name": "intensity",
+                  "parent": ["Circular"],
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 1,
+                    "max": 10,
+                    "validationError": "Light animation intensity must be an integer between 1 and 10",
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": 5,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Animation Intensity",
+                  "hint": "Increases to animation intensity make the animation more pronounced.",
+                  "validationError": "Light animation intensity must be an integer between 1 and 10",
+                  "min": 1,
+                  "max": 10,
+                  "step": "undefined",
+                  "integer": true,
+                  "positive": false,
+                  "choices": "undefined",
+                },
+                "reverse": {
+                  "name": "reverse",
+                  "parent": ["Circular"],
+                  "options": {
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": false,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Reverse Direction",
+                  "hint": "",
+                  "validationError": "is not a valid value",
+                },
+              },
+            },
+            "darkness": {
+              "name": "darkness",
+              "parent": ["Circular"],
+              "options": {
+                "validate": d => (d.min ?? 0) <= (d.max ?? 1),
+                "validationError": "darkness.max may not be less than darkness.min",
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Darkness Activation Range",
+              "hint": "You may specify a range of darkness levels during which this light source will be visible.",
+              "validationError": "darkness.max may not be less than darkness.min",
+              "fields": {
+                "min": {
+                  "name": "min",
+                  "parent": ["Circular"],
+                  "options": {
+                    "initial": 0,
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": 0,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Between",
+                  "hint": "",
+                  "validationError": "is not a number between 0 and 1",
+                  "min": 0,
+                  "max": 1,
+                  "step": "undefined",
+                  "integer": false,
+                  "positive": false,
+                  "choices": "undefined",
+                },
+                "max": {
+                  "name": "max",
+                  "parent": ["Circular"],
+                  "options": {
+                    "initial": 1,
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": 1,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "and",
+                  "hint": "",
+                  "validationError": "is not a number between 0 and 1",
+                  "min": 0,
+                  "max": 1,
+                  "step": "undefined",
+                  "integer": false,
+                  "positive": false,
+                  "choices": "undefined",
+                },
+              },
+            },
+          },
+          "model": class LightData extends DataModel {
+            static defineSchema() {
+              return {
+                "negative": new BooleanField(),
+                "priority": new NumberField({"required": true, "nullable": false, "integer": true, "initial": 0, "min": 0}),
+                "alpha": new AlphaField({"initial": 0.5}),
+                "angle": new AngleField({"initial": 360, "normalize": false}),
+                "bright": new NumberField({"required": true, "nullable": false, "initial": 0, "min": 0, "step": 0.01}),
+                "color": new ColorField({}),
+                "coloration": new NumberField({"required": true, "integer": true, "initial": 1}),
+                "dim": new NumberField({"required": true, "nullable": false, "initial": 0, "min": 0, "step": 0.01}),
+                "attenuation": new AlphaField({"initial": 0.5}),
+                "luminosity": new NumberField({"required": true, "nullable": false, "initial": 0.5, "min": 0, "max": 1}),
+                "saturation": new NumberField({"required": true, "nullable": false, "initial": 0, "min": -1, "max": 1}),
+                "contrast": new NumberField({"required": true, "nullable": false, "initial": 0, "min": -1, "max": 1}),
+                "shadows": new NumberField({"required": true, "nullable": false, "initial": 0, "min": 0, "max": 1}),
+                "animation": new SchemaField({
+                  "type": new StringField({"nullable": true, "blank": false, "initial": null}),
+                  "speed": new NumberField({"required": true, "nullable": false, "integer": true, "initial": 5, "min": 0, "max": 10,
+                    "validationError": "Light animation speed must be an integer between 0 and 10"}),
+                  "intensity": new NumberField({"required": true, "nullable": false, "integer": true, "initial": 5, "min": 1, "max": 10,
+                    "validationError": "Light animation intensity must be an integer between 1 and 10"}),
+                  "reverse": new BooleanField()
+                }),
+                "darkness": new SchemaField({
+                  "min": new AlphaField({"initial": 0}),
+                  "max": new AlphaField({"initial": 1})
+                }, {
+                  "validate": d => (d.min ?? 0) <= (d.max ?? 1),
+                  "validationError": "darkness.max may not be less than darkness.min"
+                })
+              };
+            }
+            
+            /** @override */
+            static LOCALIZATION_PREFIXES = ["LIGHT"];
+            
+            /* -------------------------------------------- */
+            /*  Deprecations and Compatibility              */
+            /* -------------------------------------------- */
+            
+            /** @inheritDoc */
+            static migrateData(data) {
+              /**
+               * Migration of negative luminosity
+               * @deprecated since v12
+               */
+              const luminosity = data.luminosity;
+              if ( luminosity < 0) {
+                data.luminosity = 1 - luminosity;
+                data.negative = true;
+              }
+              return super.migrateData(data);
+            }
+          },
+        },
+        "sight": {
+          "name": "sight",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "enabled": {
+              "name": "enabled",
+              "parent": ["Circular"],
+              "options": {
+                "initial": data => Number(data?.sight?.range) > 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": data => Number(data?.sight?.range) > 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Enabled",
+              "hint": "Allows the token to see illuminated spaces within its line of sight.",
+              "validationError": "is not a valid value",
+            },
+            "range": {
+              "name": "range",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": true,
+                "min": 0,
+                "step": 0.01,
+                "initial": 0,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Range",
+              "hint": "The distance a token can see without any light.",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": "undefined",
+              "step": 0.01,
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "angle": {
+              "name": "angle",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 360,
+                "normalize": false,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 360,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Angle",
+              "hint": "The angle of the vision cone (default is 360).",
+              "validationError": "is not a number between 0 and 360",
+              "min": 0,
+              "max": 360,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+              "normalize": false,
+            },
+            "visionMode": {
+              "name": "visionMode",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "initial": "basic",
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "basic",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Mode",
+              "hint": "Applies a visual effect to the vision to represent special senses (default is Basic Vision).",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "color": {
+              "name": "color",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": false,
+              "nullable": true,
+              "initial": null,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Color",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "attenuation": {
+              "name": "attenuation",
+              "parent": ["Circular"],
+              "options": {
+                "initial": 0.1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0.1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Attenuation",
+              "hint": "Adjust the strength of the vision source attenuation (default is 0).",
+              "validationError": "is not a number between 0 and 1",
+              "min": 0,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "brightness": {
+              "name": "brightness",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": -1,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Vision Brightness",
+              "hint": "Adjust the brightness of this vision source. The greater the brightness, the better the character is able to see in darkness (default is 0).",
+              "validationError": "is not a valid value",
+              "min": -1,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "saturation": {
+              "name": "saturation",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": -1,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Saturation",
+              "hint": "Adjust the saturation of the background which is in the vision source radius (default is 0).",
+              "validationError": "is not a valid value",
+              "min": -1,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "contrast": {
+              "name": "contrast",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": 0,
+                "min": -1,
+                "max": 1,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Contrast",
+              "hint": "Adjust the contrast of the background which is in the vision source radius (default is 0).",
+              "validationError": "is not a valid value",
+              "min": -1,
+              "max": 1,
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+          },
+        },
+        "detectionModes": {
+          "name": "detectionModes",
+          "parent": ["Circular"],
+          "options": {
+            "validate": function(modes) {
+              const seen = new Set();
+              for ( const mode of modes ) {
+                if ( mode.id === "" ) continue;
+                if ( seen.has(mode.id) ) {
+                  throw new Error(`may not have more than one configured detection mode of type "${mode.id}"`);
+                }
+                seen.add(mode.id);
+              }
+            },
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "empty": true,
+          "exact": "undefined",
+          "min": 0,
+          "max": Infinity,
+          "element": {
+            "name": "element",
+            "parent": ["Circular"],
+            "options": {
+            },
+            "required": true,
+            "nullable": false,
+            "initial": "undefined",
+            "readonly": false,
+            "gmOnly": false,
+            "label": "",
+            "hint": "",
+            "validationError": "is not a valid value",
+            "fields": {
+              "id": {
+                "name": "id",
+                "parent": ["Circular"],
+                "options": {
+                },
+                "required": false,
+                "nullable": false,
+                "initial": "undefined",
+                "readonly": false,
+                "gmOnly": false,
+                "label": "",
+                "hint": "",
+                "validationError": "is not a valid value",
+                "blank": true,
+                "trim": true,
+                "choices": "undefined",
+                "textSearch": false,
+              },
+              "enabled": {
+                "name": "enabled",
+                "parent": ["Circular"],
+                "options": {
+                  "initial": true,
+                },
+                "required": true,
+                "nullable": false,
+                "initial": true,
+                "readonly": false,
+                "gmOnly": false,
+                "label": "",
+                "hint": "",
+                "validationError": "is not a valid value",
+              },
+              "range": {
+                "name": "range",
+                "parent": ["Circular"],
+                "options": {
+                  "required": true,
+                  "min": 0,
+                  "step": 0.01,
+                },
+                "required": true,
+                "nullable": true,
+                "initial": "undefined",
+                "readonly": false,
+                "gmOnly": false,
+                "label": "",
+                "hint": "",
+                "validationError": "is not a valid value",
+                "min": 0,
+                "max": "undefined",
+                "step": 0.01,
+                "integer": false,
+                "positive": false,
+                "choices": "undefined",
+              },
+            },
+          },
+        },
+        "occludable": {
+          "name": "occludable",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "radius": {
+              "name": "radius",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "min": 0,
+                "step": 0.01,
+                "initial": 0,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 0,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Occlusion Radius",
+              "hint": "When this Token is below a Tile that uses radial occlusion, this value controls the size of the hole that is cut in the Tile to allow the Token to be seen through it.",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": "undefined",
+              "step": 0.01,
+              "integer": false,
+              "positive": false,
+              "choices": "undefined",
+            },
+          },
+        },
+        "ring": {
+          "name": "ring",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "enabled": {
+              "name": "enabled",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": false,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Ring Enabled",
+              "hint": "",
+              "validationError": "is not a valid value",
+            },
+            "colors": {
+              "name": "colors",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "fields": {
+                "ring": {
+                  "name": "ring",
+                  "parent": ["Circular"],
+                  "options": {
+                  },
+                  "required": false,
+                  "nullable": true,
+                  "initial": null,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Ring Color",
+                  "hint": "A color applied to the border of the ring.",
+                  "validationError": "is not a valid value",
+                  "blank": false,
+                  "trim": true,
+                  "choices": "undefined",
+                  "textSearch": false,
+                },
+                "background": {
+                  "name": "background",
+                  "parent": ["Circular"],
+                  "options": {
+                  },
+                  "required": false,
+                  "nullable": true,
+                  "initial": null,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Background Color",
+                  "hint": "A color applied to the background of the ring.",
+                  "validationError": "is not a valid value",
+                  "blank": false,
+                  "trim": true,
+                  "choices": "undefined",
+                  "textSearch": false,
+                },
+              },
+            },
+            "effects": {
+              "name": "effects",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 1,
+                "min": 0,
+                "max": 8388607,
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Ring Effects",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "min": 0,
+              "max": 8388607,
+              "step": "undefined",
+              "integer": true,
+              "positive": false,
+              "choices": "undefined",
+            },
+            "subject": {
+              "name": "subject",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "fields": {
+                "scale": {
+                  "name": "scale",
+                  "parent": ["Circular"],
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": 1,
+                    "min": 0.5,
+                  },
+                  "required": true,
+                  "nullable": false,
+                  "initial": 1,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Subject Scale Correction",
+                  "hint": "Adjust the relative size of the subject texture to the ring. Increasing this value will make the subject texture larger compared to the ring. Use lower values to reduce the subject texture size if it appears too dominant.",
+                  "validationError": "is not a valid value",
+                  "min": 0.5,
+                  "max": "undefined",
+                  "step": "undefined",
+                  "integer": false,
+                  "positive": false,
+                  "choices": "undefined",
+                },
+                "texture": {
+                  "name": "texture",
+                  "parent": ["Circular"],
+                  "options": {
+                    "categories": [
+                      "IMAGE",
+                    ],
+                  },
+                  "required": false,
+                  "nullable": true,
+                  "initial": null,
+                  "readonly": false,
+                  "gmOnly": false,
+                  "label": "Subject Texture",
+                  "hint": "Explicitly specify a path for the artwork placed over the dynamic token ring. If not provided, the ring subject is the same as the standard token texture.",
+                  "validationError": "is not a valid value",
+                  "blank": false,
+                  "trim": true,
+                  "choices": "undefined",
+                  "textSearch": false,
+                  "categories": [
+                    "IMAGE",
+                  ],
+                  "base64": false,
+                  "wildcard": false,
+                  "virtual": false,
+                },
+              },
+            },
+          },
+        },
+        "turnMarker": {
+          "name": "turnMarker",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "mode": {
+              "name": "mode",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "choices": [
+                  0,
+                  1,
+                  2,
+                ],
+                "initial": 1,
+                "validationError": "must be a value in CONST.TOKEN_TURN_MARKER_MODES",
+              },
+              "required": true,
+              "nullable": false,
+              "initial": 1,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Mode",
+              "hint": "Choose Default to use default Combat settings, Disabled to hide the turn marker, or Custom for a unique turn marker behavior.",
+              "validationError": "must be a value in CONST.TOKEN_TURN_MARKER_MODES",
+              "min": "undefined",
+              "max": "undefined",
+              "step": "undefined",
+              "integer": false,
+              "positive": false,
+              "choices": [
+                0,
+                1,
+                2,
+              ],
+            },
+            "animation": {
+              "name": "animation",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "nullable": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Animation",
+              "hint": "Choose an animation style for this Token's combat turn marker.",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "src": {
+              "name": "src",
+              "parent": ["Circular"],
+              "options": {
+                "categories": [
+                  "IMAGE",
+                  "VIDEO",
+                ],
+              },
+              "required": false,
+              "nullable": true,
+              "initial": null,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Media Source",
+              "hint": "Choose an image or video file used for this Token's combat turn marker.",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+              "categories": [
+                "IMAGE",
+                "VIDEO",
+              ],
+              "base64": false,
+              "wildcard": false,
+              "virtual": false,
+            },
+            "disposition": {
+              "name": "disposition",
+              "parent": ["Circular"],
+              "options": {
+              },
+              "required": true,
+              "nullable": false,
+              "initial": false,
+              "readonly": false,
+              "gmOnly": false,
+              "label": "Disposition Tint",
+              "hint": "Tint this Token's combat turn marker according to their disposition.",
+              "validationError": "is not a valid value",
+            },
+          },
+        },
+        "movementAction": {
+          "name": "movementAction",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "blank": false,
+            "nullable": true,
+            "initial": null,
+            "choices": {
+              "walk": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.walk.label",
+                "icon": "fa-solid fa-person-walking",
+                "img": "icons/svg/walk.svg",
+                "order": 0,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "getAnimationOptions": () => ({}),
+                "canSelect": () => true,
+                "deriveTerrainDifficulty": null,
+                "getCostFunction": () => cost => cost,
+              },
+              "fly": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.fly.label",
+                "icon": "fa-solid fa-person-fairy",
+                "img": "icons/svg/wing.svg",
+                "order": 1,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "getAnimationOptions": () => ({}),
+                "canSelect": () => true,
+                "deriveTerrainDifficulty": null,
+                "getCostFunction": () => cost => cost,
+              },
+              "swim": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.swim.label",
+                "icon": "fa-solid fa-person-swimming",
+                "img": "icons/svg/whale.svg",
+                "order": 2,
+                "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "canSelect": () => true,
+                "deriveTerrainDifficulty": null,
+                "getCostFunction": () => cost => cost,
+              },
+              "burrow": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.burrow.label",
+                "icon": "fa-solid fa-person-digging",
+                "img": "icons/svg/burrow.svg",
+                "order": 3,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "getAnimationOptions": () => ({}),
+                "canSelect": () => true,
+                "deriveTerrainDifficulty": null,
+                "getCostFunction": () => cost => cost,
+              },
+              "crawl": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.crawl.label",
+                "icon": "fa-solid fa-person-praying",
+                "img": "icons/svg/leg.svg",
+                "order": 4,
+                "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+                "deriveTerrainDifficulty": ({walk}) => walk,
+                "getCostFunction": () => cost => cost * 2,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "canSelect": () => true,
+              },
+              "climb": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.climb.label",
+                "icon": "fa-solid fa-person-through-window",
+                "img": "icons/svg/ladder.svg",
+                "order": 5,
+                "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+                "deriveTerrainDifficulty": ({walk}) => walk,
+                "getCostFunction": () => cost => cost * 2,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "canSelect": () => true,
+              },
+              "jump": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.jump.label",
+                "icon": "fa-solid fa-person-running-fast",
+                "img": "icons/svg/jump.svg",
+                "order": 6,
+                "deriveTerrainDifficulty": ({walk, fly}) => Math.max(walk, fly),
+                "getCostFunction": () => cost => cost * 2,
+                "teleport": false,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "getAnimationOptions": () => ({}),
+                "canSelect": () => true,
+              },
+              "blink": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.blink.label",
+                "icon": "fa-solid fa-person-from-portal",
+                "img": "icons/svg/teleport.svg",
+                "order": 7,
+                "teleport": true,
+                "getAnimationOptions": () => ({"duration": 0}),
+                "deriveTerrainDifficulty": () => 1,
+                "measure": true,
+                "walls": "move",
+                "visualize": true,
+                "canSelect": () => true,
+                "getCostFunction": () => cost => cost,
+              },
+              "displace": {
+                "label": "TOKEN.MOVEMENT.ACTIONS.displace.label",
+                "icon": "fa-solid fa-transporter-1",
+                "img": "icons/svg/portal.svg",
+                "order": 8,
+                "teleport": true,
+                "measure": false,
+                "walls": null,
+                "visualize": false,
+                "getAnimationOptions": () => ({"duration": 0}),
+                "canSelect": () => false,
+                "deriveTerrainDifficulty": () => 1,
+                "getCostFunction": () => () => 0,
+              },
+            },
+          },
+          "required": true,
+          "nullable": true,
+          "initial": null,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Movement Action",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": {
+            "walk": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.walk.label",
+              "icon": "fa-solid fa-person-walking",
+              "img": "icons/svg/walk.svg",
+              "order": 0,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "getAnimationOptions": () => ({}),
+              "canSelect": () => true,
+              "deriveTerrainDifficulty": null,
+              "getCostFunction": () => cost => cost,
+            },
+            "fly": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.fly.label",
+              "icon": "fa-solid fa-person-fairy",
+              "img": "icons/svg/wing.svg",
+              "order": 1,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "getAnimationOptions": () => ({}),
+              "canSelect": () => true,
+              "deriveTerrainDifficulty": null,
+              "getCostFunction": () => cost => cost,
+            },
+            "swim": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.swim.label",
+              "icon": "fa-solid fa-person-swimming",
+              "img": "icons/svg/whale.svg",
+              "order": 2,
+              "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "canSelect": () => true,
+              "deriveTerrainDifficulty": null,
+              "getCostFunction": () => cost => cost,
+            },
+            "burrow": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.burrow.label",
+              "icon": "fa-solid fa-person-digging",
+              "img": "icons/svg/burrow.svg",
+              "order": 3,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "getAnimationOptions": () => ({}),
+              "canSelect": () => true,
+              "deriveTerrainDifficulty": null,
+              "getCostFunction": () => cost => cost,
+            },
+            "crawl": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.crawl.label",
+              "icon": "fa-solid fa-person-praying",
+              "img": "icons/svg/leg.svg",
+              "order": 4,
+              "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+              "deriveTerrainDifficulty": ({walk}) => walk,
+              "getCostFunction": () => cost => cost * 2,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "canSelect": () => true,
+            },
+            "climb": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.climb.label",
+              "icon": "fa-solid fa-person-through-window",
+              "img": "icons/svg/ladder.svg",
+              "order": 5,
+              "getAnimationOptions": () => ({"movementSpeed": CONFIG.Token.movement.defaultSpeed / 2}),
+              "deriveTerrainDifficulty": ({walk}) => walk,
+              "getCostFunction": () => cost => cost * 2,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "canSelect": () => true,
+            },
+            "jump": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.jump.label",
+              "icon": "fa-solid fa-person-running-fast",
+              "img": "icons/svg/jump.svg",
+              "order": 6,
+              "deriveTerrainDifficulty": ({walk, fly}) => Math.max(walk, fly),
+              "getCostFunction": () => cost => cost * 2,
+              "teleport": false,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "getAnimationOptions": () => ({}),
+              "canSelect": () => true,
+            },
+            "blink": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.blink.label",
+              "icon": "fa-solid fa-person-from-portal",
+              "img": "icons/svg/teleport.svg",
+              "order": 7,
+              "teleport": true,
+              "getAnimationOptions": () => ({"duration": 0}),
+              "deriveTerrainDifficulty": () => 1,
+              "measure": true,
+              "walls": "move",
+              "visualize": true,
+              "canSelect": () => true,
+              "getCostFunction": () => cost => cost,
+            },
+            "displace": {
+              "label": "TOKEN.MOVEMENT.ACTIONS.displace.label",
+              "icon": "fa-solid fa-transporter-1",
+              "img": "icons/svg/portal.svg",
+              "order": 8,
+              "teleport": true,
+              "measure": false,
+              "walls": null,
+              "visualize": false,
+              "getAnimationOptions": () => ({"duration": 0}),
+              "canSelect": () => false,
+              "deriveTerrainDifficulty": () => 1,
+              "getCostFunction": () => () => 0,
+            },
+          },
+          "textSearch": false,
+        },
+        "flags": {
+          "name": "flags",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "validateKey": function(id) {
+            const allowed = /^[A-Za-z0-9-_]+$/;
+            if ( !allowed.test(id) ) {
+              throw new Error("Package and compendium pack IDs may only be alphanumeric with hyphens or underscores.");
+            }
+            const prohibited = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
+            if ( prohibited.test(id) ) throw new Error(`The ID "${id}" uses an operating system prohibited value.`);
+          },
+          "element": {
+            "name": "element",
+            "parent": ["Circular"],
+            "options": {
+            },
+            "required": true,
+            "nullable": false,
+            "initial": "undefined",
+            "readonly": false,
+            "gmOnly": false,
+            "label": "",
+            "hint": "",
+            "validationError": "is not a valid value",
+          },
+        },
+        "randomImg": {
+          "name": "randomImg",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": false,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Randomize Wildcard Images",
+          "hint": "",
+          "validationError": "is not a valid value",
+        },
+        "appendNumber": {
+          "name": "appendNumber",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": false,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Append Incrementing Number",
+          "hint": "Append an auto-incrementing number to the name of unlinked tokens. For example \"Goblin 3\".",
+          "validationError": "is not a valid value",
+        },
+        "prependAdjective": {
+          "name": "prependAdjective",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": false,
+          "initial": false,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "Prepend Random Adjective",
+          "hint": "Prepend a random adjective to the name of unlinked tokens. For example \"Angry Goblin\".",
+          "validationError": "is not a valid value",
+        },
+      },
+      "model": class PrototypeToken extends DataModel {
+        constructor(data={}, options={}) {
+          super(data, options);
+          Object.defineProperty(this, "apps", {"value": {}});
+        }
+        
+        /** @override */
+        static defineSchema() {
+          const schema = foundry.documents.BaseToken.defineSchema();
+          const excluded = ["_id", "actorId", "delta", "x", "y", "elevation", "shape", "sort", "hidden", "locked",
+            "_movementHistory", "_regions"];
+          for ( const fieldName of excluded ) {
+            delete schema[fieldName];
+          }
+          schema.name.textSearch = schema.name.options.textSearch = false;
+          schema.randomImg = new BooleanField();
+          schema.appendNumber = new BooleanField();
+          schema.prependAdjective = new BooleanField();
+          return schema;
+        }
+        
+        /** @override */
+        static LOCALIZATION_PREFIXES = ["DOCUMENT", "TOKEN"];
+        
+        /**
+         * The Actor which owns this Prototype Token
+         * @type {BaseActor}
+         */
+        get actor() {
+          return this.parent;
+        }
+        
+        /** @inheritdoc */
+        toObject(source=true) {
+          const data = super.toObject(source);
+          data.actorId = this.document?.id;
+          return data;
+        }
+        
+        /** @ignore */
+        static get database() {
+          return globalThis.CONFIG.DatabaseBackend;
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        _initializeSource(data, options={}) {
+          if ( data instanceof PrototypeToken ) data = data.toObject();
+          PrototypeTokenOverrides.applyOverrides(data, this.parent?.type);
+          return super._initializeSource(data, options);
+        }
+        
+        /* -------------------------------------------- */
+        /*  Document Compatibility Methods              */
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.abstract.Document#update}
+         * @ignore
+         */
+        update(data, options) {
+          return this.actor.update({"prototypeToken": data}, options);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.abstract.Document#getFlag}
+         * @ignore
+         */
+        getFlag(...args) {
+          return foundry.abstract.Document.prototype.getFlag.call(this, ...args);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.abstract.Document#getFlag}
+         * @ignore
+         */
+        setFlag(...args) {
+          return foundry.abstract.Document.prototype.setFlag.call(this, ...args);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.abstract.Document#unsetFlag}
+         * @ignore
+         */
+        async unsetFlag(...args) {
+          return foundry.abstract.Document.prototype.unsetFlag.call(this, ...args);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.abstract.Document#testUserPermission}
+         * @ignore
+         */
+        testUserPermission(user, permission, {exact=false}={}) {
+          return this.actor.testUserPermission(user, permission, {exact});
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @see {@link foundry.documents.BaseActor#isOwner}
+         * @ignore
+         */
+        get isOwner() {
+          return this.actor.isOwner;
+        }
+      },
+    },
+    "items": {
+      "name": "items",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": true,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "empty": true,
+      "exact": "undefined",
+      "min": 0,
+      "max": Infinity,
+      "element": class BaseItem extends Document {
+        
+        /* -------------------------------------------- */
+        /*  Model Configuration                         */
+        /* -------------------------------------------- */
+        
+        /** @inheritdoc */
+        static metadata = Object.freeze(mergeObject(super.metadata, {
+          "name": "Item",
+          "collection": "items",
+          "hasTypeData": true,
+          "indexed": true,
+          "compendiumIndexFields": ["_id", "name", "img", "type", "sort", "folder"],
+          "embedded": {"ActiveEffect": "effects"},
+          "label": "DOCUMENT.Item",
+          "labelPlural": "DOCUMENT.Items",
+          "permissions": {
+            "create": BaseItem.#canCreate,
+            "delete": "OWNER"
+          },
+          "schemaVersion": "13.341"
+        }, {"inplace": false}));
+        
+        /* ---------------------------------------- */
+        
+        /** @inheritdoc */
+        static defineSchema() {
+          const {BaseActiveEffect, BaseFolder} = foundry.documents;
+          return {
+            "_id": new DocumentIdField(),
+            "name": new StringField({"required": true, "blank": false, "textSearch": true}),
+            "type": new DocumentTypeField(this),
+            "img": new FilePathField({"categories": ["IMAGE"], "initial": data => {
+              return this.implementation.getDefaultArtwork(data).img;
+            }}),
+            "system": new TypeDataField(this),
+            "effects": new EmbeddedCollectionField(BaseActiveEffect),
+            "folder": new ForeignDocumentField(BaseFolder),
+            "sort": new IntegerSortField(),
+            "ownership": new DocumentOwnershipField(),
+            "flags": new DocumentFlagsField(),
+            "_stats": new DocumentStatsField()
+          };
+        }
+        
+        /* ---------------------------------------- */
+        
+        /**
+         * The default icon used for newly created Item documents
+         * @type {string}
+         */
+        static DEFAULT_ICON = "icons/svg/item-bag.svg";
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * Determine default artwork based on the provided item data.
+         * @param {ItemData} itemData  The source item data.
+         * @returns {{"img": string}}    Candidate item image.
+         */
+        static getDefaultArtwork(itemData) {
+          return { "img": this.DEFAULT_ICON };
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        _initialize(options) {
+          super._initialize(options);
+          DocumentStatsField._shimDocument(this);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        getUserLevel(user) {
+          // Embedded Items require a special exception because they ignore their own ownership field.
+          if ( this.parent ) return this.parent.getUserLevel(user);
+          return super.getUserLevel(user);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @override */
+        static canUserCreate(user) {
+          return user.hasPermission("ITEM_CREATE");
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * Is a User able to create a new Item?
+         * Embedded Items depend on Actor ownership.
+         * Otherwise, the ITEM_CREATE permission is required.
+         * @type {DocumentPermissionTest}
+         */
+        static #canCreate(user, doc) {
+          if ( doc.parent ) return doc.parent.testUserPermission(user, "OWNER");
+          return user.hasPermission("ITEM_CREATE");
+        }
+        
+        /* -------------------------------------------- */
+        
+        
+        /** @inheritDoc */
+        static migrateData(source) {
+          DocumentStatsField._migrateData(this, source);
+          return super.migrateData(source);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        static shimData(source, options) {
+          DocumentStatsField._shimData(this, source, options);
+          return super.shimData(source, options);
+        }
+      },
+    },
+    "effects": {
+      "name": "effects",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": true,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "empty": true,
+      "exact": "undefined",
+      "min": 0,
+      "max": Infinity,
+      "element": class BaseActiveEffect extends Document {
+        
+        /* -------------------------------------------- */
+        /*  Model Configuration                         */
+        /* -------------------------------------------- */
+        
+        /** @inheritdoc */
+        static metadata = Object.freeze(mergeObject(super.metadata, {
+          "name": "ActiveEffect",
+          "collection": "effects",
+          "hasTypeData": true,
+          "label": "DOCUMENT.ActiveEffect",
+          "labelPlural": "DOCUMENT.ActiveEffects",
+          "schemaVersion": "13.341",
+          "permissions": {
+            "create": "OWNER",
+            "delete": "OWNER"
+          }
+        }, {"inplace": false}));
+        
+        /* -------------------------------------------- */
+        
+        /** @inheritdoc */
+        static defineSchema() {
+          return {
+            "_id": new DocumentIdField(),
+            "name": new StringField({"required": true, "blank": false, "textSearch": true}),
+            "img": new FilePathField({"categories": ["IMAGE"]}),
+            "type": new DocumentTypeField(this, {"initial": BASE_DOCUMENT_TYPE}),
+            "system": new TypeDataField(this),
+            "changes": new ArrayField(new SchemaField({
+              "key": new StringField({"required": true}),
+              "value": new StringField({"required": true}),
+              "mode": new NumberField({"required": true, "nullable": false, "integer": true,
+                "initial": ACTIVE_EFFECT_MODES.ADD}),
+              "priority": new NumberField()
+            })),
+            "disabled": new BooleanField(),
+            "duration": new SchemaField({
+              "startTime": new NumberField({"initial": null}),
+              "seconds": new NumberField({"integer": true, "min": 0}),
+              "combat": new ForeignDocumentField(foundry.documents.BaseCombat),
+              "rounds": new NumberField({"integer": true, "min": 0}),
+              "turns": new NumberField({"integer": true, "min": 0}),
+              "startRound": new NumberField({"integer": true, "min": 0}),
+              "startTurn": new NumberField({"integer": true, "min": 0})
+            }),
+            "description": new HTMLField({"textSearch": true}),
+            "origin": new StringField({"nullable": true, "blank": false, "initial": null}),
+            "tint": new ColorField({"nullable": false, "initial": "#ffffff"}),
+            "transfer": new BooleanField({"initial": true}),
+            "statuses": new SetField(new StringField({"required": true, "blank": false})),
+            "sort": new IntegerSortField(),
+            "flags": new DocumentFlagsField(),
+            "_stats": new DocumentStatsField()
+          };
+        }
+        
+        /* -------------------------------------------- */
+        
+        /** @override */
+        static LOCALIZATION_PREFIXES = ["DOCUMENT", "EFFECT"];
+        
+        /* -------------------------------------------- */
+        /*  Database Event Handlers                     */
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        async _preCreate(data, options, user) {
+          const allowed = await super._preCreate(data, options, user);
+          if ( allowed === false ) return false;
+          if ( this.parent instanceof foundry.documents.BaseActor ) {
+            this.updateSource({"transfer": false});
+          }
+        }
+        
+        /* -------------------------------------------- */
+        /*  Deprecations and Compatibility              */
+        /* -------------------------------------------- */
+        
+        /** @inheritDoc */
+        static migrateData(data) {
+          /**
+           * icon -> img
+           * @deprecated since v12
+           */
+          this._addDataFieldMigration(data, "icon", "img");
+          return super.migrateData(data);
+        }
+        
+        /* ---------------------------------------- */
+        
+        /** @inheritdoc */
+        static shimData(data, options) {
+          this._addDataFieldShim(data, "icon", "img", {"since": 12, "until": 14});
+          return super.shimData(data, options);
+        }
+        
+        /* -------------------------------------------- */
+        
+        /**
+         * @deprecated since v12
+         * @ignore
+         */
+        get icon() {
+          this.constructor._logDataFieldMigration("icon", "img", {"since": 12, "until": 14, "once": true});
+          return this.img;
+        }
+        
+        /**
+         * @deprecated since v12
+         * @ignore
+         */
+        set icon(value) {
+          this.constructor._logDataFieldMigration("icon", "img", {"since": 12, "until": 14, "once": true});
+          this.img = value;
+        }
+      },
+    },
+    "folder": {
+      "name": "folder",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": true,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid Document ID string",
+      "blank": false,
+      "trim": true,
+      "choices": "undefined",
+      "textSearch": false,
+      "idOnly": false,
+      "model": class BaseFolder extends Document {
+        
+        /* ---------------------------------------- */
+        /*  Model Configuration                     */
+        /* ---------------------------------------- */
+        
+        /** @inheritdoc */
+        static metadata = Object.freeze(mergeObject(super.metadata, {
+          "name": "Folder",
+          "collection": "folders",
+          "label": "DOCUMENT.Folder",
+          "labelPlural": "DOCUMENT.Folders",
+          "coreTypes": FOLDER_DOCUMENT_TYPES,
+          "schemaVersion": "13.341"
+        }, {"inplace": false}));
+        
+        /** @inheritdoc */
+        static defineSchema() {
+          return {
+            "_id": new DocumentIdField(),
+            "name": new StringField({"required": true, "blank": false, "textSearch": true}),
+            "type": new DocumentTypeField(this),
+            "description": new HTMLField({"textSearch": true}),
+            "folder": new ForeignDocumentField(BaseFolder),
+            "sorting": new StringField({"required": true, "initial": "a", "choices": this.SORTING_MODES}),
+            "sort": new IntegerSortField(),
+            "color": new ColorField(),
+            "flags": new DocumentFlagsField(),
+            "_stats": new DocumentStatsField()
+          };
+        }
+        
+        /** @override */
+        static LOCALIZATION_PREFIXES = ["DOCUMENT", "FOLDER"];
+        
+        /** @inheritdoc */
+        static validateJoint(data) {
+          if ( (data.folder !== null) && (data.folder === data._id) ) {
+            throw new Error("A Folder may not contain itself");
+          }
+        }
+        
+        /**
+         * Allow folder sorting modes
+         * @type {string[]}
+         */
+        static SORTING_MODES = ["a", "m"];
+        
+        /* -------------------------------------------- */
+        
+        /** @override */
+        static get(documentId, options={}) {
+          if ( !documentId ) return null;
+          if ( !options.pack ) return super.get(documentId, options);
+          const pack = game.packs.get(options.pack);
+          if ( !pack ) {
+            console.error(`The ${this.name} model references a non-existent pack ${options.pack}.`);
+            return null;
+          }
+          return pack.folders.get(documentId);
+        }
+      },
+    },
+    "sort": {
+      "name": "sort",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": 0,
+      "readonly": false,
+      "gmOnly": false,
+      "label": "Sort Order",
+      "hint": "Configure the sorted order of this Document relative to others in its collection. Lower numbers are sorted first.",
+      "validationError": "is not a valid value",
+      "min": "undefined",
+      "max": "undefined",
+      "step": "undefined",
+      "integer": true,
+      "positive": false,
+      "choices": "undefined",
+    },
+    "ownership": {
+      "name": "ownership",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": {
+        "default": 0,
+      },
+      "readonly": false,
+      "gmOnly": true,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a mapping of user IDs and document permission levels",
+    },
+    "flags": {
+      "name": "flags",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "validateKey": function(id) {
+        const allowed = /^[A-Za-z0-9-_]+$/;
+        if ( !allowed.test(id) ) {
+          throw new Error("Package and compendium pack IDs may only be alphanumeric with hyphens or underscores.");
+        }
+        const prohibited = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
+        if ( prohibited.test(id) ) throw new Error(`The ID "${id}" uses an operating system prohibited value.`);
+      },
+      "element": {
+        "name": "element",
+        "parent": ["Circular"],
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+      },
+    },
+    "_stats": {
+      "name": "_stats",
+      "parent": {
+        "name": "undefined",
+        "parent": "undefined",
+        "options": {
+        },
+        "required": true,
+        "nullable": false,
+        "initial": "undefined",
+        "readonly": false,
+        "gmOnly": false,
+        "label": "",
+        "hint": "",
+        "validationError": "is not a valid value",
+        "fields": ["Circular"],
+      },
+      "options": {
+      },
+      "required": true,
+      "nullable": false,
+      "initial": "undefined",
+      "readonly": false,
+      "gmOnly": false,
+      "label": "",
+      "hint": "",
+      "validationError": "is not a valid value",
+      "fields": {
+        "coreVersion": {
+          "name": "coreVersion",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "blank": false,
+            "nullable": true,
+            "initial": () => game.release.version,
+          },
+          "required": true,
+          "nullable": true,
+          "initial": () => game.release.version,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+        },
+        "systemId": {
+          "name": "systemId",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "blank": false,
+            "nullable": true,
+            "initial": () => game.system?.id ?? null,
+          },
+          "required": true,
+          "nullable": true,
+          "initial": () => game.system?.id ?? null,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+        },
+        "systemVersion": {
+          "name": "systemVersion",
+          "parent": ["Circular"],
+          "options": {
+            "required": true,
+            "blank": false,
+            "nullable": true,
+            "initial": () => game.system?.version ?? null,
+          },
+          "required": true,
+          "nullable": true,
+          "initial": () => game.system?.version ?? null,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+        },
+        "createdTime": {
+          "name": "createdTime",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": false,
+          "nullable": true,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": "undefined",
+        },
+        "modifiedTime": {
+          "name": "modifiedTime",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": false,
+          "nullable": true,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "min": "undefined",
+          "max": "undefined",
+          "step": "undefined",
+          "integer": false,
+          "positive": false,
+          "choices": "undefined",
+        },
+        "lastModifiedBy": {
+          "name": "lastModifiedBy",
+          "parent": ["Circular"],
+          "options": {
+            "idOnly": true,
+          },
+          "required": true,
+          "nullable": true,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid Document ID string",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+          "idOnly": true,
+          "model": class BaseUser extends Document {
+            
+            /* -------------------------------------------- */
+            /*  Model Configuration                         */
+            /* -------------------------------------------- */
+            
+            /** @inheritdoc */
+            static metadata = Object.freeze(mergeObject(super.metadata, {
+              "name": "User",
+              "collection": "users",
+              "label": "DOCUMENT.User",
+              "labelPlural": "DOCUMENT.Users",
+              "permissions": {
+                "create": this.#canCreate,
+                "update": this.#canUpdate,
+                "delete": this.#canDelete
+              },
+              "schemaVersion": "13.341"
+            }, {"inplace": false}));
+            
+            /** @override */
+            static LOCALIZATION_PREFIXES = ["DOCUMENT", "USER"];
+            
+            /* -------------------------------------------- */
+            
+            /** @inheritdoc */
+            static defineSchema() {
+              return {
+                "_id": new DocumentIdField(),
+                "name": new StringField({"required": true, "blank": false, "textSearch": true}),
+                "role": new NumberField({"required": true, "choices": Object.values(USER_ROLES),
+                  "initial": USER_ROLES.PLAYER, "readonly": true}),
+                "password": new StringField({"required": true, "blank": true}),
+                "passwordSalt": new StringField(),
+                "avatar": new FilePathField({"categories": ["IMAGE"]}),
+                "character": new ForeignDocumentField(BaseActor),
+                "color": new ColorField({"required": true, "nullable": false,
+                  "initial": () => Color.fromHSV([Math.random(), 0.8, 0.8]).css
+                }),
+                "pronouns": new StringField({"required": true}),
+                "hotbar": new ObjectField({"required": true, "validate": BaseUser.#validateHotbar,
+                  "validationError": "must be a mapping of slots to macro identifiers"}),
+                "permissions": new ObjectField({"required": true, "validate": BaseUser.#validatePermissions,
+                  "validationError": "must be a mapping of permission names to booleans"}),
+                "flags": new DocumentFlagsField(),
+                "_stats": new DocumentStatsField()
+              };
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Validate the structure of the User hotbar object
+             * @param {object} bar      The attempted hotbar data
+             * @returns {boolean}
+             */
+            static #validateHotbar(bar) {
+              if ( typeof bar !== "object" ) return false;
+              for ( const [k, v] of Object.entries(bar) ) {
+                const slot = parseInt(k);
+                if ( !slot || slot < 1 || slot > 50 ) return false;
+                if ( !isValidId(v) ) return false;
+              }
+              return true;
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Validate the structure of the User permissions object
+             * @param {object} perms      The attempted permissions data
+             * @returns {boolean}
+             */
+            static #validatePermissions(perms) {
+              for ( const [k, v] of Object.entries(perms) ) {
+                if ( typeof k !== "string" ) return false;
+                if ( k.startsWith("-=") ) {
+                  if ( v !== null ) return false;
+                } else {
+                  if ( typeof v !== "boolean" ) return false;
+                }
+              }
+              return true;
+            }
+            
+            /* -------------------------------------------- */
+            /*  Model Properties                            */
+            /* -------------------------------------------- */
+            
+            /**
+             * A convenience test for whether this User has the NONE role.
+             * @type {boolean}
+             */
+            get isBanned() {
+              return this.role === USER_ROLES.NONE;
+            
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Test whether the User has a GAMEMASTER or ASSISTANT role in this World?
+             * @type {boolean}
+             */
+            get isGM() {
+              return this.hasRole(USER_ROLES.ASSISTANT);
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Test whether the User is able to perform a certain permission action.
+             * The provided permission string may pertain to an explicit permission setting or a named user role.
+             *
+             * @param {string} action The action to test
+             * @returns {boolean} Does the user have the ability to perform this action?
+             */
+            can(action) {
+              if ( action in USER_PERMISSIONS ) return this.hasPermission(action);
+              return this.hasRole(action);
+            }
+            
+            /* ---------------------------------------- */
+            
+            /** @inheritdoc */
+            getUserLevel(user) {
+              return DOCUMENT_OWNERSHIP_LEVELS[user.id === this.id ? "OWNER" : "NONE"];
+            }
+            
+            /* ---------------------------------------- */
+            
+            /**
+             * Test whether the User has at least a specific permission
+             * @param {string} permission The permission name from USER_PERMISSIONS to test
+             * @returns {boolean} Does the user have at least this permission
+             */
+            hasPermission(permission) {
+              if ( this.isBanned ) return false;
+            
+              // CASE 1: The user has the permission set explicitly
+              const explicit = this.permissions[permission];
+              if (explicit !== undefined) return explicit;
+            
+              // CASE 2: Permission defined by the user's role
+              const rolePerms = game.permissions[permission];
+              return rolePerms ? rolePerms.includes(this.role) : false;
+            }
+            
+            /* ----------------------------------------- */
+            
+            /**
+             * Test whether the User has at least the permission level of a certain role
+             * @param {string|number} role    The role name from USER_ROLES to test
+             * @param {boolean} [exact]       Require the role match to be exact
+             * @returns {boolean}             Does the user have at this role level (or greater)?
+             */
+            hasRole(role, {exact = false} = {}) {
+              const level = typeof role === "string" ? USER_ROLES[role] : role;
+              if (level === undefined) return false;
+              return exact ? this.role === "level" : this.role >= level;
+            }
+            
+            /* ---------------------------------------- */
+            /*  Model Permissions                       */
+            /* ---------------------------------------- */
+            
+            /**
+             * Is a user able to create an existing User?
+             * @type {DocumentPermissionTest}
+             */
+            static #canCreate(user, doc, data) {
+              if ( !user.isGM ) return false; // Only Assistants and above can create users.
+              // Do not allow Assistants to create a new user with special permissions which might be greater than their own.
+              if ( !isEmpty(doc.permissions) ) return user.hasRole(USER_ROLES.GAMEMASTER);
+              return user.hasRole(doc.role);
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Is a user able to update an existing User?
+             * @type {DocumentPermissionTest}
+             */
+            static #canUpdate(user, doc, changes) {
+              const roles = USER_ROLES;
+              if ( user.role === roles.GAMEMASTER ) return true; // Full GMs can do everything
+              if ( user.role === roles.NONE ) return false; // Banned users can do nothing
+            
+              // Non-GMs cannot update certain fields.
+              const restricted = ["permissions", "passwordSalt"];
+              if ( user.role < roles.ASSISTANT ) restricted.push("name", "role");
+              if ( doc.role === roles.GAMEMASTER ) restricted.push("password");
+              if ( restricted.some(k => k in changes) ) return false;
+            
+              // Role changes may not escalate
+              if ( ("role" in changes) && !user.hasRole(changes.role) ) return false;
+            
+              // Assistant GMs may modify other users. Players may only modify themselves
+              return user.isGM || (user.id === doc.id);
+            }
+            
+            /* -------------------------------------------- */
+            
+            /**
+             * Is a user able to delete an existing User?
+             * @type {DocumentPermissionTest}
+             */
+            static #canDelete(user, doc) {
+              const role = Math.max(USER_ROLES.ASSISTANT, doc.role);
+              return user.hasRole(role);
+            }
+          },
+        },
+        "compendiumSource": {
+          "name": "compendiumSource",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": true,
+          "initial": null,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+          "type": "undefined",
+          "embedded": "undefined",
+        },
+        "duplicateSource": {
+          "name": "duplicateSource",
+          "parent": ["Circular"],
+          "options": {
+          },
+          "required": true,
+          "nullable": true,
+          "initial": null,
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "blank": false,
+          "trim": true,
+          "choices": "undefined",
+          "textSearch": false,
+          "type": "undefined",
+          "embedded": "undefined",
+        },
+        "exportSource": {
+          "name": "exportSource",
+          "parent": ["Circular"],
+          "options": {
+            "nullable": true,
+          },
+          "required": true,
+          "nullable": true,
+          "initial": "undefined",
+          "readonly": false,
+          "gmOnly": false,
+          "label": "",
+          "hint": "",
+          "validationError": "is not a valid value",
+          "fields": {
+            "worldId": {
+              "name": "worldId",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "nullable": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "uuid": {
+              "name": "uuid",
+              "parent": ["Circular"],
+              "options": {
+                "initial": "undefined",
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+              "type": "undefined",
+              "embedded": "undefined",
+            },
+            "coreVersion": {
+              "name": "coreVersion",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "nullable": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "systemId": {
+              "name": "systemId",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "nullable": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+            "systemVersion": {
+              "name": "systemVersion",
+              "parent": ["Circular"],
+              "options": {
+                "required": true,
+                "blank": false,
+                "nullable": true,
+              },
+              "required": true,
+              "nullable": true,
+              "initial": "undefined",
+              "readonly": false,
+              "gmOnly": false,
+              "label": "",
+              "hint": "",
+              "validationError": "is not a valid value",
+              "blank": false,
+              "trim": true,
+              "choices": "undefined",
+              "textSearch": false,
+            },
+          },
+        },
+      },
+    },
+  },
+  "editable": false,
+  "user": {
+    "name": "Gamemaster",
+    "password": "",
+    "passwordSalt": "undefined",
+    "avatar": "icons/svg/mystery-man.svg",
+    "color": {
+    },
+    "pronouns": "",
+    "hotbar": {
+    },
+    "permissions": {
+    },
+    "flags": {
+      "dice-so-nice": {
+        "welcomeMessageShown": true,
+      },
+    },
+    "_stats": {
+      "coreVersion": "13.348",
+      "systemId": "rwk-rmc",
+      "systemVersion": "0.0.1",
+      "createdTime": 1756834844018,
+      "modifiedTime": 1756834915242,
+      "lastModifiedBy": "Hy4d0Yn4nJd6BfnX",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null,
+    },
+    "active": true,
+    "targets": {
+      "user": ["Circular"],
+    },
+    "viewedScene": "H2EqkISOiAvrVSn3",
+    "movingTokens": {
+    },
+    "border": {
+    },
+  },
+  "rootId": "CharacterActorSheet-Actor-eTIfZTIuBBAcDo1y",
+  "actor": {
+    "name": "Bob",
+    "img": "assets/Gregor.png",
+    "type": "character",
+    "system": {
+      "version": "",
+      "migrate": false,
+      "profession": "",
+      "race": "",
+      "realm": "",
+      "xp": 0,
+      "level": "NaN",
+      "sex": "",
+      "age": 15,
+      "appearance": "",
+      "hair": "",
+      "height": 0,
+      "weight": 0,
+      "hitpoints": {
+        "min": 0,
+        "max": 2,
+        "value": 2,
+      },
+      "powerpoints": {
+        "min": 0,
+        "value": 1,
+        "max": 3,
+      },
+    },
+    "prototypeToken": {
+      "name": "Bob",
+      "displayName": 0,
+      "actorLink": false,
+      "width": 1,
+      "height": 1,
+      "texture": {
+        "src": "assets/Gregor.png",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "offsetX": 0,
+        "offsetY": 0,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "tint": {
+        },
+        "alphaThreshold": 0.75,
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": null,
+      },
+      "bar2": {
+        "attribute": null,
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false,
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1,
+        },
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0,
+      },
+      "detectionModes": [
+      ],
+      "occludable": {
+        "radius": 0,
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null,
+        },
+        "effects": 0,
+        "subject": {
+          "scale": 1,
+          "texture": null,
+        },
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false,
+      },
+      "movementAction": null,
+      "flags": {
+      },
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false,
+    },
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "Hy4d0Yn4nJd6BfnX": 3,
+    },
+    "flags": {
+    },
+    "_stats": {
+      "coreVersion": "13.348",
+      "systemId": "rwk-rmc",
+      "systemVersion": "0.0.1",
+      "createdTime": 1758019117814,
+      "modifiedTime": 1758031607284,
+      "lastModifiedBy": "Hy4d0Yn4nJd6BfnX",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null,
+    },
+    "overrides": {
+    },
+    "statuses": {
+    },
+  },
+  "datamodel": {
+    "version": "",
+    "migrate": false,
+    "profession": "",
+    "race": "",
+    "realm": "",
+    "xp": 0,
+    "level": "NaN",
+    "sex": "",
+    "age": 15,
+    "appearance": "",
+    "hair": "",
+    "height": 0,
+    "weight": 0,
+    "hitpoints": {
+      "min": 0,
+      "max": 2,
+      "value": 2,
+    },
+    "powerpoints": {
+      "min": 0,
+      "value": 1,
+      "max": 3,
+    },
+  },
+}

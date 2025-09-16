@@ -2,9 +2,10 @@
   "TYPES": {
     "Actor": {
       "character": "Character",
-      "npc": "NPC"
+      "npc": "NPC",
+      "humanoid": "Humanoid"
     },
-      "Item": {
+    "Item": {
       "item": "Item",
       "feature": "Feature",
       "spell": "Spell"
@@ -13,7 +14,9 @@
   "RMC": {
     "SheetClass": {
       "Character": "Default RMC Character Sheet",
-      "Item": "Default RMC Item Sheet"
+      "Item": "Default RMC Item Sheet",
+      "Creature": "Default RMC Creature Sheet",
+      "Humanoid": "Default RMC Humanoid Sheet"
     },
     "TYPES.Actor": {
       "Party": "Party",
@@ -60,8 +63,12 @@
     "Hitpoints": "Hitpoints",
     "Max": "Max",
     "Min": "Min",
-    "Value": "Value"
-
-
+    "Value": "Value",
+    "EditMode": "Edit mode",
+    "ModeEdit": "Edit",
+    "ModePlay": "Play",
+    "Weapon": "Weapon",
+    "Creature": "Creature",
+    "Hero": "Hero"
   }
 }

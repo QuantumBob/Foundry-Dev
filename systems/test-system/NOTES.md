@@ -212,3 +212,15 @@ F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\actor\templates\creature.mj
 F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\data\actor\character.mjs
 foundry.abstract.TypeDataModel -> SystemDataModel -> ActorDataModel -> CommonTemplate -> CreatureTemplate -> CharacterData
 ```
+
+# Handlebars  
+
+## Use of variables in the .hbs files  
+
+{{context}} will just not show up in a handlebar template   
+Objects within the context will show up as [object Object]   
+{{system}} will only work if you copy this.actor.system to context   
+
+```
+context.system = this.actor.system;
+```

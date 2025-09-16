@@ -11,7 +11,8 @@
       "runtimeArgs": [
         "--remote-debugging-port=9222",
         "--user-data-dir=${workspaceFolder}/.vscode-chrome"
-      ]
+      ],
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
     },
     {
       "type": "node",

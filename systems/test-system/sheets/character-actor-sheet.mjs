@@ -45,14 +45,14 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
         },
       ],
     },
-    templatePath: "systems/test-system/templates/",
+    templatePath: "systems/test-system/templates",
   };
 
   /* -------------------------------------------- */
 
   static PARTS = {
     header: {
-      template: `${this.DEFAULT_OPTIONS.templatePath}character-header.hbs`,
+      template: `${this.DEFAULT_OPTIONS.templatePath}/character-header.hbs`,
     },
   };
 

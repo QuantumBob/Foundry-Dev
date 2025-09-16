@@ -1,51 +1,37 @@
-const { HandlebarsApplicationMixin } = foundry.applications.api;
-const { ActorSheetV2 } = foundry.applications.sheets;
+import { CharacterActorSheet } from "./CharacterActorSheet.mjs";
 
-export class CreatureActorSheet extends HandlebarsApplicationMixin(ActorSheetV2){
-
+export class HeroActorSheet extends CharacterActorSheet {
   //* @override */
   static DEFAULT_OPTIONS = {
     classes: ["rmc"],
-    tag: 'form',
     position: {
       width: 600,
-      height: 600
-    },
-    form: {
-      // handler: DCCActorSheet.#onSubmitForm,
-      submitOnChange: true
+      height: 600,
     },
     actor: {
-      type: 'character'
+      type: "character",
     },
-    window: {
-      resizable: true,
-      title: 'RMC.SheetClass.Character'
-    },
-    // actions: {
-    //   configureActor: this.#configureActor
-    // }
-  }
+    templatePath: "systems/rwk-rmc/templates",
+  };
 
   static PARTS = {
-    // header: { template: `systems/rwk-rmc/templates/actors/actor-${this.actor.type}-sheet.hbs`},
-    header: { template: `systems/rwk-rmc/templates/actor-character-sheet.hbs` },
-    tabs: { template: 'systems/rwk-rmc/templates/actor-partial-tabs.hbs' },
-    character: { template: 'systems/rwk-rmc/templates/actor-partial-pc-common.hbs' },
-    // equipment: { template: 'systems/rwk-rmc/templates/actor-partial-pc-equipment.hbs' },
-    notes: { template: 'systems/rwk-rmc/templates/actor-partial-pc-notes.hbs' }
-  }
+    // header: { template: `${this.DEFAULT_OPTIONS.templatePath}/actor/actor-character-sheet.hbs` },
+    // tabs: { template: "systems/rwk-rmc/templates/actor-partial-tabs.hbs" },
+    // character: { template: "systems/rwk-rmc/templates/actor-partial-pc-common.hbs" },
+    // // equipment: { template: 'systems/rwk-rmc/templates/actor-partial-pc-equipment.hbs' },
+    // notes: { template: "systems/rwk-rmc/templates/actor-partial-pc-notes.hbs" },
+  };
 
   static TABS = {
-    sheet: {
-    tabs: [
-      { id: 'character', group: 'sheet', label: 'RMC.Character' },
-      // { id: 'equipment', group: 'sheet', label: 'RMC.Equipment' },
-      { id: 'notes', group: 'sheet', label: 'RMC.Notes' }
-    ],
-    initial: 'character'
-  }
-  }
+    // sheet: {
+    //   tabs: [
+    //     { id: "character", group: "sheet", label: "RMC.Character" },
+    //     // { id: 'equipment', group: 'sheet', label: 'RMC.Equipment' },
+    //     { id: "notes", group: "sheet", label: "RMC.Notes" },
+    //   ],
+    //   initial: "character",
+    // },
+  };
 
   /** @override */
   // get template() {
@@ -58,7 +44,7 @@ export class CreatureActorSheet extends HandlebarsApplicationMixin(ActorSheetV2)
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
-    const context = await super._prepareContext(options)
+    const context = await super._prepareContext(options);
 
     // Use a safe clone of the actor data for further operations.
     // const actorData = context.data;
@@ -84,19 +70,19 @@ export class CreatureActorSheet extends HandlebarsApplicationMixin(ActorSheetV2)
     return context;
   }
 
-    /**
-     * Organize and classify Items for Character sheets.
-     *
-     * @param {Object} actorData The actor to prepare.
-     *
-     * @return {undefined}
-     */
-    // _prepareCharacterData(context) {
-    //     // Handle translation for ability scores.
-    //     for (let [k, v] of Object.entries(context.system.abilities)) {
-    //         v.label = game.i18n.localize(CONFIG.RMC.abilities[k]) ?? k;
-    //     }
-    // }
+  /**
+   * Organize and classify Items for Character sheets.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  // _prepareCharacterData(context) {
+  //     // Handle translation for ability scores.
+  //     for (let [k, v] of Object.entries(context.system.abilities)) {
+  //         v.label = game.i18n.localize(CONFIG.RMC.abilities[k]) ?? k;
+  //     }
+  // }
 
   //   /**
   //  * Display sheet specific configuration settings

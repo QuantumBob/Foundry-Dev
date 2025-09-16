@@ -1,6 +1,5 @@
 import { CharacterActorDataModel } from "./data-models/character-actor-data-model.mjs";
 import { WeaponItemDataModel } from "./data-models/weapon-item-data-model.mjs";
-
 import { CharacterActorSheet } from "./sheets/character-actor-sheet.mjs";
 import { WeaponItemSheet } from "./sheets/weapon-item-sheet.mjs";
 

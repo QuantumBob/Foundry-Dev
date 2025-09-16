@@ -1,0 +1,27 @@
+<section class="{{cssClass}} {{item.type}} flexcol" autocomplete="off">
+
+  {{! Sheet Header }}
+  <header class="sheet-header">
+
+    {{! Header stuff goes here }}
+    <div class="left">
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        data-action=""
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      {{! Name }}
+
+      <div class="document-name">{{item.name}}</div>
+    </div>
+    <div class="item-description">
+      {{item.description}}
+    </div>
+  </header>
+</section>
