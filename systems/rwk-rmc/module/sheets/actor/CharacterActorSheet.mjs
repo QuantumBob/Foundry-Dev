@@ -5,7 +5,6 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
 
   static DEFAULT_OPTIONS = {
-    classes: ["rmc"],
     position: {
       width: 600,
       height: 600,
@@ -19,20 +18,29 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
 
   static PARTS = {
     header: {
-      template: `${this.DEFAULT_OPTIONS.templatePath}/actor/actor-character-sheet.hbs`,
+      template: "systems/rwk-rmc/templates/actor/character-header.hbs",
+    },
+    main: {
+      template: `${this.DEFAULT_OPTIONS.templatePath}/actor/character-main.hbs`,
       // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
     },
     tabs: {
-      template: "systems/rwk-rmc/templates/actor/actor-partial-tabs.hbs",
+      template: "systems/rwk-rmc/templates/actor/character-tabs.hbs",
     },
     character: {
-      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-common.hbs",
+      template: "systems/rwk-rmc/templates/actor/character-character.hbs",
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
     },
     equipment: {
-      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-equipment.hbs",
+      template: "systems/rwk-rmc/templates/actor/character-equipment.hbs",
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
     },
     notes: {
-      template: "systems/rwk-rmc/templates/actor/actor-partial-pc-notes.hbs",
+      template: "systems/rwk-rmc/templates/actor/character-notes.hbs",
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
     },
   };
 
