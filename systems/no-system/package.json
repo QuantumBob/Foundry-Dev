@@ -1,0 +1,15 @@
+{
+  "name": "no-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "no-system",
+  "title": "No System",
+  "description": "An simple system to to see what we need",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 13
+  },
+  "authors": [
+    {
+      "name": "rwk"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "./lang/en.json"
+    }
+  ],
+  "esmodules": ["./no-system.mjs"],
+  "styles": ["./styles/no-system.css"],
+  "documentTypes": {
+    "Actor": {
+      "character": {}
+    }
+  }
+}

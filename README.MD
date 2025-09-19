@@ -9,8 +9,8 @@ npx kill-port 30000
 ## symbolic links
 
 mklink /D link target
-mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\" "F:\RPG\Foundry\Foundry-Dev\systems"
-mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\universal-tabletop-system" "F:\RPG\Foundry\Foundry-Dev\systems\universal-tabletop-system"
+mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\????" "F:\RPG\Foundry\Foundry-Dev\systems\????"
+mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\no-system" "F:\RPG\Foundry\Foundry-Dev\systems\no-system"
 mklink "F:\RPG\Foundry\Foundry-Dev\systems\rwk-rmc\foundry\tsconfig.json" "F:\RPG\Foundry\FoundryVTT-13\tsconfig.json"
 
 mklink /D "C:\FoundryVTT\Data\systems\test-system" "C:\Foundry Dev\systems\test-system"

@@ -1,0 +1,24 @@
+<section class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{! Sheet Header }}
+  <header class="sheet-header">
+
+    {{! Header stuff goes here }}
+    <div class="flexleft">
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        data-action="editImage"
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      {{! Name }}
+      <input type="text" name="name" class="document-name" value="{{actor.name}}" />
+
+    </div>
+  </header>
+</section>

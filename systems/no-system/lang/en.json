@@ -10,7 +10,7 @@
       "spell": "Spell"
     }
   },
-  "TESTSYS": {
+  "NOSYS": {
     "SheetClass": {
       "Character": "Default RMC Character Sheet",
       "Item": "Default RMC Item Sheet"
