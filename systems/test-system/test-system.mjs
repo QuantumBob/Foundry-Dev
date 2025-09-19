@@ -2,6 +2,7 @@ import { CharacterActorDataModel } from "./data-models/character-actor-data-mode
 import { WeaponItemDataModel } from "./data-models/weapon-item-data-model.mjs";
 import { CharacterActorSheet } from "./sheets/character-actor-sheet.mjs";
 import { WeaponItemSheet } from "./sheets/weapon-item-sheet.mjs";
+import { TestApp } from "./apps/test-app.mjs";
 
 Hooks.on("init", () => {
   // debug status
@@ -11,6 +12,7 @@ Hooks.on("init", () => {
   console.log("test-system: in init hook");
 
   CONFIG.rwkCount = 1;
+  CONFIG.testApp = new TestApp();
 
   // register data models
   CONFIG.Actor.dataModels = {
@@ -40,8 +42,10 @@ const editActor = async (li) => {
 
 Hooks.on("ready", async () => {
   console.log("RWK: in ready");
-  let actor = game.actors.getName("Bill");
-  await actor.sheet.render(true);
+  // let actor = game.actors.getName("Bill");
+  // await actor.sheet.render(true);
+
+  CONFIG.testApp.render(true);
 });
 
 Hooks.on("getActorContextOptions", (app, menu) => {
@@ -53,4 +57,9 @@ Hooks.on("getActorContextOptions", (app, menu) => {
     condition: (li) => getActor(li).canUserModify(game.user, "delete"),
     callback: (li) => editActor(li),
   });
+});
+
+Hooks.on("closeTestApp", () => {
+  console.log("in closeTestApp");
+  CONFIG.testApp = null;
 });

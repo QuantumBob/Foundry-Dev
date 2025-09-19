@@ -84,6 +84,9 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   /*  Methods                                     */
   /* -------------------------------------------- */
 
+  /* -------------------------------------------- */
+  //#region Unused
+
   // _attachFrameListeners() {
   //   console.log(
   //     `RWK: _attachFrameListeners - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
@@ -106,6 +109,8 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   super._canRender(options);
   // }
 
+  //#endregion
+
   _configureRenderOptions(options) {
     console.log(
       `RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
@@ -118,6 +123,9 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
 
     // options.window.title = options.window.title == undefined ? "undefined" : this.document.name;
   }
+
+  /* -------------------------------------------- */
+  //#region Unused
 
   // _createContextMenu(handler) {
   //   console.log(
@@ -263,6 +271,8 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   await super._preFirstRender(context, options);
   // }
 
+  //#endregion
+
   // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
   /** @override */
   async _prepareContext(options) {
@@ -279,6 +289,9 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
 
     return context;
   }
+
+  /* -------------------------------------------- */
+  //#region Unused
 
   // _prepareSubmitData(event, form, formData, updateData) {
   //   console.log(
@@ -450,4 +463,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: waitForImages - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   await super.waitForImages(element);
   // }
+
+  //#endregion
 }
