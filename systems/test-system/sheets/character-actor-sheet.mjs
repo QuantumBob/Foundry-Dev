@@ -279,7 +279,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     console.log(
       `RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
     );
-    // super._prepareContext(options);
     const context = {
       ...(await super._prepareContext(options)),
       actor: this.actor,

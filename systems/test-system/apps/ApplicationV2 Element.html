@@ -1,0 +1,26 @@
+<div id="app-1" class="application test-system" style="z-index: 101">
+  <header class="window-header">
+    <i class="window-icon fa-fw hidden" inert=""></i>
+    <h1 class="window-title"></h1>
+    <button
+      type="button"
+      class="header-control icon fa-solid fa-ellipsis-vertical hidden"
+      data-tooltip="Toggle Controls"
+      aria-label="Toggle Controls"
+      data-action="toggleControls"
+    ></button>
+    <button
+      type="button"
+      class="header-control icon fa-solid fa-xmark"
+      data-tooltip="Close Window"
+      aria-label="Close Window"
+      data-action="close"
+    ></button>
+  </header>
+  <menu class="controls-dropdown"></menu>
+  <section class="window-content">
+    <div class="testapp" data-application-part="header">
+      <a data-action="closeWindow">Close Window</a>
+    </div>
+  </section>
+</div>

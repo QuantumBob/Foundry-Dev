@@ -12,7 +12,10 @@ Hooks.on("init", () => {
   console.log("test-system: in init hook");
 
   CONFIG.rwkCount = 1;
-  CONFIG.testApp = new TestApp();
+  CONFIG.diceVisible = false;
+  CONFIG.diceChain = [];
+
+  bindKeys();
 
   // register data models
   CONFIG.Actor.dataModels = {
@@ -32,6 +35,35 @@ Hooks.on("init", () => {
   });
 });
 
+const bindKeys = () => {
+  // keybinding to show dice window with ALT D
+  const { ALT } = foundry.helpers.interaction.KeyboardManager.MODIFIER_KEYS;
+  game.keybindings.register("test-system", "showDice", {
+    name: "ShowDice",
+    editable: [{ key: "KeyD", modifiers: [ALT] }],
+    onDown: () => {
+      if (canvas.ready) {
+        if (!CONFIG.diceVisible) {
+          console.log("Opening dice window");
+          // const testApp = new TestApp();
+          CONFIG.diceChain.push(new TestApp());
+          CONFIG.diceChain[CONFIG.diceChain.length - 1].render(true);
+          CONFIG.diceVisible = true;
+        } else {
+          console.log("Closing dice window");
+          CONFIG.diceChain[CONFIG.diceChain.length - 1].close();
+          CONFIG.diceChain.pop();
+          CONFIG.diceVisible = false;
+        }
+      }
+
+      return true;
+    },
+    restricted: false,
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+};
+
 const getActor = (li) => {
   return game.actors.get(li.closest("[data-entry-id]").dataset.entryId);
 };
@@ -45,7 +77,7 @@ Hooks.on("ready", async () => {
   // let actor = game.actors.getName("Bill");
   // await actor.sheet.render(true);
 
-  CONFIG.testApp.render(true);
+  // CONFIG.testApp.render(true);
 });
 
 Hooks.on("getActorContextOptions", (app, menu) => {
