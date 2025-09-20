@@ -9,6 +9,7 @@ Hooks.on("init", () => {
   console.log("no-system: in init hook");
 
   CONFIG.rwkCount = 1;
+  CONFIG.diceChain = []
 
   // register data models
   CONFIG.Actor.dataModels = {
