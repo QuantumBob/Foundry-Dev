@@ -91,41 +91,16 @@
   justify-content: space-between;
 }
 
-.rmc.vertical-tabs nav.tabs {
-  /* --tab-full-width: 44px; */
-  /* --tab-inactive-width: 38px; */
-  width: 50px;
-  height: 90%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  z-index: -1;
-  border: none;
+.rmc.application.character-sheet {
+  background-color: #506e61;
 }
-/* .side-tabs {
-  position: absolute;
-  top: 20%;
-  right: 2px;
-  display: flex;
-  flex-direction: column; /* stack tabs vertically 
-  align-items: center;
-  width: 20px; /* tab "thickness" 
-  height: 80%;
-  background: #1e036d00;
-  border: 0px none #ffffff00;
-  padding: 5px;
-} */
 
 .rmc .window-content {
-  /* from dnd5e.css */
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
-  /* font-family: var(--dnd5e-font-roboto); */
   font-size: small;
   border-radius: 5px;
-  padding: 0;
-  /* background: var(--dnd5e-color-parchment); */
+  padding: 5px;
   overflow: visible;
 }
 .rmc.vertical-tabs {
@@ -137,69 +112,49 @@
   position: absolute;
   pointer-events: none;
   inset: 0;
-  /* border: var(--dnd5e-border-gold); */
-  /* box-shadow: 0 0 20px var(--color-shadow-dark); */
   border-radius: 5px;
+}
+.rmc.vertical-tabs nav.tabs {
+  width: 20px;
+  height: fit-content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: -1;
+  border: none;
+  justify-content: flex-start;
+  padding-block-start: 50px;
+  padding-block-end: 20px;
+  line-height: 4.5;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .rmc.vertical-tabs nav.tabs.tabs-right {
   contain: content;
   left: 100%;
-  /* align-items: center; */
-  background: #5d74e680;
+  background: #202020bc;
 }
-
 .rmc.vertical-tabs nav.tabs > .item {
-  transform: rotate(90deg); /* rotate text like browser tabs  */
-  transform-origin: center; /* pivot around corner */
-  /* width: 80px; /* adjust for readability */
-
-  /* from dnd5e.css */
-  /* --icon-size: 14px; */
-  /* width: 50px;
-  height: 60px; */
-  width: fit-content;
-  height: fit-content;
+  transform: rotate(90deg);
+  transform-origin: center;
+  height: 60px;
   position: relative;
-  /* align-items: center; */
-  /* background: var(--dnd5e-color-black); */
-  /* color: var(--dnd5e-color-gold); */
-  /* --icon-fill: var(--dnd5e-color-gold); */
   border: 1px solid transparent;
   transition: all 250ms ease;
-  /* flex: none; */
 }
-/* .side-tabs a {
-  display: block;
-  transform: rotate(270deg); /* rotate text like browser tabs 
-  transform-origin: center; /* pivot around corner 
-  width: 80px; /* adjust for readability 
-  height: 20px;
-  margin-top: 60px; /*  spacing between rotated tabs 
-  background: white;
-  
-  line-height: 20px; /* vertically center text 
-  text-decoration: none;
-  color: #333;
-  border-radius: 8px 8px 0 0; /* rounded top corners like tabs 
-  transition: background-color 0.3s;
-} */
-
-/* Unused as yet 
-.dnd5e2.sheet.actor nav.tabs {
-  top: calc(var(--dnd5e-sheet-header-height) + 1rem);
+.rmc.vertical-tabs nav.tabs > .item.active {
+  color: rgb(103, 202, 166);
 }
-.dnd5e2.vertical-tabs nav.tabs.tabs-right > .item.active,
-.dnd5e2.vertical-tabs nav.tabs.tabs-right > .item:hover {
-  margin: 0;
+.rmc.vertical-tabs nav.tabs > .item:hover {
+  color: rgb(255, 254, 234);
 }
-.dnd5e2.vertical-tabs nav.tabs.tabs-right > .item {
-  padding-inline-end: 12px;
-  justify-content: end;
-  border-radius: 0 8px 8px 0;
-  margin-inline-start: calc((var(--tab-full-width) - var(--tab-inactive-width)) * -1);
-}
-.dnd5e2.vertical-tabs nav.tabs > .item:not([hidden]) {
+.rmc.vertical-tabs nav.tabs > .item:not([hidden]) {
   display: flex;
 }
-
-*/
+.rmc.vertical-tabs nav.tabs .item.rmcnotes.hidden {
+  display: none;
+}
+.rmc .rmcnotes.hidden {
+  display: none;
+}

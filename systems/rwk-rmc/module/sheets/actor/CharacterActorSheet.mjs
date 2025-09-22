@@ -11,10 +11,11 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       width: 600,
       height: 600,
     },
-    // actions: {
-    //   toggleEditMode: CharacterActorSheet.toggleEditMode,
-    //   configureActor: CharacterActorSheet.configureActor,
-    // },
+    actions: {
+      toggleEditMode: CharacterActorSheet.toggleEditMode,
+      showNotes: CharacterActorSheet.showNotes,
+      //   configureActor: CharacterActorSheet.configureActor,
+    },
     templatePath: "systems/rwk-rmc/templates",
   };
 
@@ -51,9 +52,19 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   static TABS = {
     sheet: {
       tabs: [
-        { id: "character", group: "sheet", label: "RMC.TabClass.Character" },
-        { id: "equipment", group: "sheet", label: "RMC.TabClass.Equipment" },
-        { id: "notes", group: "sheet", label: "RMC.TabClass.Notes" },
+        {
+          id: "character",
+          group: "sheet",
+          label: "RMC.TabClass.Character",
+          cssClass: "rmccharacter",
+        },
+        {
+          id: "equipment",
+          group: "sheet",
+          label: "RMC.TabClass.Equipment",
+          cssClass: "rmcequipment",
+        },
+        { id: "notes", group: "sheet", label: "RMC.TabClass.Notes", cssClass: "rmcnotes" },
       ],
       initial: "character",
     },
@@ -62,17 +73,23 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
   //#region Actions
 
-  // static toggleEditMode(event, target) {
-  //   const mode = this.constructor.MODES.PLAY;
-  //   if (this.isEditable && this._mode === this.constructor.MODES.PLAY) {
-  //     this._mode = this.constructor.MODES.EDIT;
-  //     console.log("RWK: Editing " + this.title);
-  //   } else {
-  //     this._mode = this.constructor.MODES.PLAY;
-  //     console.log("RWK: Cannot edit " + this.title);
-  //   }
-  //   this.render(true);
-  // }
+  static toggleEditMode(event, target) {
+    const mode = this.constructor.MODES.PLAY;
+    if (this.isEditable && this._mode === this.constructor.MODES.PLAY) {
+      this._mode = this.constructor.MODES.EDIT;
+      console.log("RWK: Editing " + this.title);
+    } else {
+      this._mode = this.constructor.MODES.PLAY;
+      console.log("RWK: Cannot edit " + this.title);
+    }
+    this.render(true);
+  }
+
+  static showNotes(event, target) {
+    // const html = target.getElementsById("notes");
+    const html2 = event.currentTarget.querySelector(".notes");
+    html2.classList.add("hidden");
+  }
 
   // static async configureActor(event) {
   //   event.preventDefault();
