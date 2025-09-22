@@ -38,7 +38,9 @@ export class BaseCharacterActorSheet extends HandlebarsApplicationMixin(ActorShe
           action: "toggleEditMode",
         },
       ],
+      resizable: true,
     },
+
     // templatePath: "systems/rwk-rmc/templates",
   };
 

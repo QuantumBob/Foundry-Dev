@@ -1,8 +1,9 @@
 {{! Sheet Tab Navigation }}
-<nav class="sheet-tabs tabs side-tabs">
+{{! <nav class="sheet-tabs tabs"> }}
+<nav class="tabs">
   {{#each tabs as |tab|}}
     <a
-      class="{{tab.cssClass}}"
+      class="item control {{tab.cssClass}}"
       data-action="tab"
       data-group="{{tab.group}}"
       data-tab="{{tab.id}}"

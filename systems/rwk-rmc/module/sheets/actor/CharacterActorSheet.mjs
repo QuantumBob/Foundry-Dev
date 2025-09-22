@@ -2,9 +2,11 @@ import { _getDatasets } from "../../helpers/helpers.mjs";
 import { BaseCharacterActorSheet } from "./BaseCharacterActorSheet.mjs";
 
 export class CharacterActorSheet extends BaseCharacterActorSheet {
+  path = "systems/rwk-rmc/templates";
   /* -------------------------------------------- */
 
   static DEFAULT_OPTIONS = {
+    classes: ["character-sheet", "vertical-tabs"],
     position: {
       width: 600,
       height: 600,
@@ -20,11 +22,13 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     header: {
       template: "systems/rwk-rmc/templates/actor/character-header.hbs",
     },
-    main: {
-      template: `${this.DEFAULT_OPTIONS.templatePath}/actor/character-main.hbs`,
-      // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
-    },
+    // main: {
+    //   template: `${this.DEFAULT_OPTIONS.templatePath}/actor/character-main.hbs`,
+    //   // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
+    // },
     tabs: {
+      id: "tabs",
+      classes: ["tabs-right"],
       template: "systems/rwk-rmc/templates/actor/character-tabs.hbs",
     },
     character: {
