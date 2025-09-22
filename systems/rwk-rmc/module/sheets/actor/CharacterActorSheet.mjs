@@ -2,8 +2,14 @@ import { _getDatasets } from "../../helpers/helpers.mjs";
 import { BaseCharacterActorSheet } from "./BaseCharacterActorSheet.mjs";
 
 export class CharacterActorSheet extends BaseCharacterActorSheet {
-  path = "systems/rwk-rmc/templates";
   /* -------------------------------------------- */
+  _mode = null;
+
+  /* -------------------------------------------- */
+  //#region Statics
+
+  // Available sheet modes.
+  static MODES = { PLAY: 1, EDIT: 2 };
 
   static DEFAULT_OPTIONS = {
     classes: ["character-sheet", "vertical-tabs"],
@@ -16,34 +22,51 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       showNotes: CharacterActorSheet.showNotes,
       //   configureActor: CharacterActorSheet.configureActor,
     },
-    templatePath: "systems/rwk-rmc/templates",
+    templates: "systems/rwk-rmc/templates",
   };
 
   static PARTS = {
     header: {
-      template: "systems/rwk-rmc/templates/actor/character-header.hbs",
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-header.hbs`,
+      // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
     },
-    // main: {
-    //   template: `${this.DEFAULT_OPTIONS.templatePath}/actor/character-main.hbs`,
-    //   // template: `${this.DEFAULT_OPTIONS.templatePath}/variable-list-sheet.hbs`,
-    // },
     tabs: {
       id: "tabs",
       classes: ["tabs-right"],
-      template: "systems/rwk-rmc/templates/actor/character-tabs.hbs",
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-tabs.hbs`,
     },
-    character: {
-      template: "systems/rwk-rmc/templates/actor/character-character.hbs",
+    combat: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-combat.hbs`,
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
+    },
+    stats: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-stats.hbs`,
       container: { classes: ["tab-body"], id: "tabs" },
       scrollable: [""],
     },
     equipment: {
-      template: "systems/rwk-rmc/templates/actor/character-equipment.hbs",
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-equipment.hbs`,
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
+    },
+    skills: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-skills.hbs`,
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
+    },
+    spells: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-spells.hbs`,
+      container: { classes: ["tab-body"], id: "tabs" },
+      scrollable: [""],
+    },
+    details: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-details.hbs`,
       container: { classes: ["tab-body"], id: "tabs" },
       scrollable: [""],
     },
     notes: {
-      template: "systems/rwk-rmc/templates/actor/character-notes.hbs",
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-notes.hbs`,
       container: { classes: ["tab-body"], id: "tabs" },
       scrollable: [""],
     },
@@ -52,23 +75,18 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   static TABS = {
     sheet: {
       tabs: [
-        {
-          id: "character",
-          group: "sheet",
-          label: "RMC.TabClass.Character",
-          cssClass: "rmccharacter",
-        },
-        {
-          id: "equipment",
-          group: "sheet",
-          label: "RMC.TabClass.Equipment",
-          cssClass: "rmcequipment",
-        },
+        { id: "combat", group: "sheet", label: "RMC.TabClass.Combat", cssClass: "rmccombat" },
+        { id: "stats", group: "sheet", label: "RMC.TabClass.Stats", cssClass: "rmcstats" },
+        { id: "equipment", group: "sheet", label: "RMC.TabClass.Equipment", cssClass: "rmcequipment" },
+        { id: "skills", group: "sheet", label: "RMC.TabClass.Skills", cssClass: "rmcskills" },
+        { id: "spells", group: "sheet", label: "RMC.TabClass.Spells", cssClass: "rmcspells" },
+        { id: "details", group: "sheet", label: "RMC.TabClass.Details", cssClass: "rmcdetails" },
         { id: "notes", group: "sheet", label: "RMC.TabClass.Notes", cssClass: "rmcnotes" },
       ],
-      initial: "character",
+      initial: "stats",
     },
   };
+  //#endregion
 
   /* -------------------------------------------- */
   //#region Actions
@@ -102,7 +120,6 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   //   }).render(true);
   // }
   //#endregion
-  /* -------------------------------------------- */
 
   /* -------------------------------------------- */
   //#region Accesors
@@ -111,46 +128,32 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
   }
   //#endregion
-  /* -------------------------------------------- */
 
   /* -------------------------------------------- */
   //#region Methods
 
+  _configureRenderOptions(options) {
+    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._configureRenderOptions(options);
+    // Set initial mode
+
+    let { mode, renderContext } = options;
+    if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
+    this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
+  }
+
   // see \systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
   /** @override */
   async _prepareContext(options) {
-    console.log(
-      `RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-    );
+    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
 
-    //#region Foundrys _prepareContext
-    /*
-    async _prepareContext(options) {
-      const context = await super._prepareContext(options);
-      const document = this.document;
-      return Object.assign(context, {
-        document,
-        source: document._source,
-        fields: document.schema.fields,
-        editable: this.isEditable,
-        user: game.user,
-        rootId: document.collection?.has(document.id) ? this.id : foundry.utils.randomID()
-      });
-    }*/
-    //#endregion
-
-    // Retrieve the data structure from the base sheet.
-    // You can inspect or log the context variable to see the structure.
-    // But some key properties for sheets are the actor object, the data object,
-    // whether or not it's editable, the items array, and the effects array.
+    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
     const context = {
       ...(await super._prepareContext(options)),
       actor: this.actor,
       editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
       tabs: this._prepareTabs("sheet"),
     };
-
-    // Add the actor's data to context.xyz for easier access, as well as flags.
     context.system = context.editable ? this.actor.system._source : this.actor.system;
     context.flags = this.actor.flags;
     context.items = context.document._source.items;
@@ -210,5 +213,4 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   }
 
   //#endregion
-  /* -------------------------------------------- */
 }

@@ -158,3 +158,18 @@
 .rmc .rmcnotes.hidden {
   display: none;
 }
+.rmc.application.character-sheet .character-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.rmc.application.character-sheet .character-header .character-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.rmc.application.character-sheet .skills-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

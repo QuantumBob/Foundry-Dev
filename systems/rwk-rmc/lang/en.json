@@ -21,7 +21,12 @@
     "TabClass": {
       "Character": "Character",
       "Equipment": "Equipment",
-      "Notes": "Notes"
+      "Notes": "Notes",
+      "Combat": "Combat",
+      "Details": "Details",
+      "Skills": "Skills",
+      "Spells": "Spells",
+      "Stats": "Stats"
     },
     "TYPES.Actor": {
       "Party": "Party",

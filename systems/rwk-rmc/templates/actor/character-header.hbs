@@ -1,27 +1,57 @@
-<section class="{{cssClass}} {{actor.type}}" autocomplete="off">
+<section class="{{cssClass}} {{actor.type}}-header" autocomplete="off">
   {{! Sheet Header }}
-  <div class="character-flex">
-    <div class="tab-flex">
-      Block one
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+  {{#if editable}}
+    <div><label>Edit Mode</label></div>
+  {{/if}}
+
+  {{! Header stuff goes here }}
+  <div class="description">
+    {{#if editable}}
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        data-action="editImage"
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
+    {{else}}
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        data-action=""
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      <div class="document-name">{{actor.name}}</div>
+    {{/if}}
+  </div>
+  <div class="{{actor.type}}-stats">
+    <div class="physical-stats">
+      <div>Constitution</div>
+      <div>Agility</div>
+      <div>Strength</div>
+      <div>Quickness</div>
+      <div>Self-Disclipline</div>
     </div>
-    <div class="tab-flex">
-      Block two
-      <div>AAA</div>
-      <div>BBB</div>
+    <div class="mental-stats">
+      <div>Reasoning</div>
+      <div>Memory</div>
+      <div>Presence</div>
+      <div>Empathy</div>
+      <div>Intuition</div>
     </div>
-    <div class="tab-flex">
-      Block three
-      <div>WWW</div>
-      <div>XXX</div>
-      <div>YYY</div>
-      <div>ZZZ</div>
-    </div>
-    <div>
-      <input type="checkbox" id="showNotes" name="showNotes" data-action="showNotes" />
-      <label for="showNotes">Show Notes</label>
-    </div>
+  </div>
+  <div class="combat-stats">
+    <div class="hitpoints">Hitpoint</div>
+    <div class="armor">Armour</div>
   </div>
 </section>
