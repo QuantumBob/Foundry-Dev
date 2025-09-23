@@ -36,5 +36,13 @@ export default function BaseSheetMixin(Base) {
       }
       this.render(true);
     }
+    _configureRenderOptions(options) {
+      console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+      super._configureRenderOptions(options);
+      // Set initial mode
+      let { mode, renderContext } = options;
+      if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
+      this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
+    }
   };
 }

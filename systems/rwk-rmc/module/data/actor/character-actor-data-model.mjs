@@ -16,16 +16,6 @@ export class CharacterActorDataModel extends BaseActorDataModel {
       hair: new StringField({ required: false, blank: true, trim: true, initial: "" }),
       height: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
       weight: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
-      hitpoints: new SchemaField({
-        min: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-        max: new NumberField({ required: true, integer: true, min: 0, initial: 3 }),
-        value: new NumberField({ required: true, integer: true, min: 0, initial: 1 }),
-      }),
-      powerpoints: new SchemaField({
-        min: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
-        value: new NumberField({ required: true, integer: true, min: 0, initial: 1 }),
-        max: new NumberField({ required: true, integer: true, min: 0, initial: 3 }),
-      }),
     });
   }
 

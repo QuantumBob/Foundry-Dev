@@ -1,17 +1,10 @@
 const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
 
 export class BaseActorDataModel extends foundry.abstract.TypeDataModel {
-  /**
-   * Merge two schema definitions together as well as possible.
-   * @param {DataSchema} a  First schema that forms the basis for the merge. *Will be mutated.*
-   * @param {DataSchema} b  Second schema that will be merged in, overwriting any non-mergeable properties.
-   * @returns {DataSchema}  Fully merged schema.
-   */
   static mergeSchema(a, b) {
     Object.assign(a, b);
     return a;
   }
-
   static defineSchema() {
     return {
       version: new StringField({
