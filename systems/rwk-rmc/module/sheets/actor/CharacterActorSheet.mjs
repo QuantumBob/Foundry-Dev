@@ -3,22 +3,15 @@ import { BaseCharacterActorSheet } from "./BaseCharacterActorSheet.mjs";
 
 export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
-  _mode = null;
-
-  /* -------------------------------------------- */
   //#region Statics
 
-  // Available sheet modes.
-  static MODES = { PLAY: 1, EDIT: 2 };
-
   static DEFAULT_OPTIONS = {
-    classes: ["character-sheet", "vertical-tabs"],
+    classes: ["character", "vertical-tabs"],
     position: {
       width: 600,
       height: 600,
     },
     actions: {
-      toggleEditMode: CharacterActorSheet.toggleEditMode,
       showNotes: CharacterActorSheet.showNotes,
       //   configureActor: CharacterActorSheet.configureActor,
     },
@@ -91,18 +84,6 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
   //#region Actions
 
-  static toggleEditMode(event, target) {
-    const mode = this.constructor.MODES.PLAY;
-    if (this.isEditable && this._mode === this.constructor.MODES.PLAY) {
-      this._mode = this.constructor.MODES.EDIT;
-      console.log("RWK: Editing " + this.title);
-    } else {
-      this._mode = this.constructor.MODES.PLAY;
-      console.log("RWK: Cannot edit " + this.title);
-    }
-    this.render(true);
-  }
-
   static showNotes(event, target) {
     // const html = target.getElementsById("notes");
     const html2 = event.currentTarget.querySelector(".notes");
@@ -142,11 +123,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
   }
 
-  // see \systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
-  /** @override */
   async _prepareContext(options) {
-    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-
     console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
     const context = {
       ...(await super._prepareContext(options)),

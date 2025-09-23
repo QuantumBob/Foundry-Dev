@@ -10,6 +10,7 @@ npx kill-port 30000
 
 mklink /D link target
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\????" "F:\RPG\Foundry\Foundry-Dev\systems\????"
+mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\modules\rwk-tools" "F:\RPG\Foundry\Foundry-Dev\modules\rwk-tools"
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\no-system" "F:\RPG\Foundry\Foundry-Dev\systems\no-system"
 mklink "F:\RPG\Foundry\Foundry-Dev\systems\rwk-rmc\foundry\tsconfig.json" "F:\RPG\Foundry\FoundryVTT-13\tsconfig.json"
 

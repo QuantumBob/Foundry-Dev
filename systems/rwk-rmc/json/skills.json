@@ -1,0 +1,1760 @@
+{
+  "Armour": {
+    "Skin": {
+      "Description": "Normal clothing, assumed if other covering is not specified.",
+      "Category": "None",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 1,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": 0,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Robes": {
+      "Description": "Full-length robes normally worn by spell users and certain other combatants.",
+      "Category": "None",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 2,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": 0,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Light Hide": {
+      "Description": "The natural hide of certain animals (e.g.,Deer, Dog, Wolf).",
+      "Category": "None",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 3,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": 0,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Heavy Hide": {
+      "Description": "The natural hide of certain of animals (e.g., Buffalo, Elephant, Bear).",
+      "Category": "None",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 4,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": 0,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Leather Jerkin": {
+      "Description": "A heavy leather coat without arms and reaching only to the waist or mid-thigh.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 5,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": 0,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Leather Coat": {
+      "Description": "A heavy leather coat covering the arms and torso to mid-thigh.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 6,
+      "Minimum Maneuver Mod": 0,
+      "Maximum Maneuver Mod": -20,
+      "Missile Attack Penalty": 5,
+      "Armor Quickness Penalty": 0
+    },
+    "Reinforced Leather Coat": {
+      "Description": "A heavy leather coat covering the arms and torso to mid-thigh, but with either rigid-leather sections or metal sections sewn in for reinforcement.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 7,
+      "Minimum Maneuver Mod": -10,
+      "Maximum Maneuver Mod": -40,
+      "Missile Attack Penalty": 15,
+      "Armor Quickness Penalty": 10
+    },
+    "Reinforced Full-Length Leather Coat": {
+      "Description": "A reinforced leather coat (as above) that covers to the lower leg.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 8,
+      "Minimum Maneuver Mod": -15,
+      "Maximum Maneuver Mod": -50,
+      "Missile Attack Penalty": 15,
+      "Armor Quickness Penalty": 15
+    },
+    "Leather Breastplate": {
+      "Description": "A rigid breastplate covering the torso to mid-thigh and part of the upper arms.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 9,
+      "Minimum Maneuver Mod": -5,
+      "Maximum Maneuver Mod": -50,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 0
+    },
+    "Leather Breastplate and Greaves": {
+      "Description": "A rigid breastplate covering the torso to mid-thigh and part of the upper arms, with leather greaves covering the forearms and lower legs.",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 10,
+      "Minimum Maneuver Mod": -10,
+      "Maximum Maneuver Mod": -70,
+      "Missile Attack Penalty": 10,
+      "Armor Quickness Penalty": 5
+    },
+    "Half-Hide Plate": {
+      "Description": "Rigid-leather armor that covers the body completely; includes the hide of creatures that contain at least a few rigid plates (e.g., Rhinoceros, Alligator)",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 11,
+      "Minimum Maneuver Mod": -15,
+      "Maximum Maneuver Mod": -90,
+      "Missile Attack Penalty": 20,
+      "Armor Quickness Penalty": 15
+    },
+    "Full-Hide Plate": {
+      "Description": "As half-hide plate (above), except that the rigid leather or plates are harder and/or more plentiful (e.g., Turtles, Dragons, Giant Crabs).",
+      "Category": "Light",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 12,
+      "Minimum Maneuver Mod": -15,
+      "Maximum Maneuver Mod": -110,
+      "Missile Attack Penalty": 30,
+      "Armor Quickness Penalty": 15
+    },
+    "Chain Shirt": {
+      "Description": "A chain mail shirt covering the torso to mid-thigh and half of the upper arms.",
+      "Category": "Medium",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 13,
+      "Minimum Maneuver Mod": -10,
+      "Maximum Maneuver Mod": -70,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 5
+    },
+    "Chain Shirt and Greaves": {
+      "Description": "A chain mail shirt covering the torso to mid-thigh and half of the upper arms, with greaves on the forearms and lower legs.",
+      "Category": "Medium",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 14,
+      "Minimum Maneuver Mod": -15,
+      "Maximum Maneuver Mod": -90,
+      "Missile Attack Penalty": 10,
+      "Armor Quickness Penalty": 10
+    },
+    "Full Chain": {
+      "Description": "Chain mail covering most of the body and legs in the form of a shirt and leggings.",
+      "Category": "Medium",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 15,
+      "Minimum Maneuver Mod": -25,
+      "Maximum Maneuver Mod": -120,
+      "Missile Attack Penalty": 20,
+      "Armor Quickness Penalty": 20
+    },
+    "Chain Hauberk": {
+      "Description": "A full-length chain mail coat split from the waist in the front and back to facilitate movement.",
+      "Category": "Medium",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 16,
+      "Minimum Maneuver Mod": -25,
+      "Maximum Maneuver Mod": -130,
+      "Missile Attack Penalty": 20,
+      "Armor Quickness Penalty": 20
+    },
+    "Metal Breastplate": {
+      "Description": "A metal breastplate plus smaller plates covering torso to mid-thigh and part of the upper arms.",
+      "Category": "Heavy",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 17,
+      "Minimum Maneuver Mod": -15,
+      "Maximum Maneuver Mod": -90,
+      "Missile Attack Penalty": 0,
+      "Armor Quickness Penalty": 10
+    },
+    "Metal Breastplate and Greaves": {
+      "Description": "A metal breastplate plus smaller plates covering torso to mid-thigh and part of the upper arms, with greaves on the forearms and lower legs.",
+      "Category": "Heavy",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 18,
+      "Minimum Maneuver Mod": -20,
+      "Maximum Maneuver Mod": -110,
+      "Missile Attack Penalty": 10,
+      "Armor Quickness Penalty": 20
+    },
+    "Half Plate": {
+      "Description": "Rigid plate armor covering the body, but with chain mail between the plates, at the joints, and covering the legs.",
+      "Category": "Heavy",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 19,
+      "Minimum Maneuver Mod": -35,
+      "Maximum Maneuver Mod": -150,
+      "Missile Attack Penalty": 30,
+      "Armor Quickness Penalty": 30
+    },
+    "Full Plate": {
+      "Description": "Rigid plate armor as half plate above, but with plates overlapping at joints, and plate armor covering the legs.",
+      "Category": "Heavy",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Moving Maneuver",
+      "Armor Type": 20,
+      "Minimum Maneuver Mod": -45,
+      "Maximum Maneuver Mod": -165,
+      "Missile Attack Penalty": 40,
+      "Armor Quickness Penalty": 40
+    }
+  },
+  "Artistic": {
+    "Acting": {
+      "Description": "This skill provides a bonus for simulating actions or reactions of others, as often used in drama performances, devising new identities, etc. This skill may be used to impersonate others, or hide one’s own reactions from others. It may be used anytime a character wishes to behave or appear in a manner other than that normal and natural to him under any given circumstances.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Unfamiliar with nature of subject": -30, "7+ ranks in an appropriate spoken language": 10 }]
+    },
+    "Dancing": {
+      "Description": "This skill provides a bonus for performing dances. It may also apply to any circumstances in which complex and/or precise footwork is necessary (e.g., negotiating a pattern on the floor, performing certain rituals, etc.).",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Mimery": {
+      "Description": "This skill provides a bonus for conveying concepts or information without verbal communication or a codified sign language. This skill is useful when trying to span a language barrier, entertain others, etc. Also used when trying to imitate a particular action (i.e., a movement not requiring a maneuver).",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Simple concepts": 0, "Complex concepts": -15, "With props": 10 }]
+    },
+    "Mimicary": {
+      "Description": "This skill provides a bonus for imitating sounds. This skill is useful when trying to imitate individuals, animals or even non-animate sounds (e.g., wind, stairs creaking, etc.).",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [
+        {
+          "Simple sounds (one note/tone)": 20,
+          "Multitone sounds (birds trilling, etc.)": -10,
+          "Very complex (comprehensive words)": -20,
+          "Imitate another’s vocal patterns": -20,
+          "Multi-sided conversations": -30,
+          "Simple non-animate sounds": -25,
+          "Complex non-animate sounds": "-35 to -75"
+        }
+      ]
+    },
+    "Play Instrument": {
+      "Description": "This skill provides a bonus for using a specific instrument, such as flute, drum, lute, etc. It may also be used to recognize musical patterns or rhythms, notes, etc. Note that separate development is required for skill with each instrument.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Poetic Improvisation": {
+      "Description": "This skill provides a bonus for improvising or reading poetry. It may also be used to recognize poetical styles, forms, etc. Note that a minimum of 4 ranks in the spoken language utilized is required to use this skill.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Elves": 10, "7+ ranks in an appropriate spoken language": 10 }]
+    },
+    "Singing": {
+      "Description": "This skill provides a bonus for vocally reproducing musical tunes and/or words. Note that although one may perform a song in an unfamiliar language, this skill does not provide any understanding of that language; this skill merely allows the memorization and reproduction of a song.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Per rank in an appropriate spoken language below 4": -10 }]
+    },
+    "Tale Telling": {
+      "Description": "This skill provides a bonus for conveying information in the form of stories or fables in an engaging manner. This is primarily for the purpose of entertainment or subtle instruction; attempts to inform or influence large groups of people should use the Public Speaking skill (Influence skill category) instead. This skill may be used for improvisation or to relate memorized stories. This may (GM’s discretion) also be used when attempting to memorize a new story.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "7+ ranks in an appropriate spoken language": 10, "Elves": 10, "Halflings": 15 }]
+    },
+    "Ventriloquism": {
+      "Description": "This skill provides a bonus for speaking without appearing to do so. A successful maneuver roll will make the individual’s voice seem to originate somewhere other than himself.",
+      "Category": "Active",
+      "Stat Bonuses": ["Pr", "Em", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "With props": 15, "Distance voice is thrown (for every 1' away)": -5 }]
+    },
+    "Music": {
+      "Description": "This skill provides a bonus to writing, recognizing or performing in concert a piece of music. This skill may be used to determine the ability of the individual to play in concert with others, or to direct others in doing so. A successful maneuver roll by a conductor will give those he is conducting a bonus of +20 to their own use of this skill.",
+      "Category": "Passive",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "2-4 people": -5, "5-10 people": -10, "11-20 people": -15, "21+ people": -20 }]
+    },
+    "Painting": {
+      "Description": "This skill provides a bonus for creating graphic images. This may be on a flat medium such as sketching or painting with pigments, or painting on an object of some kind. Any activity that involves the creation of an image or deliberate design may benefit from this skill.",
+      "Category": "Passive",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Unfamiliar medium": -30, "From posed image or person": 10, "From memory  (+ Memory stat bonus x 3)": -30 }]
+    },
+    "Poetry": {
+      "Description": "This skill provides a bonus for the writing of poetry, or any highly stylized form of writing. Note that the individual must have at least four (4) ranks in the written language to be used. Note that this form of poetry is typically of a significantly greater quality than improvisational poetry.",
+      "Category": "Passive",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [
+        { "Writing about a personal experience": 10, "Writing about an unfamiliar topic": -30, "8+ ranks in an appropriate written/language": 15 }
+      ]
+    },
+    "Sculpting": {
+      "Description": "This skill provides a bonus for the manipulation of a malleable material or the carving of a resilient material into a desired three dimensional shape. This skill does not confer the ability to work materials normally unworkable (e.g., the individual must have the means to mold and form copper if the sculpture is to be formed of that metal). Note that this skill may also be used to identify styles of sculpture and to imitate other sculptures.",
+      "Category": "Passive",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [{ "Unfamiliar medium": -30, "From posed image or person": 10, "From memory. (+ Memory stat bonus x 3)": -30 }]
+    }
+  },
+  "Athletic": {
+    "Athletic Games (Brawn)": {
+      "Description": "This skill encompasses any athletic game that primarily involves brawn (e.g., wrestling, etc.). Skill in each game must be developed separately, and includes rules, techniques, etc.",
+      "Category": "Athletic",
+      "Stat Bonuses": ["St", "Co", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": []
+    },
+    "Jumping": {
+      "Description": "This skill provides a bonus for jumping, either from a running or a standing start. The base jump (running horizontal) for the average man of 5'10\" is equal to 50\" + (2 x St bonus in inches). For every 2 inches above or below this average height, add or subtract one from the base jump. The difficulties listed below assume that the character is running at a dash at the time of takeoff. For every speed cat- egory (fast sprint/sprint/run/etc.) below the dash rate, raise the difficulty of the running jump by one (e.g., hard becomes very hard, etc.). The base jump (standing horizontal) for the average man of 5'10\" is equal to the base jump (running horizontal) divided by two. The base jump (running vertical) for the average man of 5'10\" is equal to (12 + St bonus) in inches. For every 3 inches above or below this average height, add or subtract one inch from the base jump. The optimal speed for a vertical jump with a running start is a run. The base jump (standing vertical) for the average man of 5'10\" is equal to the base jump (running vertical) divided by 3.",
+      "Category": "Athletic",
+      "Stat Bonuses": ["St", "Co", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [
+        {
+          "Running = Base Jump x 1": "Routine",
+          "Running = Base Jump x 1.5": "Easy",
+          "Running = Base Jump x 2": "Light",
+          "Running = Base Jump x 2.5": "Medium",
+          "Running = Base Jump x 3": "Hard",
+          "Running = Base Jump x 3.5": "Very Hard",
+          "Running = Base Jump x 4": "Extremely Hard",
+          "Running = Base Jump x 4.5": "Sheer Folly",
+          "Running = Base Jump x 5": "Absurd"
+        }
+      ]
+    },
+    "Weight-lifting": {
+      "Description": "Normally, a character can lift up to half his own weight using his hands. This skill provides a bonus to attempts to lift heavier weights or objects. While it is possible to lift these weights without the use of this skill, the techniques conferred by this skill allow greater weights to be lifted, and the likelihood of injury to be lessened. Note that this skill requires a great deal of practice and exercise to develop properly, and will increase the musculature of the individual. The use of this skill requires a round of prepara- tion, during which only 10% activity may be performed and the individual’s DB is reduced to zero.",
+      "Category": "Athletic",
+      "Stat Bonuses": ["St", "Co", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{ "Flat, level surface": 5, "Weight is unevenly distributed": -20, "Easy hand-holds": 10, "Extra prep round": 10 }]
+    },
+    "Athletic Games (Endurance)": {
+      "Description": "This skill encompasses any athletic game that primarily involves endurance (e.g., track events, etc.). Skill in each game must be developed separately, and includes rules, techniques, etc.",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Distance Running": {
+      "Description": "This skill provides a bonus for maintaining one’s speed over long distances at slow to moderate paces, including pacing one’s resources (exhaustion point expenditure) and running in a safe and non-injurious manner. This skill is used when making move- ment maneuvers based on pace—see Section 18.17 (p. 56).",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Rowing": {
+      "Description": "This skill provides a bonus for the propulsion of watercraft through the use of paddles, oars, or poles. It combines the skills required to control and guide the craft with the coordination to work with others in rhythm (when necessary), in addition to the marshaling and pacing of internal resources.",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Scaling": {
+      "Description": "This skill provides a bonus for climbing maneuvers of extended duration, including the climbing of mountains, long stairways, etc. It combines the skills required to climb safely and the marshaling and pacing of internal resources to last throughout the entire climb.",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Sprinting": {
+      "Description": "This skill provides a bonus for maximizing one’s speed over short distances, including marshaling and pacing one’s resources (exhaustion point expenditure) and running in a safe and non- injurious manner. This skill is used when making movement ma- neuvers based on pace—see Sections 16.0 (p. 51) & 18.17 (p. 56).",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Swimming": {
+      "Description": "This skill provides a bonus to swimming maneuvers. Skill rank 1 will prevent the character from drowning in water over his head, provided there are no applicable penalties (weight penalty, armor penalties, etc.). Further skill ranks will enable the character to make headway against a current, to stay afloat for longer periods of time without touching ground, to swim longer distances, to move faster in the water, and to make maneuvers in the water. For this skill, MMPs are tripled. The GM should assign high difficulty to swimming in armor.",
+      "Category": "Endurance",
+      "Stat Bonuses": ["Co", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [
+        {
+          "Plate": "Absurd",
+          "Chain": "Extremely Hard",
+          "Rigid Leather": "Very Hard",
+          "Soft Leather": "Hard",
+          "Heavy Clothes": "Medium",
+          "Other factors, such as treacherous water, might increase the difficulty.": "Variable"
+        }
+      ]
+    },
+    "Acrobatics": {
+      "Description": "This skill provides a bonus for in-air maneuvers (e.g., flying or levitation) or swinging on objects. This skill includes the use of parallel bars, uneven bars, and other gymnastic activities in which most of the activity is spent in airborne maneuvers. A successful maneuver roll can reduce the severity of a falling critical by one (i.e., an 'A' is ignored, a 'B' becomes a 'A', a 'D' becomes a 'C', etc.).",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Athletic Games (Gymnastic)": {
+      "Description": "This skill encompasses any athletic game that primarily involves gymnastic skills (e.g., gymnastic events, soccer, basketball, etc.). Skill in each game must be developed separately, and includes rules, techniques, etc.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Climbing": {
+      "Description": "This skill provides a bonus for climbing maneuvers over rela- tively short distances through the use of hand holds, etc. This could range from the ability to climb sheer faces (absurd) to climb- ing a ladder (easy). The normal climbing rate for walls with ad- equate hand holds is 10'/round as a “Medium” moving maneuver. Poorer handholds or greater speed will increase the difficulty of the maneuver. Note that extended climbs may require the use of the Athletic Endurance: Scaling Skill.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Contortions": {
+      "Description": "This skill provides a bonus for manipulating one’s body in order to move through small openings or absorb sudden crushing impact (other than falls). This skill also helps one escape from bonds, etc.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Dving": {
+      "Description": "This skill provides a bonus for controlled falling maneuvers. This can range from controlling the direction of an extended fall to diving into water safely from a great height (up to 20'/skill rank if a successful maneuver roll is made).",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Flying/Gliding": {
+      "Description": "This skill provides a bonus for flying or gliding through the use of natural or artificial wings (e.g., feathered wings, parachute, hang- glider, balloonist, etc.). Flying/gliding has a natural -75 for all types of maneuvers performed while trying to fly/glide if this skill is not learned or developed. Does not include powered aircraft.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    },
+    "Juggling": {
+      "Description": "This skill provides a bonus for tossing objects up and manipu- lating them in such a manner as to keep them up in the air.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [
+        {
+          "2 objects": 30,
+          "3 objects": 20,
+          "4 objects": 10,
+          "5 objects": 0,
+          "6 objects": -10,
+          "7 objects": -20,
+          "8 objects": -30,
+          "9 objects": -50,
+          "10 objects or more": -70,
+          "Irregularly shaped objects": -10,
+          "Sharp objects": -20,
+          "Different objects": -30,
+          "Per pound over 1 lb": -5,
+          "Surface (rough to icy slick surface)": "+30 to -70"
+        }
+      ]
+    },
+    "Tumbling": {
+      "Description": "This skill provides a bonus for horizontal dives, rolling, vaulting maneuvers, or swinging on stationary objects. Also used to de- crease the damage one takes from a fall. A character could fall safely up to 2'/skill rank if a successful maneuver roll is made.",
+      "Category": "Gymnastics",
+      "Stat Bonuses": ["Ag", "Qu", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Either Maneuver",
+      "Modifiers": [{}]
+    }
+  },
+  "Awareness": {
+    "Alertness": {
+      "": {
+        "Description": "",
+        "Category": "",
+        "Stat Bonuses": [],
+        "Skill Rank Bonus Progression": "Standard",
+        "Skill Category Bonus Progression": "Standard",
+        "Classification": " Maneuver",
+        "Modifiers": []
+      }
+    },
+    "Sense Ambush": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Detect Traps": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Lie Perception": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Locate Hidden": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Observation": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Poison Perception": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Reading Traps": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Surveillance": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Tracking": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Direction Sense": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Sense Awareness": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Situational Awareness": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Time Sense": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Body Development": {
+    "Description": "This skill enhances the character`s ability to resist damage, and withstand pain and shock. A character`s Body Development skill bonus determines how many hits (concussion hits) a character can take without passing out. Note that this is not merely strength training—training in this skill provides a greater tolerance for pain, physical toughness and discipline in the face of wounds and bleeding. An individual might remain a very slight and frail-looking individual but still hold a large number of ranks of body development. A character takes hits as damage from attacks—hits reflect pain, shock, and bleeding. When the hits that a character has taken are greater than or equal to his maximum hits, he passes out. When the hits that a character has taken are greater than or equal to his maximum hits plus his constitution, he dies. (Note: All characters receive a special +10 bonus to this skill.)",
+    "Category": "Body Development",
+    "Stat Bonuses": ["Co", "SD", "Co"],
+    "Skill Rank Bonus Progression": "Based on Race",
+    "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+    "Classification": "Special",
+    "Modifiers": []
+  },
+  "Combat Manuevers": {
+    "Mounted Combat": {
+      "Description": "",
+      "Category": "Combat Manuevers",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Qucidraw": {
+      "Description": "",
+      "Category": "Combat Manuevers",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Swashbuckling": {
+      "Description": "",
+      "Category": "Combat Manuevers",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Two Weapon Combat": {
+      "Description": "",
+      "Category": "Combat Manuevers",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Communication": {
+    "Language, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Lip Reading": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Signalling": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Crafts": {
+    "Cooking": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Leather craft": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Metal craft": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Rope Mastery": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Stone crafts": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Wood crafts": {
+      "Description": "",
+      "Category": "Crafts",
+      "Stat Bonuses": [],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Dirested Spells": {
+    "Element, named": {
+      "Description": "The skills in this category provide bonuses to directed spell attacks. Such attacks use the Bolt Spell Attack Table A-10.9.9 (p. 228). See Appendix A-10.7 (p. 19) for guidelines on handling Directed Spell attacks. The five types of directed spells are Fire Bolts, Ice Bolts, Lightning Bolts, Shock Bolts, and Water Bolts — skill must be developed separately for each different type. A character wishing to develop skill with such a spell must be able to cast it without the need of a spell casting static maneuver at least once a day, either intrinsically or from an item or runes.",
+      "Category": "Dirested Spells",
+      "Stat Bonuses": ["Ag", "SD", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    }
+  },
+  "Influence": {
+    "Bribery": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Diplomacy": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Duping": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Interrogation": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Leadership": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Public Speaking": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Seduction": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Trading": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Lore": {
+    "Fauna Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Flore Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Heraldry": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "History, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Philosophy": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Race Lore, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Region Lore, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Religion": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Artifact Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Spell Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Undead Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Demon/Devil Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Dragon Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Faerie Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Xeno Lore": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Martial Arts Striking": {
+    "Boxing": {
+      "Description": "This is the skill of using one’s fists and feet to strike an opponent, while protecting oneself from similar blows. This skill uses the Tooth & Claw Attack  able A-10.9.7 (p. 226) and may not exceed the damage done by a “small” attack.",
+      "Category": "Martial Arts Striking",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "Tackling": {
+      "Description": "This is the skill of diving at a person in order to bring them to the ground in the intent of momentarily immobilizing them. This skill uses the Bash & rapple Attack Table A-10.9.8 (p. 227) and may not exceed the damage done by a “small” attack.",
+      "Category": "Martial Arts Striking",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    }
+  },
+  "Outdoor": {
+    "Animal Handling": {
+      "Description": "",
+      "Category": "Outdoor, Animal",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Animal Training": {
+      "Description": "",
+      "Category": "Outdoor, Animal",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Driving": {
+      "Description": "",
+      "Category": "Outdoor, Animal",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Riding": {
+      "Description": "",
+      "Category": "Outdoor, Animal",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Caving": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Foraging": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Hunting": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Star-gazing": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Survival": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Weather Watching": {
+      "Description": "",
+      "Category": "Outdoor, Environmental",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Power Awareness": {
+    "Attunement": {
+      "Description": "This skill enables a character to use the spell abilities of a staff, wand, or any item with spell casting abilities. In order to cast spells from an item, the wielder of the item must have made an Attunement static maneuver. If an item has several spells or groups of spells that are widely separated in power or type, the GM may require separate attunement (staves & wands) static maneuvers for each spell or group of spells. Teaching someone else an item is not permitted because using an item is a personal experience between the individual and the item. Although you may tell someone what the item does and thus remove any penalty for not knowing the spell(s) in the item, you cannot aid them. Certain spells on items do not normally require Attunement rolls, subject to GM stipulation. They include: 1) Spells that operate constantly: Boots of Silence, Cloaks of Invisibility, etc. 2) Bonuses built into items: Bonuses on weapons, bonuses on armor, spell adders, spell multipliers, etc., 3) Spells in intelligent items: Intelligent items can cast the spells that they contain when instructed by a wielder who can communicate with the item and whom the item will obey (unless specifically created otherwise, intelligent items will obey any wielder). All of these cases include spells that do not require the conscious casting of any spell by the wielder of the item. A character should be given one chance to attune to an item. If he fails, he may not try again until he improves his skill rank with Attunement. ",
+      "Category": "Power Awareness",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [
+        {
+          "Character does not know the realm of the spell": -20,
+          "Character knows the realm of the spell": 10,
+          "Character does not know what spell is": -10,
+          "Character knows what spell is": 20,
+          "Character’s realm differs from spell`s": -30,
+          "Character can cast spell intrinsically": 30
+        }
+      ]
+    },
+    "Read Runes": {
+      "Description": "Rune skill enables a character to decipher and use runes (spells inscribed in suitable media). If the level of the spell on the rune is less than or equal to the level of the character attempting to use it to cast a spell, deciphering the rune is sufficient to use it (subject to the normal chances of spell failure). If the rune is a level above the character, or of a realm of magic other than his specialty, a second roll, similar to the first, must be made to successfully cast the spell from the rune. Runes are generally not reusable, but the rune paper is. A character should be given one chance to decipher a rune. If he fails, he may not try again until he improves his skill rank with Read Runes.",
+      "Category": "Power Awareness",
+      "Stat Bonuses": ["Em", "In", "Pr"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": [
+        {
+          "Character does not know the realm of the spell": -20,
+          "Character knows the realm of the spell": 10,
+          "Character does not know what spell is": -10,
+          "Character knows what spell is": 20,
+          "Character’s realm differs from spell`s": -30,
+          "Character can cast spell intrinsically": 3
+        }
+      ]
+    }
+  },
+  "Power Point Development": {
+    "Power Point Development": {
+      "Description": "Developing this skill allows a spell user to increase the total number of power points (PP) he may have available at any given time. In order to cast a spell, a number of PPs equal to the spell`s level must be used.",
+      "Category": "Power Point Development",
+      "Stat Bonuses": ["Realm stat"],
+      "Skill Rank Bonus Progression": "Based on Race",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Special",
+      "Modifiers": []
+    }
+  },
+  "Science Analytic": {
+    "Basic Math": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Research": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Advanced Math": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Combined",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Alchemy": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Combined",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Anthropology": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Combined",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Other, named": {
+      "Description": "",
+      "Category": "Science Analytic",
+      "Stat Bonuses": ["Re", "Me", "Re"],
+      "Skill Rank Bonus Progression": "Combined",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Self Control": {
+    "Frenzy": {
+      "Description": "",
+      "Category": "Self Control",
+      "Stat Bonuses": ["SD", "Pr", "SD"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Meditation": {
+      "Description": "",
+      "Category": "Self Control",
+      "Stat Bonuses": ["SD", "Pr", "SD"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Mnemonics": {
+      "Description": "",
+      "Category": "Self Control",
+      "Stat Bonuses": ["SD", "Pr", "SD"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Stun Removal": {
+      "Description": "",
+      "Category": "Self Control",
+      "Stat Bonuses": ["SD", "Pr", "SD"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Spells": {
+    "Spell List, named": {
+      "Description": "A character's skill rank for a spell list determines which spells on that list he may cast. In addition, if certain restrictions are not met, a character's skill bonus for a spell's list can affect the casting of that spell. A character “learns” spells by developing skill ranks for the spell list that the spell is on. A character “knows” all of the spells on a spell list that have a level less than or equal to his skill rank for that spell list. See Appendix A-9 (p. 152) for more information on spell lists. A character may cast any spell on a list that has a spell level that is less than or equal to his skill rank for that list (i.e., any spell he “knows”). A character must use power points to cast a spell. See Section 14.0 (p. 46) & 18.12 (p. 55) for details on preparing and casting spells.",
+      "Category": "Spells",
+      "Stat Bonuses": ["Realm stat"],
+      "Skill Rank Bonus Progression": "-30, 1, 1, 0.5, 0 (Limited)",
+      "Skill Category Bonus Progression": "0, 0, 0, 0, 0",
+      "Classification": "Static Maneuver, Special",
+      "Modifiers": []
+    }
+  },
+  "Subterfuge": {
+    "Ambush": {
+      "Description": "",
+      "Category": "Attack",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Silent Attack": {
+      "Description": "",
+      "Category": "Attack",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Camouflage": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Disarm Traps": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Disguise": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Picking Locks": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Setting Traps": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Using/Removing Poison": {
+      "Description": "",
+      "Category": "Mechanics",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Hiding": {
+      "Description": "",
+      "Category": "Stealth",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Picking Pockets": {
+      "Description": "",
+      "Category": "Stealth",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Stalking": {
+      "Description": "",
+      "Category": "Stealth",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Trickery": {
+      "Description": "",
+      "Category": "Stealth",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Technical Trade": {
+    "Begging": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "First Aid": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Gambling": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Mapping": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Operating Equimpment": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Orienteering": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Sailing": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Tactical Games": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Using Prepared Herbs": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Diagnostics, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Engineering": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Mechanition": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Mining": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Second Aid": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Administration": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Appraisal": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Boat Pilot": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Evaluate Armor": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Evaluate Metal": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Evaluate Stone": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Evaluate Weapon": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Navigation": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    },
+    "Tactics, named": {
+      "Description": "",
+      "Category": "",
+      "Stat Bonuses": ["", "", ""],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": " Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Urban": {
+    "Contacting": {
+      "Description": "This skill provides a bonus to locating individuals of influence or knowledge within an urban environment. It includes knowledge of where such individuals may be found as well a information involving how they might be reached (e.g., locating a crime boss or fence, politician, etc.). This skill is the equivalent of scrounging except that it operates for individuals or locations. Note that actual interaction with such persons are covered by the skills in the Influence Skill Category.",
+      "Category": "Urban",
+      "Stat Bonuses": ["In", "Pr", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Mingling": {
+      "Description": "This skill provides a bonus to attempts to mix easily with a large urban population, whether for the purposes of remaining unno ticed, escaping pursuers, or simply moving easily through a crowd.",
+      "Category": "Urban",
+      "Stat Bonuses": ["In", "Pr", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Scrounging": {
+      "Description": "This skill provides a bonus in being able to come up with the location of a particular needed item, part or ingredient. This skill is normally used in an urban type of setting.",
+      "Category": "Urban",
+      "Stat Bonuses": ["In", "Pr", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    },
+    "Streetwize": {
+      "Description": "Awareness of events and protocol in the street society and underworld and the ability to interact with the individuals who run and live in the common or underworld society. Note that this skill does not necessarily enable a character to find such individuals.",
+      "Category": "Urban",
+      "Stat Bonuses": ["In", "Pr", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Static Maneuver",
+      "Modifiers": []
+    }
+  },
+  "Weapon": {
+    "Concussion weapon, named": {
+      "Description": "",
+      "Category": "Concussion",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "1-H Edged weapon, named": {
+      "Description": "",
+      "Category": "1-H Edged",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "2-Handed weapon, named": {
+      "Description": "",
+      "Category": "2-Handed",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "Missile weapon, named": {
+      "Description": "",
+      "Category": "Missile",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "Missile Artillery weapon, named": {
+      "Description": "",
+      "Category": "Missile Artillery",
+      "Stat Bonuses": ["In", "Ag", "Re"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "Pole Arms weapon, named": {
+      "Description": "",
+      "Category": "Pole Arms",
+      "Stat Bonuses": ["St", "Ag", "St"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    },
+    "Thrown weapon, named": {
+      "Description": "",
+      "Category": "Thrown",
+      "Stat Bonuses": ["Ag", "St", "Ag"],
+      "Skill Rank Bonus Progression": "Standard",
+      "Skill Category Bonus Progression": "Standard",
+      "Classification": "Offensive Bonus",
+      "Modifiers": []
+    }
+  }
+}

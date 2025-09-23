@@ -1,25 +1,10 @@
 import { _getDatasets } from "../../helpers/helpers.mjs";
-const { HandlebarsApplicationMixin } = foundry.applications.api;
+import BaseSheetMixin from "../abstract/BaseSheetMixin.mjs";
 const { ActorSheetV2 } = foundry.applications.sheets;
 
-export class BaseCharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
-  /**
-   * Available sheet modes.
-   * @enum {number}
-   */
-  static MODES = {
-    PLAY: 1,
-    EDIT: 2,
-  };
-
-  /* -------------------------------------------- */
-
-  _mode = null;
-
-  /* -------------------------------------------- */
-
+export class BaseCharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
-    classes: ["rmc"],
+    classes: ["rmc", "actor"],
     form: {
       submitOnChange: true,
     },
@@ -28,16 +13,6 @@ export class BaseCharacterActorSheet extends HandlebarsApplicationMixin(ActorShe
       configureActor: BaseCharacterActorSheet.configureActor,
     },
     window: {
-      controls: [
-        {
-          // font awesome icon
-          icon: "fa-solid fa-triangle-exclamation",
-          // string that will be run through localization
-          label: "RMC.EditMode",
-          // string that MUST match one of your `actions`
-          action: "toggleEditMode",
-        },
-      ],
       resizable: true,
     },
 
@@ -68,18 +43,6 @@ export class BaseCharacterActorSheet extends HandlebarsApplicationMixin(ActorShe
   /* -------------------------------------------- */
   //#region Actions
 
-  static toggleEditMode(event, target) {
-    const mode = this.constructor.MODES.PLAY;
-    if (this.isEditable && this._mode === this.constructor.MODES.PLAY) {
-      this._mode = this.constructor.MODES.EDIT;
-      console.log("RWK: Editing " + this.title);
-    } else {
-      this._mode = this.constructor.MODES.PLAY;
-      console.log("RWK: Cannot edit " + this.title);
-    }
-    this.render(true);
-  }
-
   static async configureActor(event) {
     event.preventDefault();
     await new CharacterActorSheet({
@@ -106,9 +69,7 @@ export class BaseCharacterActorSheet extends HandlebarsApplicationMixin(ActorShe
   //#region Methods
 
   _configureRenderOptions(options) {
-    console.log(
-      `RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-    );
+    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
     super._configureRenderOptions(options);
     // Set initial mode
     let { mode, renderContext } = options;

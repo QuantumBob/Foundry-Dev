@@ -91,7 +91,12 @@
   justify-content: space-between;
 }
 
-.rmc.application.character-sheet {
+.rmc.sheet.actor.character:not(.minimized, .minimizing, .maximizing) {
+  min-width: 400px;
+  min-height: 600px;
+}
+
+.rmc.character.sheet {
   background-color: #506e61;
 }
 
@@ -120,11 +125,11 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   z-index: -1;
   border: none;
   justify-content: flex-start;
-  padding-block-start: 50px;
+  padding-block-start: 20px;
   padding-block-end: 20px;
   line-height: 4.5;
   border-bottom-right-radius: 20px;
@@ -158,17 +163,17 @@
 .rmc .rmcnotes.hidden {
   display: none;
 }
-.rmc.application.character-sheet .character-header {
+.rmc.character.sheet .character-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.rmc.application.character-sheet .character-header .character-stats {
+.rmc.character.sheet .character-header .character-stats {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-.rmc.application.character-sheet .skills-wrapper {
+.rmc.character.sheet .skills-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
