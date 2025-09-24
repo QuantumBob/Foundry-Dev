@@ -3,8 +3,5 @@
     {
       "path": ".",
     },
-    {
-      "path": "../FoundryVTT/Data/modules/rwk-tools",
-    },
   ],
 }

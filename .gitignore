@@ -10,4 +10,6 @@ systems/boilerplate
 systems/draw-steel
 systems/test-boiler
 systems/universal-tabletop-system
+modules
+!modules/rwk-tools
 .vscode-chrome

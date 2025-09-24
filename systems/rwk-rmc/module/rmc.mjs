@@ -89,5 +89,5 @@ Hooks.once("init", () => {
 Hooks.on("ready", async () => {
   console.log("RWK: in ready");
   let actor = game.actors.getName("Bob");
-  await actor.sheet.render(true);
+  await actor?.sheet.render(true);
 });
