@@ -1,0 +1,16 @@
+{
+  "id": "rwk-toggle-sidebar",
+  "title": "rwk toggle sidebar",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "rwk",
+      "flags": {}
+    }
+  ],
+  "esmodules": ["/module/rwk-toggle-sidebar.js"]
+}

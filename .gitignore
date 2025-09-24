@@ -10,6 +10,14 @@ systems/boilerplate
 systems/draw-steel
 systems/test-boiler
 systems/universal-tabletop-system
-modules
-!modules/rwk-tools
+modules/_dev-mode
+modules/compendium-browser
+modules/dice-calculator
+modules/dice-so-nice
+modules/lib-wrapper
+modules/lordudice
+modules/quench
+modules/rwk-tools-2
+modules/scaleGrid
+modules/README.txt
 .vscode-chrome
