@@ -1,15 +1,25 @@
-const { NumberField, StringField } = foundry.data.fields;
+import { AbstractrDataModel } from "./abstract-data-model.mjs";
+const { NumberField, StringField, BooleanField } = foundry.data.fields;
 
-export class BaseItemDataModel extends foundry.abstract.TypeDataModel {
+export class BaseItemDataModel extends AbstractrDataModel {
   static defineSchema() {
-    return {
-      rarity: new StringField({
+    return this.mergeSchema(super.defineSchema(), {
+      version: new StringField({
         required: true,
-        blank: false,
-        options: ["common", "uncommon", "rare", "legendary"],
-        initial: "common",
+        nullable: true,
+        initial: null,
+        gmOnly: true,
+        hint: "Version of the data model",
+        label: "Version",
       }),
-      price: new NumberField({ required: true, integer: true, min: 0, initial: 20 }),
-    };
+      migrate: new BooleanField({
+        hint: "Flag to trigger migration process on next reload",
+        label: "Needs Migration",
+        nullable: false,
+        required: true,
+        initial: false,
+        gmOnly: true,
+      }),
+    });
   }
 }

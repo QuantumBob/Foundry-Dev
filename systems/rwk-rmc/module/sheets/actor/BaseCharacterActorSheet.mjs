@@ -16,19 +16,9 @@ export class BaseCharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
   };
 
   /* -------------------------------------------- */
-  //#region Actions
-
-  //#endregion
-
-  /* -------------------------------------------- */
   //#region Accesors
   get title() {
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
   }
-  //#endregion
-
-  /* -------------------------------------------- */
-  //#region Methods
-
   //#endregion
 }

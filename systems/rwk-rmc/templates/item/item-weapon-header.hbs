@@ -1,27 +1,43 @@
 <section class="{{cssClass}} {{item.type}} flexcol" autocomplete="off">
-
+  {{#if editable}}
+    <div>Edit Mode</div>
+  {{/if}}
   {{! Sheet Header }}
   <header class="sheet-header">
 
     {{! Header stuff goes here }}
     <div class="left">
-      <img
-        class="profile-img"
-        src="{{document.img}}"
-        data-action=""
-        data-edit="img"
-        data-type="Image"
-        alt="Portrait"
-        title="{{document.name}}"
-        height="100"
-        width="100"
-      />
-      {{! Name }}
-
-      <div class="document-name">{{item.name}}</div>
-    </div>
-    <div class="item-description">
-      {{item.description}}
+      {{#if editable}}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action="editImage"
+          data-edit="img"
+          data-type="Image"
+          alt="Item Image"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+        {{! Name }}
+        <input type="text" name="name" class="document-name uninput" autocomplete="off" value="{{item.name}}" />
+        <input type="text" name="description" class="document-description uninput" autocomplete="off" value="{{system.description}}" />
+      {{else}}
+        <img
+          class="profile-img"
+          src="{{document.img}}"
+          data-action=""
+          data-edit="img"
+          data-type="Image"
+          alt="Item Image"
+          title="{{document.name}}"
+          height="100"
+          width="100"
+        />
+        {{! Name }}
+        <div class="document-name">{{item.name}}</div>
+        <div class="item-description">{{system.description}}</div>
+      {{/if}}
     </div>
   </header>
 </section>

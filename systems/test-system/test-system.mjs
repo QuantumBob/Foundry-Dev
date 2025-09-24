@@ -77,8 +77,8 @@ const editActor = async (li) => {
 Hooks.on("ready", async () => {
   console.log("RWK: in ready");
   // auto open actor sheet
-  // let actor = game.actors.getName("Bill");
-  // await actor.sheet.render(true);
+  let actor = game.actors.getName("Bill");
+  await actor?.sheet.render(true);
 
   // auto open testApp
   // CONFIG.testApp.render(true);

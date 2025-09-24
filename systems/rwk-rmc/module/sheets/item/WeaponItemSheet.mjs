@@ -1,43 +1,40 @@
 import { BaseItemSheet } from "./BaseItemSheet.mjs";
 
 export class WeaponItemSheet extends BaseItemSheet {
-  // constructor(...args) {
-  //   super(...args);
-  // }
+  /* -------------------------------------------- */
+  //#region Statics
   static DEFAULT_OPTIONS = {
-    form: {
-      submitOnChange: true,
-      closeOnSubmit: false,
-    },
-    classes: ["rms"],
-    window: {
-      icon: "fas fa-suitcase",
-      title: "RMC.SheetClass.Item",
-      resizable: true,
-      minimizable: true,
-      contentClasses: ["item-sheetv2-content"],
-    },
-    position: {
-      width: 500,
-      height: 600,
-    },
+    classes: ["weapon"],
   };
   static PARTS = {
-    // header: { template: "systems/ars/templates/item/parts/item-header-sheetv2.hbs" },
+    header: { template: "systems/rwk-rmc/templates/item//item-weapon-header.hbs" },
   };
+  //#endregion
 
-  /**
-   * Tab configuration for the ARS item sheet.
-   * @type {object}
-   */
-  static TABS = {};
+  async _processSubmitData(event, form, formData, updateData) {
+    const overrides = foundry.utils.flattenObject(this.actor.overrides);
+    for (const k of Object.keys(overrides)) delete submitData[k];
+    this.document.update(submitData);
+  }
+
+  _configureRenderOptions(options) {
+    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._configureRenderOptions(options);
+    // Set initial mode
+
+    let { mode, renderContext } = options;
+    if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
+    this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
+  }
 
   async _prepareContext(options) {
-    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    console.log(`RWK: _prepareContext - ${this.document.name} : index ${CONFIG.rwkCount++}`);
     const context = {
       ...(await super._prepareContext(options)),
       item: this.item,
       editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
     };
+    context.system = context.editable ? this.item.system._source : this.item.system;
+    return context;
   }
 }

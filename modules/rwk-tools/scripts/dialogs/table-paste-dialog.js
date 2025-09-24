@@ -1,5 +1,5 @@
 import { processPastedData } from "../lib/journals-2-tables.js";
-
+// This is identical to paste-window.js except for export at end
 class TablePasteDialog extends Application {
   static get defaultOptions() {
     return {

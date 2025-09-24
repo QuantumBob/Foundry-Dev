@@ -41,13 +41,13 @@ Hooks.once("init", () => {
   // CONFIG.Actor.documentClass = RMCActor;
   CONFIG.Actor.dataModels = {
     character: CharacterActorDataModel,
-    hero: HeroActorDataModel,
-    creature: CreatureActorDataModel,
+    // hero: HeroActorDataModel,
+    // creature: CreatureActorDataModel,
   };
   // CONFIG.Item.documentClass = RMCItem;
   CONFIG.Item.dataModels = {
     weapon: WeaponItemDataModel,
-    spell: SpellItemDataModel,
+    // spell: SpellItemDataModel,
   };
 
   // CONFIG.Actor.trackableAttributes = {
@@ -68,16 +68,16 @@ Hooks.once("init", () => {
     makeDefault: true,
     label: "TYPES.Actor.character",
   });
-  DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", HeroActorSheet, {
-    types: ["hero"],
-    makeDefault: false,
-    label: "RMC.Hero",
-  });
-  DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", HumanoidCreatureActorSheet, {
-    types: ["creature"],
-    makeDefault: false,
-    label: "RMC.Creature",
-  });
+  // DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", HeroActorSheet, {
+  //   types: ["hero"],
+  //   makeDefault: false,
+  //   label: "RMC.Hero",
+  // });
+  // DocumentSheetConfig.registerSheet(Actor, "rwk-rmc", HumanoidCreatureActorSheet, {
+  //   types: ["creature"],
+  //   makeDefault: false,
+  //   label: "RMC.Creature",
+  // });
 
   // Register V2 Item sheets
   DocumentSheetConfig.registerSheet(Item, "rwk-rmc", WeaponItemSheet, {
@@ -91,3 +91,5 @@ Hooks.on("ready", async () => {
   let actor = game.actors.getName("Bob");
   await actor?.sheet.render(true);
 });
+
+Hooks.on("preUpdateActor", async () => {});

@@ -5,7 +5,7 @@ const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fie
 export class CharacterActorDataModel extends BaseActorDataModel {
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      profession: new StringField({ required: false, blank: true, trim: true, initial: "" }),
+      profession: new StringField({ required: false, blank: true, trim: true, initial: "fighter" }),
       race: new StringField({ required: false, blank: true, trim: true, initial: "" }),
       realm: new StringField({ required: false, blank: true, trim: true, initial: "" }),
       xp: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
@@ -17,6 +17,10 @@ export class CharacterActorDataModel extends BaseActorDataModel {
       height: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
       weight: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
     });
+  }
+
+  _onUpdate(changed, options, userId) {
+    super._onUpdate(changed, options, userId);
   }
 
   prepareDerivedData() {

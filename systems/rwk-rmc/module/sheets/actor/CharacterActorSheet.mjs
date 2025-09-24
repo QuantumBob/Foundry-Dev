@@ -173,6 +173,19 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     return context;
   }
 
+  _processFormData(event, form, formData) {
+    // const data = super._processFormData(event, form, formData);
+    const data = foundry.utils.expandObject(formData.object);
+    return data;
+  }
+
+  async _processSubmitData(event, form, formData, updateData) {
+    const overrides = foundry.utils.flattenObject(this.actor.overrides);
+    for (const k of Object.keys(overrides)) delete formData[k];
+    this.document.update(formData);
+    return true;
+  }
+
   /* -------------------------------------------- */
 
   /**

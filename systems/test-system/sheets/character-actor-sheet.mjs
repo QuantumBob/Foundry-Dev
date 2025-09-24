@@ -28,6 +28,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
       height: 600,
     },
     form: {
+      handler: CharacterActorSheet.#onSubmitForm,
       submitOnChange: true,
     },
     actions: {
@@ -112,17 +113,60 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //#endregion
 
   _configureRenderOptions(options) {
-    console.log(
-      `RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-    );
+    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
     super._configureRenderOptions(options);
     // Set initial mode
     let { mode, renderContext } = options;
     if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
     this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
-
-    // options.window.title = options.window.title == undefined ? "undefined" : this.document.name;
   }
+
+  // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
+  /** @override */
+  async _prepareContext(options) {
+    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    const context = {
+      ...(await super._prepareContext(options)),
+      actor: this.actor,
+      editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
+    };
+    context.system = context.editable ? this.actor.system._source : this.actor.system;
+
+    return context;
+  }
+
+  _onChangeForm(formConfig, event) {
+    console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._onChangeForm(formConfig, event);
+  }
+
+  static async #onSubmitForm(event, form, formData) {
+    event.preventDefault();
+    await this.document.update(formData.object); // Note: formData.object
+  }
+
+  // async _onSubmitForm(formConfig, event) {
+  //   console.log(`RWK: _onSubmitForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+  //   event.preventDefault();
+  //   // await this.document.update(formData.object); // Note: formData.object
+  //   // await super._onSubmitForm(formConfig, event);
+  // }
+
+  // _prepareSubmitData(event, form, formData, updateData) {
+  //   console.log(`RWK: _prepareSubmitData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+  //   super._prepareSubmitData(event, form, formData, updateData);
+
+  // }
+
+  // async _processSubmitData(event, form, submitData, options) {
+  //   console.log(`RWK: _processSubmitData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+  //   // in foundry method
+  //   // if (document.collection?.has(document.id)) {
+  //   //   await document.update(submitData, options);
+  //   // }
+  //   const data = await super._processSubmitData(event, form, submitData, options);
+  //   // return data;
+  // }
 
   /* -------------------------------------------- */
   //#region Unused
@@ -164,11 +208,10 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: _insertElement - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._insertElement(element);
   // }
+  //#endregion
 
-  // _onChangeForm(formConfig, event) {
-  //   console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-  //   super._onChangeForm(formConfig, event);
-  // }
+  /* -------------------------------------------- */
+  //#region #####
 
   // _onClickAction(event, target) {
   //   console.log(`RWK: _onClickAction - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
@@ -248,11 +291,10 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: _onSortItem - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   await super._onSortItem(event, item);
   // }
+  //#endregion
 
-  // async _onSubmitForm(formConfig, event) {
-  //   console.log(`RWK: _onSubmitForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-  //   await super._onSubmitForm(formConfig, event);
-  // }
+  /* -------------------------------------------- */
+  //#region Unused
 
   // async _postRender(context, options) {
   //   console.log(`RWK: _postRender - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
@@ -273,32 +315,8 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
 
   //#endregion
 
-  // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
-  /** @override */
-  async _prepareContext(options) {
-    console.log(
-      `RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-    );
-    const context = {
-      ...(await super._prepareContext(options)),
-      actor: this.actor,
-      editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
-    };
-    context.source = context.editable ? this.actor.system._source : this.actor.system;
-
-    return context;
-  }
-
   /* -------------------------------------------- */
   //#region Unused
-
-  // _prepareSubmitData(event, form, formData, updateData) {
-  //   console.log(
-  //     `RWK: _prepareSubmitData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-  //   );
-  //   super._prepareSubmitData(event, form, formData, updateData);
-  // }
-
   // _prepareTabs(group) {
   //   console.log(`RWK: _prepareTabs - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._prepareTabs(group);
@@ -321,12 +339,15 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   super._processFormData(event, form, formData);
   // }
 
-  // async _processSubmitData(event, form, submitData, options) {
-  //   console.log(
-  //     `RWK: _processSubmitData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`
-  //   );
-  //   await super._processSubmitData(event, form, submitData, options);
+  // _processFormData(event, form, formData) {
+  //   console.log(`RWK: _processFormData - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+  //   const data = super._processFormData(event, form, formData);
+  //   return data;
   // }
+  //#endregion
+
+  /* -------------------------------------------- */
+  //#region Unused
 
   // _removeElement(element) {
   //   console.log(`RWK: _removeElement - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);

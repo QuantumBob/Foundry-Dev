@@ -1,5 +1,5 @@
 import { processPastedData } from "./journals-2-tables.js";
-
+// This is identical to paste-window.js except for export on class
 export default class PasteWindow extends Application {
   static get defaultOptions() {
     return {
@@ -25,10 +25,7 @@ export default class PasteWindow extends Application {
     const nameInput = html.find("#table-name");
     const convertButton = html.find("#submit");
 
-    if (
-      importEntitiesSelector.find("option:selected").val() == "Actor" ||
-      importEntitiesSelector.find("option:selected").val() == "Item"
-    ) {
+    if (importEntitiesSelector.find("option:selected").val() == "Actor" || importEntitiesSelector.find("option:selected").val() == "Item") {
       keepItem.prop("disabled", false);
       duplicateItem.prop("disabled", false);
       replaceItem.prop("disabled", false);
@@ -61,13 +58,9 @@ export default class PasteWindow extends Application {
       const name = html.find("#table-name")[0].value;
 
       const entityType = importEntitiesSelector.find("option:selected").val();
-      const folderStructure = folderStructureSelector
-        .find("option:selected")
-        .val();
+      const folderStructure = folderStructureSelector.find("option:selected").val();
       const ifItemExists =
-        $("input:radio[name=ifItemExists]:checked").val() === undefined
-          ? "keepItem"
-          : $("input:radio[name=ifItemExists]:checked").val();
+        $("input:radio[name=ifItemExists]:checked").val() === undefined ? "keepItem" : $("input:radio[name=ifItemExists]:checked").val();
       const tableOfItems = html.find("#tableOfItems")[0].checked;
 
       const settings = {};

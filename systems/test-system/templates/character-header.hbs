@@ -1,70 +1,24 @@
 <section class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
-  {{! Sheet Header }}
   <header class="sheet-header">
-
-    {{#if editable}}
-      <div><label>Edit Mode</label></div>
-    {{/if}}
-
-    {{! Header stuff goes here }}
     <div class="left">
-      {{#if editable}}
-        <img
-          class="profile-img"
-          src="{{document.img}}"
-          data-action="editImage"
-          data-edit="img"
-          data-type="Image"
-          alt="Portrait"
-          title="{{document.name}}"
-          height="100"
-          width="100"
-        />
-      {{else}}
-        <img
-          class="profile-img"
-          src="{{document.img}}"
-          data-action=""
-          data-edit="img"
-          data-type="Image"
-          alt="Portrait"
-          title="{{document.name}}"
-          height="100"
-          width="100"
-        />
-      {{/if}}
-      {{! Name }}
-      {{#if editable}}
-        <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
-      {{else}}
-        <div class="document-name">{{actor.name}}</div>
-      {{/if}}
+      <img
+        class="profile-img"
+        src="{{document.img}}"
+        data-action="editImage"
+        data-edit="img"
+        data-type="Image"
+        alt="Portrait"
+        title="{{document.name}}"
+        height="100"
+        width="100"
+      />
+      <label for="name">Name</label>
+      <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
     </div>
-    <div class="header-fields">
-      <div class="resources grid grid-2col">{{! resources here }}</div>
-      <div class="abilities grid grid-3col">{{! abilities here }}</div>
-      <div class="resource flex-group-center">
-        <label for="system.hitpoints.value" class="resource-label">{{localize
-            "TESTSYS.Hitpoints"
-          }}</label>
-        <div class="resource-content flexrow flex-center flex-between">
-          <input
-            id="system.hitpoints.value"
-            type="text"
-            name="system.hitpoints.value"
-            value="{{system.hitpoints.value}}"
-            data-dtype="Number"
-          />
-          <span> / </span>
-          <input
-            type="text"
-            name="system.hitpoints.max"
-            value="{{system.hitpoints.max}}"
-            data-dtype="Number"
-          />
-        </div>
-      </div>
+
+    <div class="description">
+      <label for="description">Description</label>
+      <input type="text" name="description" class="document-name uninput" data-edit="txt" value="{{system.description}}" />
     </div>
   </header>
 </section>

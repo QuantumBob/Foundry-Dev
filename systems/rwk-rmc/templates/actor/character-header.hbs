@@ -1,7 +1,7 @@
 <section class="{{cssClass}} {{actor.type}}-header" autocomplete="off">
   {{! Sheet Header }}
   {{#if editable}}
-    <div><label>Edit Mode</label></div>
+    <div>Edit Mode</div>
   {{/if}}
 
   {{! Header stuff goes here }}
@@ -18,7 +18,8 @@
         height="100"
         width="100"
       />
-      <input type="text" name="name" class="document-name uninput" value="{{actor.name}}" />
+      <input type="text" name="name" autocomplete="off" class="document-name uninput" value="{{actor.name}}" />
+      <input type="text" name="profession" autocomplete="off" class="document-profession uninput" value="{{system.profession}}" />
     {{else}}
       <img
         class="profile-img"
@@ -32,6 +33,8 @@
         width="100"
       />
       <div class="document-name">{{actor.name}}</div>
+      <div class="document-profession">{{system.profession}}</div>
+
     {{/if}}
   </div>
   <div class="{{actor.type}}-stats">

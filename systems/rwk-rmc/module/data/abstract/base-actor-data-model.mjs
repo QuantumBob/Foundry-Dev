@@ -1,12 +1,9 @@
+import { AbstractrDataModel } from "./abstract-data-model.mjs";
 const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
 
-export class BaseActorDataModel extends foundry.abstract.TypeDataModel {
-  static mergeSchema(a, b) {
-    Object.assign(a, b);
-    return a;
-  }
+export class BaseActorDataModel extends AbstractrDataModel {
   static defineSchema() {
-    return {
+    return this.mergeSchema(super.defineSchema(), {
       version: new StringField({
         required: true,
         nullable: true,
@@ -23,6 +20,6 @@ export class BaseActorDataModel extends foundry.abstract.TypeDataModel {
         initial: false,
         gmOnly: true,
       }),
-    };
+    });
   }
 }

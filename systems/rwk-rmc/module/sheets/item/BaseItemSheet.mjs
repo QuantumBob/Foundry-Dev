@@ -1,16 +1,13 @@
+import BaseSheetMixin from "../abstract/BaseSheetMixin.mjs";
+
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ItemSheetV2 } = foundry.applications.sheets;
 
-export class BaseItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
-  constructor(...args) {
-    super(...args);
-  }
+export class BaseItemSheet extends BaseSheetMixin(ItemSheetV2) {
+  /* -------------------------------------------- */
+  //#region Statics
   static DEFAULT_OPTIONS = {
-    form: {
-      submitOnChange: true,
-      closeOnSubmit: false,
-    },
-    classes: ["rms"],
+    classes: ["item"],
     window: {
       icon: "fas fa-suitcase",
       title: "RMC.SheetClass.Item",
@@ -18,14 +15,20 @@ export class BaseItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       minimizable: true,
       contentClasses: ["item-sheetv2-content"],
     },
+    form: {
+      submitOnChange: true,
+    },
     position: {
       width: 500,
       height: 600,
     },
   };
-  static PARTS = {
-    header: { template: "systems/rwk-rmc/templates/item/item-weapon-header.hbs" },
-  };
+  //#endregion
 
-  static TABS = {};
+  /* -------------------------------------------- */
+  //#region Accesors
+  get title() {
+    return `${game.i18n.localize("TYPES.Item.item")} Sheet: ${this.document.name}`;
+  }
+  //#endregion
 }

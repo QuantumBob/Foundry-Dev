@@ -24,7 +24,7 @@
   },
   "rwk end region": {
     "prefix": ["end", "rwk"],
-    "body": ["//#endregion\n/* -------------------------------------------- */\n"],
+    "body": ["//#endregion\n"],
     "description": "Add end region tag with extras",
   },
 }
