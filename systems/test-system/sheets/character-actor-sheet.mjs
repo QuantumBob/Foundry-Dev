@@ -60,6 +60,15 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   /* -------------------------------------------- */
   /*  Actions                                     */
   /* -------------------------------------------- */
+  static async #onSubmitForm(event, form, formData) {
+    event.preventDefault();
+    const s = this.actor.system._source;
+    this.actor.system._source.description = formData.object.description;
+    // const data = await this.document.update(); // Note: formData.object
+    const data = await this.document.updateSource({ description: formData.object.description });
+
+    let t = 0;
+  }
 
   static toggleEditMode(event, target) {
     const mode = this.constructor.MODES.PLAY;
@@ -135,15 +144,10 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     return context;
   }
 
-  _onChangeForm(formConfig, event) {
-    console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-    super._onChangeForm(formConfig, event);
-  }
-
-  static async #onSubmitForm(event, form, formData) {
-    event.preventDefault();
-    await this.document.update(formData.object); // Note: formData.object
-  }
+  // _onChangeForm(formConfig, event) {
+  //   console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+  //   super._onChangeForm(formConfig, event);
+  // }
 
   // async _onSubmitForm(formConfig, event) {
   //   console.log(`RWK: _onSubmitForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
