@@ -222,5 +222,33 @@ Objects within the context will show up as [object Object]
 {{system}} will only work if you copy this.actor.system to context   
 
 ```
-context.system = this.actor.system;
+context.system = this.actor.system;  
 ```
+
+# Updating Actors
+
+## This is from Discord
+
+So in your event listener  
+1. You want to clone the array with `const clone = foundry.utils.duplicate(actor.path.to.prop)`  
+2. Edit your array with `clone.push()`  
+3. Call `actor.update({ 'path.to.prop': clone})`  
+
+### This is what I thought at first  
+
+If form is only filled with {{document.value}} fields use this one...  
+```const data = await this.document.update(formData.object); // Note: formData.object```  
+If form is filled with {{system.value}} fields use this one...  
+```const data = await this.actor.updateSource({ "system.description": description });```  
+
+## WORKING!!!!! YEAH!!!!  
+
+This is what works. Use the duplicate method if needed.   
+
+```
+// let description = foundry.utils.duplicate(this.actor._source.system.description ?? {});
+const description = formData.object.description;
+const data = await this.actor.update({ "system.description": description });
+```
+
+Remember the data in the sheet from the token and from the actor in the sidebar may not be linked.

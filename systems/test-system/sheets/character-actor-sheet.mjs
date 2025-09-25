@@ -6,20 +6,15 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 // window.customElements.define("slide-toggle", SlideToggleElement);
 
 export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
-  /**
-   * Available sheet modes.
-   * @enum {number}
-   */
+  _mode = null;
+
+  /* -------------------------------------------- */
+  //#region STATICS
+
   static MODES = {
     PLAY: 1,
     EDIT: 2,
   };
-
-  /* -------------------------------------------- */
-
-  _mode = null;
-
-  /* -------------------------------------------- */
 
   static DEFAULT_OPTIONS = {
     classes: ["test-system"],
@@ -56,18 +51,24 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
       template: `${this.DEFAULT_OPTIONS.templatePath}/character-header.hbs`,
     },
   };
+  //#endregion
 
   /* -------------------------------------------- */
-  /*  Actions                                     */
-  /* -------------------------------------------- */
+  //#region Actions
+
   static async #onSubmitForm(event, form, formData) {
     event.preventDefault();
-    const s = this.actor.system._source;
-    this.actor.system._source.description = formData.object.description;
-    // const data = await this.document.update(); // Note: formData.object
-    const data = await this.document.updateSource({ description: formData.object.description });
+    /* see NOTES.md */
+    // const description = foundry.utils.duplicate(this.actor._source.system.description ?? {});
+    const nameChange = formData.name;
+    const imgChange = formData.img;
+    const description = formData.description;
+    const hp = formData.hitpoints;
+    const combined = { system: { description: description, hitpoints: hp } };
+    const combined2 = { img: imgChange, name: nameChange, system: { description: description, hitpoints: hp } };
+    const system = foundry.utils.flattenObject(formData.object);
 
-    let t = 0;
+    const data = await this.actor.update({ system });
   }
 
   static toggleEditMode(event, target) {
@@ -81,6 +82,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     }
     this.render(true);
   }
+  //#endregion
 
   /* -------------------------------------------- */
   /*  Accessors                                   */
@@ -91,8 +93,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   }
 
   /* -------------------------------------------- */
-  /*  Methods                                     */
-  /* -------------------------------------------- */
+  //#region Methods
 
   /* -------------------------------------------- */
   //#region Unused
@@ -144,6 +145,9 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     return context;
   }
 
+  /* -------------------------------------------- */
+  //#region Unused
+
   // _onChangeForm(formConfig, event) {
   //   console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._onChangeForm(formConfig, event);
@@ -171,9 +175,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   const data = await super._processSubmitData(event, form, submitData, options);
   //   // return data;
   // }
-
-  /* -------------------------------------------- */
-  //#region Unused
 
   // _createContextMenu(handler) {
   //   console.log(
@@ -212,10 +213,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: _insertElement - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._insertElement(element);
   // }
-  //#endregion
-
-  /* -------------------------------------------- */
-  //#region #####
 
   // _onClickAction(event, target) {
   //   console.log(`RWK: _onClickAction - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
@@ -295,10 +292,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: _onSortItem - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   await super._onSortItem(event, item);
   // }
-  //#endregion
-
-  /* -------------------------------------------- */
-  //#region Unused
 
   // async _postRender(context, options) {
   //   console.log(`RWK: _postRender - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
@@ -317,10 +310,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   await super._preFirstRender(context, options);
   // }
 
-  //#endregion
-
-  /* -------------------------------------------- */
-  //#region Unused
   // _prepareTabs(group) {
   //   console.log(`RWK: _prepareTabs - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._prepareTabs(group);
@@ -348,10 +337,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   const data = super._processFormData(event, form, formData);
   //   return data;
   // }
-  //#endregion
-
-  /* -------------------------------------------- */
-  //#region Unused
 
   // _removeElement(element) {
   //   console.log(`RWK: _removeElement - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
