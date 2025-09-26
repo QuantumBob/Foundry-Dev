@@ -1,18 +1,22 @@
 import { _getDatasets } from "../../helpers/helpers.mjs";
 import { BaseCharacterActorSheet } from "./BaseCharacterActorSheet.mjs";
 
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
+
 export class CharacterActorSheet extends BaseCharacterActorSheet {
+  editingDescriptionTarget = null;
   /* -------------------------------------------- */
   //#region Statics
 
   static DEFAULT_OPTIONS = {
-    classes: ["character", "vertical-tabs"],
+    classes: ["character", "vertical-tabs", "rmc-font"],
     position: {
       width: 600,
       height: 600,
     },
     actions: {
       showNotes: CharacterActorSheet.showNotes,
+      editDescription: CharacterActorSheet.#editDescription,
       //   configureActor: CharacterActorSheet.configureActor,
     },
     templates: "systems/rwk-rmc/templates",
@@ -53,8 +57,8 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       container: { classes: ["tab-body"], id: "tabs" },
       scrollable: [""],
     },
-    details: {
-      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-details.hbs`,
+    biography: {
+      template: `${this.DEFAULT_OPTIONS.templates}/actor/character-biography.hbs`,
       container: { classes: ["tab-body"], id: "tabs" },
       scrollable: [""],
     },
@@ -73,7 +77,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
         { id: "equipment", group: "sheet", label: "RMC.TabClass.Equipment", cssClass: "rmcequipment" },
         { id: "skills", group: "sheet", label: "RMC.TabClass.Skills", cssClass: "rmcskills" },
         { id: "spells", group: "sheet", label: "RMC.TabClass.Spells", cssClass: "rmcspells" },
-        { id: "details", group: "sheet", label: "RMC.TabClass.Details", cssClass: "rmcdetails" },
+        { id: "biography", group: "sheet", label: "RMC.TabClass.Biography", cssClass: "rmcbiography" },
         { id: "notes", group: "sheet", label: "RMC.TabClass.Notes", cssClass: "rmcnotes" },
       ],
       initial: "stats",
@@ -90,6 +94,12 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     html2.classList.add("hidden");
   }
 
+  static #editDescription(event, target) {
+    if (target.ariaDisabled) return;
+    this.editingDescriptionTarget = target.dataset.target;
+    // this.render();
+  }
+
   // static async configureActor(event) {
   //   event.preventDefault();
   //   await new CharacterActorSheet({
@@ -103,25 +113,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   //#endregion
 
   /* -------------------------------------------- */
-  //#region Accesors
-
-  get title() {
-    return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
-  }
-  //#endregion
-
-  /* -------------------------------------------- */
   //#region Methods
-
-  _configureRenderOptions(options) {
-    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-    super._configureRenderOptions(options);
-    // Set initial mode
-
-    let { mode, renderContext } = options;
-    if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
-    this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
-  }
 
   async _prepareContext(options) {
     console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
@@ -154,7 +146,8 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     return context;
   }
 
-  async _preparePartContext(partId, context) {
+  async _preparePartContext(partId, context, options) {
+    context = await super._preparePartContext(partId, context, options);
     switch (partId) {
       case "header":
         console.log("RWK: _preparePartContext - header");
@@ -166,10 +159,67 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
         break;
       case "equipment":
         break;
+      case "biography":
+        return await this._prepareBiography(context);
+        break;
       case "notes":
+        return await this._prepareNotes(context);
         break;
       default:
     }
+    return context;
+  }
+
+  async _prepareBiography(context) {
+    if (this.actor.limited) return context;
+
+    const enrichmentOptions = {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor,
+      rollData: context.rollData,
+    };
+    // await TextEditor.enrichHTML(this.actor.system.details.biography.value, enrichmentOptions);
+    context.enrichedBiography = await TextEditor.enrichHTML(this.actor.system.biography, {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor,
+      rollData: context.rollData,
+    });
+    // DnD5e
+    // biography: new SchemaField({
+    //     value: new HTMLField({label: "DND5E.Biography"}),
+    //     public: new HTMLField({label: "DND5E.BiographyPublic"})
+    //   }, {label: "DND5E.Biography"})
+    // };
+    // context.enriched = {
+    //   label: "DND5E.Biography",
+    //   value: await TextEditor.enrichHTML(this.actor.system.details.biography.value, enrichmentOptions),
+    // };
+    return context;
+  }
+
+  async _prepareNotes(context) {
+    if (this.actor.limited) return context;
+
+    const enrichmentOptions = {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor,
+      rollData: context.rollData,
+    };
+    // await TextEditor.enrichHTML(this.actor.system.details.notes.value, enrichmentOptions);
+    context.enrichedNotes = await TextEditor.enrichHTML(this.actor.system.notes, {
+      secrets: this.actor.isOwner,
+      relativeTo: this.actor,
+      rollData: context.rollData,
+    });
+    // biography: new SchemaField({
+    //     value: new HTMLField({label: "DND5E.Biography"}),
+    //     public: new HTMLField({label: "DND5E.BiographyPublic"})
+    //   }, {label: "DND5E.Biography"})
+    // };
+    // context.enriched = {
+    //   label: "DND5E.Biography",
+    //   value: await TextEditor.enrichHTML(this.actor.system.details.biography.value, enrichmentOptions),
+    // };
     return context;
   }
 

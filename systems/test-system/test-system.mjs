@@ -1,23 +1,74 @@
-import { CharacterActorDataModel } from "./data-models/character-actor-data-model.mjs";
-import { WeaponItemDataModel } from "./data-models/weapon-item-data-model.mjs";
-import { CharacterActorSheet } from "./sheets/character-actor-sheet.mjs";
-import { WeaponItemSheet } from "./sheets/weapon-item-sheet.mjs";
-import { TestApp } from "./apps/test-app.mjs";
+import { CharacterActorDataModel } from "./module/data-models/character-actor-data-model.mjs";
+import { WeaponItemDataModel } from "./module/data-models/weapon-item-data-model.mjs";
+import { CharacterActorSheet } from "./module/sheets/character-actor-sheet.mjs";
+import { WeaponItemSheet } from "./module/sheets/weapon-item-sheet.mjs";
+import { TestApp } from "./module/applications/test-app.mjs";
+
+let debugFlag = true;
+
+/* -------------------------------------------- */
+//#region Hooks
 
 Hooks.on("init", () => {
-  // debug status
-  CONFIG.debug.applications = true;
-  CONFIG.debug.documents = true;
-  CONFIG.debug.hooks = true;
   console.log("test-system: in init hook");
 
+  debug(debugFlag);
+
+  setBasicConfig();
+
+  bindKeys();
+
+  initFoundry();
+});
+
+Hooks.on("ready", async () => {
+  console.log("RWK: in ready");
+  // auto open actor sheet
+  let actor = game.actors.getName("Bill") ?? game.actors.getName("Bob");
+
+  await actor?.sheet.render(true);
+
+  // auto open testApp
+  // CONFIG.testApp.render(true);
+});
+
+Hooks.on("getActorContextOptions", (app, menu) => {
+  console.log("RWK: getDocumentContextOptions");
+
+  // add entry to context menu of actor sidebar
+  menu.push({
+    name: "TESTSYS.SIDEBAR.EditActor",
+    icon: '<i class="fa-solid fa-image"></i>',
+    condition: (li) => getActor(li).canUserModify(game.user, "delete"),
+    callback: (li) => editActor(li),
+  });
+});
+
+Hooks.on("closeTestApp", () => {
+  console.log("in closeTestApp");
+  CONFIG.testApp = null;
+});
+//#endregion
+
+/* -------------------------------------------- */
+//#region Methods
+
+const setBasicConfig = () => {
   CONFIG.rwkCount = 1;
   // settings for dice app (TestApp class)
   CONFIG.diceVisible = false;
   CONFIG.diceChain = [];
+};
 
-  bindKeys();
+const debug = (debug = false) => {
+  if (!debug) return;
+  // debug status
+  CONFIG.debug.applications = true;
+  CONFIG.debug.documents = true;
+  CONFIG.debug.hooks = true;
+};
 
+const initFoundry = () => {
   // register data models
   CONFIG.Actor.dataModels = {
     character: CharacterActorDataModel,
@@ -34,7 +85,7 @@ Hooks.on("init", () => {
     makeDefault: true,
     label: "Test System Character",
   });
-});
+};
 
 // bind keys used by test-system
 const bindKeys = () => {
@@ -73,30 +124,4 @@ const getActor = (li) => {
 const editActor = async (li) => {
   await getActor(li).sheet.render(true);
 };
-
-Hooks.on("ready", async () => {
-  console.log("RWK: in ready");
-  // auto open actor sheet
-  let actor = game.actors.getName("Bill");
-  await actor?.sheet.render(true);
-
-  // auto open testApp
-  // CONFIG.testApp.render(true);
-});
-
-Hooks.on("getActorContextOptions", (app, menu) => {
-  console.log("RWK: getDocumentContextOptions");
-
-  // add entry to context menu of actor sidebar
-  menu.push({
-    name: "TESTSYS.SIDEBAR.EditActor",
-    icon: '<i class="fa-solid fa-image"></i>',
-    condition: (li) => getActor(li).canUserModify(game.user, "delete"),
-    callback: (li) => editActor(li),
-  });
-});
-
-Hooks.on("closeTestApp", () => {
-  console.log("in closeTestApp");
-  CONFIG.testApp = null;
-});
+//#endregion

@@ -1,6 +1,6 @@
 import { BaseActorDataModel } from "../abstract/base-actor-data-model.mjs";
 
-const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
+const { NumberField, StringField, SchemaField, BooleanField, HTMLField } = foundry.data.fields;
 
 export class CharacterActorDataModel extends BaseActorDataModel {
   static defineSchema() {
@@ -16,6 +16,8 @@ export class CharacterActorDataModel extends BaseActorDataModel {
       hair: new StringField({ required: false, blank: true, trim: true, initial: "" }),
       height: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
       weight: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
+      biography: new StringField({ required: true, blank: true }),
+      notes: new StringField({ required: true, blank: true }),
     });
   }
 

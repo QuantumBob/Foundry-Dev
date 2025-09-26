@@ -20,7 +20,7 @@
     }
   ],
   "esmodules": ["./test-system.mjs"],
-  "styles": ["./styles/test-system.css"],
+  "styles": ["./test-system.css"],
   "documentTypes": {
     "Actor": {
       "character": {}

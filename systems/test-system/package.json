@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --no-source-map styles/test-system.scss:styles/test-system.css",
-    "sass:watch": "sass --no-source-map --watch src/scss:dist/css"
+    "sass": "sass --no-source-map styles/test-system.scss:/test-system.css",
+    "sass:watch": "sass --no-source-map --watch styles/scss:/css"
   },
   "type": "module",
   "keywords": [],

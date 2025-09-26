@@ -19,7 +19,13 @@
         width="100"
       />
       <input type="text" name="name" autocomplete="off" class="document-name uninput" value="{{actor.name}}" />
-      <input type="text" name="profession" autocomplete="off" class="document-profession uninput" value="{{system.profession}}" />
+      <input
+        type="text"
+        name="system.profession"
+        autocomplete="off"
+        class="document-profession uninput"
+        value="{{system.profession}}"
+      />
     {{else}}
       <img
         class="profile-img"

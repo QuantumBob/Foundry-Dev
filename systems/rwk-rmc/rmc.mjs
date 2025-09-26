@@ -1,15 +1,13 @@
-import RMC from "./helpers/config.mjs";
-
-import { CharacterActorDataModel } from "./data/actor/character-actor-data-model.mjs";
-import { HeroActorDataModel } from "./data/actor/hero-actor-data-model.mjs";
-import { CreatureActorDataModel } from "./data/actor/creature-actor-data-model.mjs";
-import { WeaponItemDataModel } from "./data/item/weapon-item-data-model.mjs";
-import { SpellItemDataModel } from "./data/item/spell-item-data-model.mjs";
-
-import { CharacterActorSheet } from "./sheets/actor/CharacterActorSheet.mjs";
-import { HeroActorSheet } from "./sheets/actor/HeroActorSheet.mjs";
-import { HumanoidCreatureActorSheet } from "./sheets/actor/HumanoidCreatureActorSheet.mjs";
-import { WeaponItemSheet } from "./sheets/item/WeaponItemSheet.mjs";
+import RMC from "./module/helpers/config.mjs";
+import { CharacterActorDataModel } from "./module/data/actor/character-actor-data-model.mjs";
+import { HeroActorDataModel } from "./module/data/actor/hero-actor-data-model.mjs";
+import { CreatureActorDataModel } from "./module/data/actor/creature-actor-data-model.mjs";
+import { WeaponItemDataModel } from "./module/data/item/weapon-item-data-model.mjs";
+import { SpellItemDataModel } from "./module/data/item/spell-item-data-model.mjs";
+import { CharacterActorSheet } from "./module/sheets/actor/CharacterActorSheet.mjs";
+import { HeroActorSheet } from "./module/sheets/actor/HeroActorSheet.mjs";
+import { HumanoidCreatureActorSheet } from "./module/sheets/actor/HumanoidCreatureActorSheet.mjs";
+import { WeaponItemSheet } from "./module/sheets/item/WeaponItemSheet.mjs";
 
 globalThis.rmc = {
   config: RMC,
@@ -21,21 +19,50 @@ globalThis.rmc = {
   //   utils
 };
 
-const DEBUG = true;
+let DEBUG = true;
+
+/* -------------------------------------------- */
+//#region Hooks
 
 Hooks.once("init", () => {
   console.log("RWK: rwk-rmc: init hook");
+
+  debugStatus(DEBUG);
+
+  basicCONFIG();
+
+  initFoundry();
+});
+
+Hooks.on("ready", async () => {
+  console.log("RWK: in ready");
+  let actor = game.actors.getName("Bob") ?? game.actors.getName("Bill");
+  await actor?.sheet.render(true);
+});
+
+Hooks.on("preUpdateActor", async () => {});
+//#endregion
+
+/* -------------------------------------------- */
+//#region Methods
+
+const debugStatus = (DEBUG) => {
   // debug status
   if (DEBUG) {
     CONFIG.debug.applications = true;
     CONFIG.debug.documents = true;
     CONFIG.debug.hooks = true;
   }
+};
+
+const basicCONFIG = () => {
   // Add custom constants for configuration.
   globalThis.rmc = game.rmc = Object.assign(game.system, rmc);
   CONFIG.rwkCount = 1;
   CONFIG.RMC = RMC;
+};
 
+const initFoundry = () => {
   // CONFIG.ActiveEffect.legacyTransferral = false;
   // config Documents and Data Models
   // CONFIG.Actor.documentClass = RMCActor;
@@ -84,12 +111,5 @@ Hooks.once("init", () => {
     makeDefault: true,
     label: "RMC.Weapon",
   });
-});
-
-Hooks.on("ready", async () => {
-  console.log("RWK: in ready");
-  let actor = game.actors.getName("Bob");
-  await actor?.sheet.render(true);
-});
-
-Hooks.on("preUpdateActor", async () => {});
+};
+//#endregion

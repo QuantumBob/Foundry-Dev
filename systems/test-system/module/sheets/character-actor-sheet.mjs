@@ -23,7 +23,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
       height: 600,
     },
     form: {
-      handler: CharacterActorSheet.#onSubmitForm,
+      //   handler: CharacterActorSheet.#onSubmitForm,
       submitOnChange: true,
     },
     actions: {
@@ -49,6 +49,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   static PARTS = {
     header: {
       template: `${this.DEFAULT_OPTIONS.templatePath}/character-header.hbs`,
+      classes: ["header-template-class"],
     },
   };
   //#endregion
@@ -56,6 +57,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   /* -------------------------------------------- */
   //#region Actions
 
+  /* Not needed for simple updates - just format the html inputs properly */
   static async #onSubmitForm(event, form, formData) {
     event.preventDefault();
     /* see NOTES.md */
@@ -144,7 +146,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
 
     return context;
   }
-
   /* -------------------------------------------- */
   //#region Unused
 

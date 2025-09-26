@@ -1,3 +1,12 @@
+.rmc-font {
+  font-family: Amiri;
+}
+.rmc-font-upper {
+  font-family: Amiri;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .rmc .sheet-header .profile-img {
   flex: 0 0 100px;
   height: 100px;

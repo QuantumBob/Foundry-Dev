@@ -23,7 +23,7 @@
       "Equipment": "Equipment",
       "Notes": "Notes",
       "Combat": "Combat",
-      "Details": "Details",
+      "Biography": "Biography",
       "Skills": "Skills",
       "Spells": "Spells",
       "Stats": "Stats"
@@ -60,6 +60,7 @@
       "StremgthShort": "Str"
     },
     "Notes": "Notes",
+    "Biography": "Biography",
     "Roll": "Roll",
     "ItemEdit": "Edit Item",
     "ItemDelete": "Delete Item",

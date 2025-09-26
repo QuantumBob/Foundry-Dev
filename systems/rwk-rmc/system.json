@@ -20,8 +20,8 @@
       "path": "./lang/en.json"
     }
   ],
-  "esmodules": ["./module/rmc.mjs"],
-  "styles": ["./styles/rmc.css"],
+  "esmodules": ["./rmc.mjs"],
+  "styles": ["./rmc.css"],
   "grid": {
     "distance": 5,
     "units": "ft"
@@ -30,7 +30,7 @@
   "documentTypes": {
     "Actor": {
       "character": {
-        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+        "htmlFields": ["notes.value", "notes.public", "bastion.description"]
       }
     },
     "Item": {

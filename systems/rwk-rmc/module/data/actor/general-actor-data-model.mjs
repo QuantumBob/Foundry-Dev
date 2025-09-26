@@ -4,6 +4,14 @@ const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fie
 
 export class CharacterActorDataModel extends BaseActorDataModel {
   static defineSchema() {
-    return this.mergeSchema(super.defineSchema(), {});
+    return this.mergeSchema(super.defineSchema(), {
+      notes: new SchemaField(
+        {
+          value: new HTMLField({ label: "Notes" }),
+          public: new HTMLField({ label: "Notes Public" }),
+        },
+        { label: "Notes" }
+      ),
+    });
   }
 }
