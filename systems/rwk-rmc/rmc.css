@@ -180,10 +180,18 @@
 .rmc.character.sheet .character-header .character-stats {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  flex-grow: 2;
 }
 .rmc.character.sheet .skills-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.rmc.character.sheet .character-header .description {
+  flex-grow: 1;
+}
+
+.rmc.character.sheet .character-header .combat-stats {
+  flex-grow: 1;
 }

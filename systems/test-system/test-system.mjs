@@ -5,6 +5,7 @@ import { WeaponItemSheet } from "./module/sheets/weapon-item-sheet.mjs";
 import { TestApp } from "./module/applications/test-app.mjs";
 
 let debugFlag = true;
+let debugActor = true;
 
 /* -------------------------------------------- */
 //#region Hooks
@@ -23,10 +24,15 @@ Hooks.on("init", () => {
 
 Hooks.on("ready", async () => {
   console.log("RWK: in ready");
-  // auto open actor sheet
-  let actor = game.actors.getName("Bill") ?? game.actors.getName("Bob");
-
-  await actor?.sheet.render(true);
+  if (debugActor) {
+    // auto open actor sheet
+    let actor = game.actors.getName("Bill") ?? game.actors.getName("Bob");
+    await actor?.sheet.render(true);
+  } else {
+    // auto open actor sheet
+    let item = game.items.getName("Club") ?? game.items.getName("Wood");
+    await item?.sheet.render(true);
+  }
 
   // auto open testApp
   // CONFIG.testApp.render(true);
@@ -84,6 +90,11 @@ const initFoundry = () => {
     types: ["character"],
     makeDefault: true,
     label: "Test System Character",
+  });
+  DocumentSheetConfig.registerSheet(Item, "test-system", WeaponItemSheet, {
+    types: ["weapon"],
+    makeDefault: true,
+    label: "Test System Weapon",
   });
 };
 
