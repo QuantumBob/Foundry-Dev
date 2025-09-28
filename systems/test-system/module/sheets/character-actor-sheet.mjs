@@ -88,15 +88,46 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //#endregion
 
   /* -------------------------------------------- */
-  /*  Accessors                                   */
-  /* -------------------------------------------- */
+  //#region Accessors
 
   get title() {
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
   }
+  //#endregion
+  
 
   /* -------------------------------------------- */
   //#region Methods
+
+    _configureRenderOptions(options) {
+    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    super._configureRenderOptions(options);
+    // Set initial mode
+    let { mode, renderContext } = options;
+    if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
+    this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
+  }
+
+  // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
+  /** @override */
+  async _prepareContext(options) {
+    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
+    const context = {
+      ...(await super._prepareContext(options)),
+      actor: this.actor,
+      editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
+    };
+    context.system = context.editable ? this.actor.system._source : this.actor.system;
+    context.items = this.actor.itemTypes();
+    // this._prepareItems(context);
+
+    return context;
+  }
+
+  // async _preparePartContext(partId, context) {}
+  
+  //#endregion
+  
 
   /* -------------------------------------------- */
   //#region Unused
@@ -122,99 +153,6 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //   console.log(`RWK: _canRender - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
   //   super._canRender(options);
   // }
-
-  //#endregion
-
-  _configureRenderOptions(options) {
-    console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-    super._configureRenderOptions(options);
-    // Set initial mode
-    let { mode, renderContext } = options;
-    if (mode === undefined && renderContext === "createItem") mode = this.constructor.MODES.EDIT;
-    this._mode = mode ?? this._mode ?? this.constructor.MODES.PLAY;
-  }
-
-  // see -F:\RPG\Foundry\Foundry-Dev\systems\dnd5e\module\applications\actor\api\base-actor-sheet.mjs
-  /** @override */
-  async _prepareContext(options) {
-    console.log(`RWK: _prepareContext - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
-    const context = {
-      ...(await super._prepareContext(options)),
-      actor: this.actor,
-      editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
-    };
-    context.system = context.editable ? this.actor.system._source : this.actor.system;
-    context.items = this._getItems();
-
-    // this._prepareItems(context);
-
-    return context;
-  }
-
-  // async _preparePartContext(partId, context) {}
-
-  _getItems() {
-    const types = Object.fromEntries(
-      game.documentTypes.Item.map((t) => {
-        return [t, { label: game.i18n.localize(CONFIG.Item.typeLabels[t]), items: [] }];
-      })
-    );
-    for (const item of this.actor.items) {
-      types[item.type].items.push(item);
-    }
-    // Only show Base if it's actually being used
-    if (types.base.items.length === 0) delete types.base;
-    return types;
-  }
-
-  _prepareItems(context) {
-    // Initialize containers.
-    const gear = [];
-    const features = [];
-    const weapons = [];
-    const spells = {
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-      10: [],
-    };
-    // Iterate through items, allocating to containers
-    for (const [key, value] of Object.entries(context.items)) {
-      if (key === "base") continue;
-      value.img = value.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (key === "item") {
-        gear.push(value);
-      }
-      // Append to features.
-      else if (key === "feature") {
-        features.push(value);
-      }
-      // Append to features.
-      else if (key === "weapon") {
-        weapons.push(value);
-      }
-      // Append to spells.
-      else if (key === "spell") {
-        if (value.system.spellLevel != undefined) {
-          spells[value.system.spellLevel].push(value);
-        }
-      }
-    }
-    // Assign and return
-    context.gear = gear;
-    context.features = features;
-    context.weapons = weapons;
-    context.spells = spells;
-  }
-  /* -------------------------------------------- */
-  //#region Unused
 
   // _onChangeForm(formConfig, event) {
   //   console.log(`RWK: _onChangeForm - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);

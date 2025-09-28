@@ -13,11 +13,14 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.35.0",
+    "@unibeautify/beautifier-js-beautify": "^0.4.0",
     "copyfiles": "^2.4.1",
     "eslint": "^9.35.0",
     "globals": "^16.3.0",
+    "js-beautify": "^1.15.4",
     "js-yaml": "^4.1.0",
-    "sass": "^1.92.1"
+    "sass": "^1.92.1",
+    "unibeautify": "^0.17.1"
   },
   "dependencies": {
     "ws": "^8.18.3"
