@@ -2,10 +2,10 @@
   <header class="sheet-header">
     <div>CssClass : {{part.cssClass}}, {{actor.type}}</div>
     <div class="left">
-      <img
+    <img
         class="profile-img"
         src="{{actor.img}}"
-        data-action="editImage"
+        {{tif2 editable "data-action='editImage'" "data-action=''"}}
         data-edit="img"
         data-type="Image"
         alt="Portrait"
@@ -14,7 +14,14 @@
         width="100"
       />
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" class="document-name uninput" value="{{actor.name}}" data-dtype="String" />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="document-name uninput"
+        value="{{actor.name}}"
+        data-dtype="String"
+      />
     </div>
     <div class="description">
       <label for="description">Description</label>
@@ -63,8 +70,17 @@
         </li>
         <ul class="items">
           {{#each group.items as |item|}}
-            <li class="item flexrow draggable" data-item-id="{{item._id}}" data-document-class="Item">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+            <li
+              class="item flexrow draggable"
+              data-item-id="{{item._id}}"
+              data-document-class="Item"
+            >
+              <img
+                src="{{item.img}}"
+                title="{{item.name}}"
+                width="24"
+                height="24"
+              />
               <div class="item-name">{{item.name}}</div>
               <div class="document-controls">
                 <a

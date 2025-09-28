@@ -3,6 +3,7 @@ import { WeaponItemDataModel } from "./module/data-models/weapon-item-data-model
 import { CharacterActorSheet } from "./module/sheets/character-actor-sheet.mjs";
 import { WeaponItemSheet } from "./module/sheets/weapon-item-sheet.mjs";
 import { TestApp } from "./module/applications/test-app.mjs";
+// import hbs from "hbs";
 
 let debugFlag = true;
 let debugActor = true;
@@ -54,6 +55,57 @@ Hooks.on("closeTestApp", () => {
   console.log("in closeTestApp");
   CONFIG.testApp = null;
 });
+//#endregion
+
+/* -------------------------------------------- */
+//#region Helpers
+
+// Handlebars.registerHelper(
+//   // DO NOT PUT if OR IT WILL BREAK THE REGULAR #if
+//   "tif",
+//   (cond, attrName, trueVal, falseVal) => {
+//     console.log(falseVal);
+//     const val = cond ? trueVal : falseVal;
+//     if (val === undefined || val === null) {
+//       return;
+//     } else if (attrName === null) {
+//       return val;
+//     } else {
+//       return new Handlebars.handlebars.SafeString(`${attrName}="${val}"`); // SafeString is required so the " and = are not transformed
+//     }
+//   }
+// );
+Handlebars.registerHelper("tif2", (condition, valueTrue, valueFalse) => {
+  return condition ? valueTrue : valueFalse;
+});
+
+Handlebars.registerHelper(
+  // DO NOT PUT if OR IT WILL BREAK THE REGULAR #if
+  "tif",
+  (condition, options) => {
+    if (condition) {
+      const r = options.fn(this);
+      return r;
+    } else {
+      return options.inverse;
+    }
+  }
+);
+
+Handlebars.registerHelper(
+  // DO NOT PUT if OR IT WILL BREAK THE REGULAR #if
+  "telse",
+  (condition, attrName) => {
+    if (condition === undefined || condition === null) {
+      return;
+    } else if (attrName === null) {
+      return condition;
+    } else {
+      const r = new Handlebars.SafeString(`${attrName.name}="${condition}"`); // SafeString is required so the " and = are not transformed
+      return r;
+    }
+  }
+);
 //#endregion
 
 /* -------------------------------------------- */
