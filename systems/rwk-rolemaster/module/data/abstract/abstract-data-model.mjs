@@ -3,7 +3,5 @@ export class AbstractrDataModel extends foundry.abstract.TypeDataModel {
     Object.assign(a, b);
     return a;
   }
-  static defineSchema() {
-    return {};
-  }
+
 }

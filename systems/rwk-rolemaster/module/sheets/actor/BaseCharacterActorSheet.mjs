@@ -18,7 +18,13 @@ export class BaseCharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
   /* -------------------------------------------- */
   //#region Accesors
   get title() {
-    return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
+    let creation = game.i18n.localize("ROLEMASTER.Creation.notstarted");
+    if (this.actor.system.creation === 1)
+      creation = game.i18n.localize("ROLEMASTER.Creation.underway");
+    if (this.actor.system.creation === 2)
+      creation = game.i18n.localize("ROLEMASTER.Creation.complete");
+
+    return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}. ${creation}`;
   }
   //#endregion
 }

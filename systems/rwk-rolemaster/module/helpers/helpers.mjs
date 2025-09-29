@@ -1,11 +1,15 @@
- /**
-   * Helper to compose datasets available in the hbs.
-   * @returns {Record<string, unknown>}
-   * @protected
-   */
-  export function _getDatasets() {
-    return {
-      isSource: { source: true },
-      notSource: { source: false },
-    };
-  }
+/**
+  * Helper to compose datasets available in the hbs.
+  * @returns {Record<string, unknown>}
+  * @protected
+  */
+export function _getDatasets() {
+  return {
+    isSource: { source: true },
+    notSource: { source: false },
+  };
+}
+
+export function log(message) {
+  console.log(`RWK: ${message}`);
+}

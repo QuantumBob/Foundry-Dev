@@ -7,7 +7,7 @@ export class WeaponItemSheet extends BaseItemSheet {
     classes: ["weapon"],
   };
   static PARTS = {
-    header: { template: "systems/rwk-rolemaster/templates/item//item-weapon-header.hbs" },
+    header: { template: "systems/rwk-rolemaster/templates/item/item-weapon-header.hbs" },
   };
   //#endregion
 

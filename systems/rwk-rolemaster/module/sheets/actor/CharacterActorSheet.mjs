@@ -127,6 +127,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     context.flags = this.actor.flags;
     context.items = context.document._source.items;
     context.effects = context.source.effects;
+    context.creation = this.actor.system.creation;
 
     // Prepare character data and items.
     // if (context.source.type == "character") {
@@ -251,6 +252,16 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       v.label = game.i18n.localize(CONFIG.ROLEMASTER.abilities[k]) ?? k;
     }
   }
+  _onDropDocument(event, document) {
+    if (document.type === "stat-generation")
+      this.actor.system.creation = 1;
+    this.render({ window: { title: this.title } });
+  }
+
+  _preRender(context, options) {
+    const test = this.title;
+  }
+
 
   //#endregion
 }

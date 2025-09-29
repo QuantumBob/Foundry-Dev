@@ -3,7 +3,8 @@ const { NumberField, StringField, BooleanField } = foundry.data.fields;
 
 export class BaseItemDataModel extends AbstractrDataModel {
   static defineSchema() {
-    return this.mergeSchema(super.defineSchema(), {
+    // return this.mergeSchema(super.defineSchema(), {
+    return {
       version: new StringField({
         required: true,
         nullable: true,
@@ -20,6 +21,7 @@ export class BaseItemDataModel extends AbstractrDataModel {
         initial: false,
         gmOnly: true,
       }),
-    });
+    }
+    // });
   }
 }

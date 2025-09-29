@@ -3,7 +3,8 @@ const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fie
 
 export class BaseActorDataModel extends AbstractrDataModel {
   static defineSchema() {
-    return this.mergeSchema(super.defineSchema(), {
+    // return this.mergeSchema(super.defineSchema(), {
+    return {
       version: new StringField({
         required: true,
         nullable: true,
@@ -20,6 +21,7 @@ export class BaseActorDataModel extends AbstractrDataModel {
         initial: false,
         gmOnly: true,
       }),
-    });
+      // });
+    }
   }
 }

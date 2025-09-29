@@ -1,4 +1,3 @@
-import { BooleanField } from "@client/data/fields.mjs";
 import { BaseItemDataModel } from "../abstract/base-item-data-model.mjs";
 
 const { NumberField, StringField, BooleanField } = foundry.data.fields;
@@ -20,7 +19,7 @@ export class SpellItemDataModel extends BaseItemDataModel {
       spellSubtype: new StringField(defaultString),
       areaOfEffect: new StringField(defaultString),
       duration: new NumberField(defaultNumber), // -1 for variable
-      concentration: BooleanField({}),
+      concentration: new BooleanField({}),
       permanent: new BooleanField({}),
       range: new StringField(defaultString),
     };

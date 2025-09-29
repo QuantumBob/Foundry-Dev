@@ -1,6 +1,6 @@
 {
   "id": "rwk-rolemaster",
-  "title": "RoleMaster Classic",
+  "title": "RoleMaster",
   "description": "Implimentation of the the Iron Crown RoleMaster Classic system",
   "version": "0.0.1",
   "compatibility": {
@@ -31,16 +31,21 @@
     "Actor": {
       "character": {
         "htmlFields": ["notes.value", "notes.public", "bastion.description"]
+      },
+      "test actor": {
+  
       }
     },
     "Item": {
+      "stat generation": {
+      },
       "weapon": {
         "filePathFields": {
           "activities.*.img": ["IMAGE"]
         },
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
       },
-      "equipment": {
+      "resistance-roll": {
         "filePathFields": {
           "activities.*.img": ["IMAGE"]
         },
@@ -52,13 +57,13 @@
         },
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
       },
-      "tool": {
+      "accessory": {
         "filePathFields": {
           "activities.*.img": ["IMAGE"]
         },
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
       },
-      "loot": {
+      "armor": {
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
       },
       "race": {
@@ -73,13 +78,7 @@
         },
         "htmlFields": ["description.value", "description.chat"]
       },
-      "class": {
-        "filePathFields": {
-          "advancement.*.icon": ["IMAGE"]
-        },
-        "htmlFields": ["description.value", "description.chat"]
-      },
-      "subclass": {
+      "profession": {
         "filePathFields": {
           "advancement.*.icon": ["IMAGE"]
         },
@@ -91,24 +90,11 @@
         },
         "htmlFields": ["description.value", "description.chat"]
       },
-      "feat": {
-        "filePathFields": {
-          "activities.*.img": ["IMAGE"],
-          "advancement.*.icon": ["IMAGE"]
-        },
-        "htmlFields": ["description.value", "description.chat"]
-      },
       "container": {
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
       },
       "backpack": {
         "htmlFields": ["description.value", "description.chat", "unidentified.description"]
-      },
-      "facility": {
-        "filePathFields": {
-          "activities.*.img": ["IMAGE"]
-        },
-        "htmlFields": ["description.value", "description.chat"]
       }
     }
   }

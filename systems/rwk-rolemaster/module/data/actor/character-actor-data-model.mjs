@@ -5,6 +5,7 @@ const { NumberField, StringField, SchemaField, BooleanField, HTMLField } = found
 export class CharacterActorDataModel extends BaseActorDataModel {
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
+      creation: new NumberField({ gmOnly: true, initial: 0, nullable: false, required: true, integer: true, min: 0, max: 2, choices: { 0: "Character Creation not started", 1: "Character creation under way", 2: "Character creation complete" } }),
       profession: new StringField({ required: false, blank: true, trim: true, initial: "fighter" }),
       race: new StringField({ required: false, blank: true, trim: true, initial: "" }),
       realm: new StringField({ required: false, blank: true, trim: true, initial: "" }),

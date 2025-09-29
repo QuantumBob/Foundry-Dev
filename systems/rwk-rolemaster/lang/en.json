@@ -80,6 +80,12 @@
     "ModePlay": "Play",
     "Weapon": "Weapon",
     "Creature": "Creature",
-    "Hero": "Hero"
+    "Hero": "Hero",
+    "StatGeneration": "Stat Generation",
+    "Creation" :{
+      "notstarted": "Character Creation not started",
+      "underway": "Character creation under way", 
+      "complete": "Character creation complete"
+    }
   }
 }

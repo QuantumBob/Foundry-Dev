@@ -2,7 +2,7 @@ import { BaseItemDataModel } from "../abstract/base-item-data-model.mjs";
 
 const { NumberField, StringField } = foundry.data.fields;
 const defaultString = { required: false, blank: true, trim: true, }
-const defaultNumber = { required: false, integer: true, positive: true, initial: 0 }
+const defaultNumber = { required: false, integer: true, positive: true, initial: 1 }
 
 export class WeaponItemDataModel extends BaseItemDataModel {
   static defineSchema() {
@@ -22,8 +22,8 @@ export class WeaponItemDataModel extends BaseItemDataModel {
       price: new NumberField({ required: false, integer: true, min: 0, initial: 20 }),
       type: new StringField(defaultString),
       damage: new NumberField({ required: false, integer: true, positive: true, initial: 5 }),
-      weight: new NumberField(defaultNumber),
-      productionTime: new NumberField(defaultNumber),
+      weight: new NumberField({ required: false, integer: true, initial: 0 }),
+      productionTime: new NumberField({ required: false, integer: true, initial: 0 }),
       breakage: new StringField(defaultString),
       weaponStrength: new StringField(defaultString),
       fumble: new StringField(defaultString),

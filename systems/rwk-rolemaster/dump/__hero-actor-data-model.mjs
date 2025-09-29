@@ -1,4 +1,4 @@
-import { CharacterActorDataModel } from "./character-actor-data-model.mjs";
+import { CharacterActorDataModel } from "../module/data/actor/character-actor-data-model.mjs";
 
 const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
 
