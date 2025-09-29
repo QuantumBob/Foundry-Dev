@@ -118,7 +118,7 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
       editable: this.isEditable && this._mode === this.constructor.MODES.EDIT,
     };
     context.system = context.editable ? this.actor.system._source : this.actor.system;
-    context.items = this.actor.itemTypes();
+    context.items = this.actor.itemTypes;
     // this._prepareItems(context);
 
     return context;

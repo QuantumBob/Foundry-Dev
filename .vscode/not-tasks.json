@@ -90,12 +90,12 @@
       "problemMatcher": "$tsc-watch"
     },
     {
-      "label": "build rwk-rmc",
+      "label": "build rwk-rolemaster",
       "type": "shell",
       "command": "npm",
       "args": ["run", "build tsc: no sourcemaps and sass"],
       "options": {
-        "cwd": "${workspaceFolder}/systems/rwk-rmc"
+        "cwd": "${workspaceFolder}/systems/rwk-rolemaster"
       },
       "group": {
         "kind": "build",
@@ -104,12 +104,12 @@
       "problemMatcher": []
     },
     {
-      "label": "watch rwk-rmc",
+      "label": "watch rwk-rolemaster",
       "type": "shell",
       "command": "npm",
       "args": ["run", "watch tsc and sass"],
       "options": {
-        "cwd": "${workspaceFolder}/systems/rwk-rmc"
+        "cwd": "${workspaceFolder}/systems/rwk-rolemaster"
       },
       "problemMatcher": "$tsc-watch"
     },

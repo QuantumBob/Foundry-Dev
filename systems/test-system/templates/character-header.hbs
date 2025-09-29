@@ -1,104 +1,90 @@
 <section class="{{actor.type}} flexcol"
 	autocomplete="off">
 	<header class="sheet-header">
-		<div>CssClass :
-			{{part.cssClass}},
-			{{actor.type}}
-		</div>
-		<div class="left">
-			<img class="profile-img"
-				src="{{actor.img}}"
+		<div class="top">
+			<div>CssClass :
+				{{part.cssClass}},
+				{{actor.type}}
+			</div>
+			<div class="left">
+				<img class="profile-img"
+					src="{{actor.img}}"
+					{{#if editable}}
+					data-action="editImage"
+					{{else}}
+					data-action=""
+					{{/if}}
+					data-edit="img"
+					data-type="Image"
+					alt="Portrait"
+					title="{{actor.name}}"
+					height="100"
+					width="100" />
+				<label for="name">Name</label>
 				{{#if editable}}
-				data-action="editImage"
-				{{#else}}
-				data-action=""
-				{{/if}}
-				data-edit="img"
-				data-type="Image"
-				alt="Portrait"
-				title="{{actor.name}}"
-				height="100"
-				width="100" />
-			<label for="name">Name</label>
-			{{#if editable}}
-				<input type="text"
-					id="name"
-					name="name"
-					class="document-name uninput"
-					value="{{actor.name}}"
-					data-dtype="String" />
-				{{#else}}
+					<input type="text"
+						id="name"
+						name="name"
+						class="document-name uninput"
+						value="{{actor.name}}"
+						data-dtype="String" />
+				{{else}}
 					<div id="name"
 						class="document-name">{{actor.name}}</div>
-			{{/if}}
+				{{/if}}
+			</div>
+			<div class="description">
+				<label for="description">Description</label>
+				<input type="text"
+					id="description"
+					name="system.description"
+					class="document-name uninput"
+					data-edit="txt"
+					value="{{system.description}}"
+					data-dtype="String" />
+			</div>
+			<div class="hitpoints">
+				<label for="hitpoints">Hitpoints</label>
+				<input type="number"
+					id="hitpoints"
+					name="system.hitpoints"
+					class="document-name uninput"
+					data-edit="txt"
+					value="{{system.hitpoints}}"
+					data-dtype="Number" />
+			</div>
 		</div>
-		<div class="description">
-			<label for="description">Description</label>
-			<input type="text"
-				id="description"
-				name="system.description"
-				class="document-name uninput"
-				data-edit="txt"
-				value="{{system.description}}"
-				data-dtype="String" />
-		</div>
-		<div class="hitpoints">
-			<label for="hitpoints">Hitpoints</label>
-			<input type="number"
-				id="hitpoints"
-				name="system.hitpoints"
-				class="document-name uninput"
-				data-edit="txt"
-				value="{{system.hitpoints}}"
-				data-dtype="Number" />
-		</div>
-		<ul class="itemTypes">
-			{{#each items as |group type|}}
-				<li class="itemHeader flexrow">
-					<div class="type-label">
-						{{group.label}}
-					</div>
-					<div class="document-controls">
+		<div>
+			<ul class="items">
+				<li class="title flexrow"
+					data-item-id="{{item._id}}"
+					data-document-class="Item">Weapons</li>
+				{{#each items.weapon as |item|}}
+					<li class="item flexrow draggable"
+						data-item-id="{{item._id}}"
+						data-document-class="Item">
+						<img src="{{item.img}}"
+							title="{{item.name}}"
+							width="24"
+							height="24" />
+						<div class="item-name">{{item.name}}</div>
 						{{#if @root.editable}}
-							<a class="item-control item-create"
-								title="{{localize 'DOCUMENT.Create' type=group.label}}"
-								data-action="createDoc"
-								data-document-class="Item"
-								data-type="{{type}}">
-								<i class="fas fa-plus"></i>
-								{{localize "DOCUMENT.New" type=group.label}}
-							</a>
-						{{/if}}
-					</div>
-				</li>
-				<ul class="items">
-					{{#each group.items as |item|}}
-						<li class="item flexrow draggable"
-							data-item-id="{{item._id}}"
-							data-document-class="Item">
-							<img src="{{item.img}}"
-								title="{{item.name}}"
-								width="24"
-								height="24" />
-							<div class="item-name">{{item.name}}</div>
 							<div class="document-controls">
 								<a class="item-control item-edit"
 									title="{{localize 'DOCUMENT.Update' type=item.name}}"
 									data-action="viewDoc">
 									<i class="fas fa-edit"></i>
 								</a>
-								{{#if @root.editable}}
-									<a class="item-control item-delete"
-										title="{{localize 'DOCUMENT.Delete' type=item.name}}"
-										data-action="deleteDoc">
-										<i class="fas fa-trash"></i>
-									</a>
-								{{/if}}
-							</div>
-						</li>
-					{{/each}}
-				</ul>
-			{{/each}}
+								<a class="item-control item-delete"
+									title="{{localize 'DOCUMENT.Delete' type=item.name}}"
+									data-action="deleteDoc">
+									<i class="fas fa-trash"></i>
+								</a>
+						{{/if}}
+		</div>
+		</li>
+		{{/each}}
 		</ul>
+		</div>
 	</header>
 </section>

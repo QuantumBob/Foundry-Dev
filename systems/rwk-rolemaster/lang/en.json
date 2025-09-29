@@ -2,7 +2,8 @@
   "TYPES": {
     "Actor": {
       "character": "Character",
-      "npc": "NPC"
+      "npc": "NPC",
+      "humanoid": "Humanoid"
     },
     "Item": {
       "item": "Item",
@@ -10,10 +11,22 @@
       "spell": "Spell"
     }
   },
-  "TESTSYS": {
+  "ROLEMASTER": {
     "SheetClass": {
       "Character": "Default ROLEMASTER Character Sheet",
-      "Item": "Default ROLEMASTER Item Sheet"
+      "Item": "Default ROLEMASTER Item Sheet",
+      "Creature": "Default ROLEMASTER Creature Sheet",
+      "Humanoid": "Default ROLEMASTER Humanoid Sheet"
+    },
+    "TabClass": {
+      "Character": "Character",
+      "Equipment": "Equipment",
+      "Notes": "Notes",
+      "Combat": "Combat",
+      "Biography": "Biography",
+      "Skills": "Skills",
+      "Spells": "Spells",
+      "Stats": "Stats"
     },
     "TYPES.Actor": {
       "Party": "Party",
@@ -47,6 +60,7 @@
       "StremgthShort": "Str"
     },
     "Notes": "Notes",
+    "Biography": "Biography",
     "Roll": "Roll",
     "ItemEdit": "Edit Item",
     "ItemDelete": "Delete Item",
@@ -64,23 +78,8 @@
     "EditMode": "Edit mode",
     "ModeEdit": "Edit",
     "ModePlay": "Play",
-    "Close": "Close",
-    "SIDEBAR": {
-      "EditActor": "Edit Actor"
-    },
-    "DICE": {
-      "Close": "Close",
-      "Roll": "Roll",
-      "Plus": "+",
-      "Minus": "-",
-      "d100": "d20",
-      "d20": "d20",
-      "d12": "d12",
-      "d10": "d10",
-      "d8": "d8",
-      "d6": "d6",
-      "d4": "d4",
-      "closeIcon": "X"
-    }
+    "Weapon": "Weapon",
+    "Creature": "Creature",
+    "Hero": "Hero"
   }
 }

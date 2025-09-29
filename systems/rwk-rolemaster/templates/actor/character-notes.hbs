@@ -1,0 +1,19 @@
+{{! Notes Tab }}
+<section class="tab {{tabs.notes.id}} {{tabs.notes.cssClass}}"
+	data-tab="{{tabs.notes.id}}"
+	data-group="{{tabs.notes.group}}"
+	id="notes">
+	<div data-target="system.notes">
+		<h5 class="icon">
+			<i class="fas fa-feather"></i>
+			<span class="rolemaster-font">{{localize "ROLEMASTER.Notes"}}</span>
+		</h5>
+		{{#if editable}}
+			<prose-mirror name="system.notes"
+				value="{{system.notes}}"
+				document-uuid="{{actor.uuid}}"></prose-mirror>
+		{{else}}
+			<div class="editor-content">{{{enrichedNotes}}}</div>
+		{{/if}}
+	</div>
+</section>

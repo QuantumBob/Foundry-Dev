@@ -12,8 +12,8 @@
   },
   "NOSYS": {
     "SheetClass": {
-      "Character": "Default RMC Character Sheet",
-      "Item": "Default RMC Item Sheet"
+      "Character": "Default ROLEMASTER Character Sheet",
+      "Item": "Default ROLEMASTER Item Sheet"
     },
     "TYPES.Actor": {
       "Party": "Party",

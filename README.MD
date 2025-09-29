@@ -12,10 +12,10 @@ mklink /D link target
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\????" "F:\RPG\Foundry\Foundry-Dev\systems\????"
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\modules\rwk-tools" "F:\RPG\Foundry\Foundry-Dev\modules\rwk-tools"
 mklink /D "F:\RPG\Foundry\Foundry-Data\FVTT-Dev-Data\Data\systems\no-system" "F:\RPG\Foundry\Foundry-Dev\systems\no-system"
-mklink "F:\RPG\Foundry\Foundry-Dev\systems\rwk-rmc\foundry\tsconfig.json" "F:\RPG\Foundry\FoundryVTT-13\tsconfig.json"
+mklink "F:\RPG\Foundry\Foundry-Dev\systems\rwk-rolemaster\foundry\tsconfig.json" "F:\RPG\Foundry\FoundryVTT-13\tsconfig.json"
 
 mklink /D "C:\FoundryVTT\Data\systems\test-system" "C:\Foundry Dev\systems\test-system"
-mklink /D "C:\FoundryVTT\Data\systems\rwk-rmc" "C:\Foundry Dev\systems\rwk-rmc"
+mklink /D "C:\FoundryVTT\Data\systems\rwk-rolemaster" "C:\Foundry Dev\systems\rwk-rolemaster"
 
 mklink /D "C:\Foundry Dev\foundry\client" "C:\Foundry VTT 13\client"
 mklink /D "C:\Foundry Dev\foundry\common" "C:\Foundry VTT 13\common"
@@ -191,11 +191,11 @@ add build and utility scripts to package.json
 // "release": "npm run version:sync && npm run build && mkdir -p release && cd dist && zip -r ../release/my-system-v$(node -p \"require('../package.json').version\").zip ."
 "build": "tsc && sass src:dist --no-source-map",
 "watch": "concurrently \"tsc -w\" \"sass --watch src:dist\"",
-"release": "npm run build && zip -r ../rwk-rmc.zip dist"
+"release": "npm run build && zip -r ../rwk-rolemaster.zip dist"
 "build": "tsc && sass src:dist --no-source-map && npm run lint",
 "watch": "concurrently \"tsc -w\" \"sass --watch src:dist\" \"npm run lint -- --watch\"",
 "lint": "eslint \"src/\*\*/_.{ts,mts}\"",
-"release": "npm run build && zip -r ../rwk-rmc.zip dist"
+"release": "npm run build && zip -r ../rwk-rolemaster.zip dist"
 },
 "devDependencies": {
 "copyfiles": "^2.4.1",
@@ -523,7 +523,7 @@ update foundry's system.json
 "styles": ["styles/style.css"]
 }
 
-Create a file .eslintrc.json in rwk-rmc/
+Create a file .eslintrc.json in rwk-rolemaster/
 {
 "parser": "@typescript-eslint/parser",
 "parserOptions": {

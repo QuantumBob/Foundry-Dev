@@ -1,0 +1,19 @@
+{
+  "name": "rwk-rolemaster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --no-source-map styles/rolemaster.scss:styles/rolemaster.css",
+    "sass:watch": "sass --no-source-map --watch styles/rolemaster.scss:styles/rolemaster.css"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "typeAcquisition": {
+    "include": [
+      "jquery"
+    ]
+  }
+}

@@ -31,10 +31,10 @@ async function reloadFoundry() {
 
 const watcher = chokidar.watch(
   [
-    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rmc/**/*.mjs",
-    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rmc/**/*.js",
-    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rmc/**/*.json",
-    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rmc/**/*.scss"
+    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rolemaster/**/*.mjs",
+    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rolemaster/**/*.js",
+    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rolemaster/**/*.json",
+    "F:/RPG/Foundry/Foundry-Data/FVTT-Dev-Data/Data/systems/rwk-rolemaster/**/*.scss"
   ],
   {
     ignoreInitial: true,

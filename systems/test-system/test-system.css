@@ -30,7 +30,19 @@ body {
 .label {
   text-align: center;
 }
-
+.title{
+  justify-self: center;
+}
 .close {
   margin: 3px;
+}
+.flexrow > img {
+  flex :none;
+  margin-right: 15px;
+}
+.document-controls{
+  flex :none;
+}
+.item-control {
+  margin-right: 15px;
 }
