@@ -1,5 +1,6 @@
-import { _getDatasets } from "../../helpers/helpers.mjs";
+// import { _getDatasets } from "../../helpers/helpers.mjs";
 import { BaseCharacterActorSheet } from "./BaseCharacterActorSheet.mjs";
+import { log } from "../../helpers/helpers.mjs";
 
 const TextEditor = foundry.applications.ux.TextEditor.implementation;
 
@@ -15,8 +16,10 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
       height: 600,
     },
     actions: {
-      showNotes: CharacterActorSheet.showNotes,
+      showNotes: CharacterActorSheet.#showNotes,
       editDescription: CharacterActorSheet.#editDescription,
+      viewDoc: CharacterActorSheet.#viewDoc,
+      deleteStatGen: CharacterActorSheet.#deleteStatGen
       //   configureActor: CharacterActorSheet.configureActor,
     },
     templates: "systems/rwk-rolemaster/templates",
@@ -88,7 +91,7 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   /* -------------------------------------------- */
   //#region Actions
 
-  static showNotes(event, target) {
+  static #showNotes(event, target) {
     // const html = target.getElementsById("notes");
     const html2 = event.currentTarget.querySelector(".notes");
     html2.classList.add("hidden");
@@ -98,6 +101,16 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     if (target.ariaDisabled) return;
     this.editingDescriptionTarget = target.dataset.target;
     // this.render();
+  }
+  static #viewDoc(event, target) {
+    let item = game.items.get(target.dataset.itemId);
+    item?.sheet.render(true);
+  }
+  static async #deleteStatGen(event, target) {
+    const item = this.actor.items.get(target.dataset.itemId);
+    await item.deleteDialog();
+    const doc = await this.actor.update({ "system.creation": 0 });
+    this.render({ window: { title: this.title } });
   }
 
   // static async configureActor(event) {
@@ -125,9 +138,12 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
     };
     context.system = context.editable ? this.actor.system._source : this.actor.system;
     context.flags = this.actor.flags;
-    context.items = context.document._source.items;
+    context.items = this.actor.itemTypes;
     context.effects = context.source.effects;
+    context.stats = this.actor.system.stats;
     context.creation = this.actor.system.creation;
+    context.editStats = context.creation === 1 ? true : false;
+
 
     // Prepare character data and items.
     // if (context.source.type == "character") {
@@ -233,35 +249,28 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   async _processSubmitData(event, form, formData, updateData) {
     const overrides = foundry.utils.flattenObject(this.actor.overrides);
     for (const k of Object.keys(overrides)) delete formData[k];
-    this.document.update(formData);
+    await this.document.update(formData);
     return true;
   }
 
-  /* -------------------------------------------- */
-
-  /**
-   * Organize and classify Items for Character sheets.
-   *
-   * @param {Object} actorData The actor to prepare.
-   *
-   * @return {undefined}
-   */
   _prepareCharacterData(context) {
     // Handle translation for ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.ROLEMASTER.abilities[k]) ?? k;
     }
   }
-  _onDropDocument(event, document) {
-    if (document.type === "stat-generation")
-      this.actor.system.creation = 1;
+  async _onDropItem(event, document) {
+
+    let doc;
+    if (document.type === "stat-generation") {
+      if (this.actor.items.some(d => d.type === "stat-generation")) return;
+      await super._onDropItem(event, document);
+      // this.actor.system.creation = 1;
+      doc = await this.actor.update({ "system.creation": 1 });
+    }
+
     this.render({ window: { title: this.title } });
   }
-
-  _preRender(context, options) {
-    const test = this.title;
-  }
-
 
   //#endregion
 }

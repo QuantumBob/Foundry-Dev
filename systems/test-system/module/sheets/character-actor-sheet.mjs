@@ -59,20 +59,20 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
   //#region Actions
 
   /* Not needed for simple updates - just format the html inputs properly */
-  static async #onSubmitForm(event, form, formData) {
-    event.preventDefault();
-    /* see NOTES.md */
-    // const description = foundry.utils.duplicate(this.actor._source.system.description ?? {});
-    const nameChange = formData.name;
-    const imgChange = formData.img;
-    const description = formData.description;
-    const hp = formData.hitpoints;
-    const combined = { system: { description: description, hitpoints: hp } };
-    const combined2 = { img: imgChange, name: nameChange, system: { description: description, hitpoints: hp } };
-    const system = foundry.utils.flattenObject(formData.object);
+  // static async #onSubmitForm(event, form, formData) {
+  //   event.preventDefault();
+  //   /* see NOTES.md */
+  //   // const description = foundry.utils.duplicate(this.actor._source.system.description ?? {});
+  //   const nameChange = formData.name;
+  //   const imgChange = formData.img;
+  //   const description = formData.description;
+  //   const hp = formData.hitpoints;
+  //   const combined = { system: { description: description, hitpoints: hp } };
+  //   const combined2 = { img: imgChange, name: nameChange, system: { description: description, hitpoints: hp } };
+  //   const system = foundry.utils.flattenObject(formData.object);
 
-    const data = await this.actor.update({ system });
-  }
+  //   const data = await this.actor.update({ system });
+  // }
 
   static toggleEditMode(event, target) {
     const mode = this.constructor.MODES.PLAY;
@@ -94,12 +94,12 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     return `${game.i18n.localize("TYPES.Actor.character")} Sheet: ${this.document.name}`;
   }
   //#endregion
-  
+
 
   /* -------------------------------------------- */
   //#region Methods
 
-    _configureRenderOptions(options) {
+  _configureRenderOptions(options) {
     console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
     super._configureRenderOptions(options);
     // Set initial mode
@@ -124,10 +124,18 @@ export class CharacterActorSheet extends HandlebarsApplicationMixin(ActorSheetV2
     return context;
   }
 
+  async _onDropItem(event, document) {
+    const doc = await super._onDropItem(event, document);
+    if (document.type === "weapon")
+      console.log(`RWK: _onDropItem - ${document.documentName} : index ${CONFIG.rwkCount++}`);
+    // await this.actor.update();
+    // this.render({ window: { title: this.title } });
+  }
+
   // async _preparePartContext(partId, context) {}
-  
+
   //#endregion
-  
+
 
   /* -------------------------------------------- */
   //#region Unused

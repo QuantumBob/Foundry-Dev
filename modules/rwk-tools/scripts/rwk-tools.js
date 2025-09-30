@@ -98,9 +98,9 @@ Hooks.once("ready", async () => {
     onlyDnDNote = false;
   }
 });
-Hooks.on("preCreateItem", (item, options, sheet, userId) => {
+Hooks.on("preCreateItem", (doc, data, options, userId) => {
   // only allow unique named items.
-  if (game.items.getName(item.name)) {
+  if (game.items.getName(doc.name) && !doc.isOwned) {
     return false;
   }
 });

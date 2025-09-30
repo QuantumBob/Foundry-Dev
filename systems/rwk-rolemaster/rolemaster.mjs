@@ -19,7 +19,7 @@ globalThis.rolemaster = {
 };
 
 let DEBUG = true;
-let autoLoadActor = false;
+let autoLoadActor = true;
 
 /* -------------------------------------------- */
 //#region Hooks
@@ -46,9 +46,6 @@ Hooks.on("ready", async () => {
   }
 });
 
-Hooks.on("preCreateItem", async (document, data, options, id) => {
-  console.log("in preCreateItem ");
-});
 //#endregion
 
 /* -------------------------------------------- */
@@ -110,7 +107,7 @@ const initFoundry = () => {
   DocumentSheetConfig.registerSheet(RolemasterItem, "rwk-rolemaster", StatGenerationItemSheet, {
     makeDefault: true,
     label: "ROLEMASTER.StatGeneration",
-    types: ["stat generation"],
+    types: ["stat-generation"],
   });
 };
 //#endregion

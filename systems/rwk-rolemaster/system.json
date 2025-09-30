@@ -37,7 +37,7 @@
       }
     },
     "Item": {
-      "stat generation": {
+      "stat-generation": {
       },
       "weapon": {
         "filePathFields": {

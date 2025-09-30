@@ -1,4 +1,5 @@
 import { BaseActorDataModel } from "../abstract/base-actor-data-model.mjs";
+import StatsItemDataModel from "../item/stats-item-data-model.mjs"
 
 const { NumberField, StringField, SchemaField, BooleanField, HTMLField } = foundry.data.fields;
 
@@ -19,7 +20,7 @@ export class CharacterActorDataModel extends BaseActorDataModel {
       weight: new NumberField({ required: true, integer: true, min: 0, initial: 0, max: 30 }),
       biography: new StringField({ required: true, blank: true }),
       notes: new StringField({ required: true, blank: true }),
-      stats: new SchemaField({}),
+      stats: new SchemaField({ ...StatsItemDataModel.stats }),
       languages: new SchemaField({}),
       defensiveBonus: new SchemaField({
         armourType: new StringField({ required: false, blank: true, trim: true, initial: "" }),

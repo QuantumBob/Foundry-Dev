@@ -176,12 +176,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 5px;
+}
+.rolemaster.character.sheet .character-header > div {
+  margin: 5px;
 }
 .rolemaster.character.sheet .character-header .character-stats {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-grow: 2;
+  border-right: beige solid 2px;
+  border-left: beige solid 2px;
+  padding-left: 5px;
+}
+.rolemaster.character.sheet .character-header .character-stats .stat-group {
+  flex-grow: 1;
 }
 .rolemaster.character.sheet .skills-wrapper {
   display: flex;
@@ -194,4 +204,19 @@
 
 .rolemaster.character.sheet .character-header .combat-stats {
   flex-grow: 1;
+}
+.rolemaster.character.sheet .tab.stats .character-stats {
+  border: beige solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.rolemaster.character.sheet .tab.stats .character-stats .stat-group, .stat-values {
+  flex-grow: 1;
+  margin: 5px;
+}
+.rolemaster.character.sheet .tab.stats .character-stats .stat-group, .stat-values .stat-temporary{
+  height: 1rem;
+  min-width:fit-content;
+  max-width: 50px;
 }

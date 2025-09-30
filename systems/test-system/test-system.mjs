@@ -3,6 +3,8 @@ import { WeaponItemDataModel } from "./module/data-models/weapon-item-data-model
 import { CharacterActorSheet } from "./module/sheets/character-actor-sheet.mjs";
 import { WeaponItemSheet } from "./module/sheets/weapon-item-sheet.mjs";
 import { TestApp } from "./module/applications/test-app.mjs";
+import { TestActor } from "./module/documents/test-actor-document.mjs";
+import { TestItem } from "./module/documents/test-item-document.mjs";
 
 let debugFlag = true;
 let debugActor = true;
@@ -82,16 +84,18 @@ const initFoundry = () => {
   CONFIG.Item.dataModels = {
     weapon: WeaponItemDataModel,
   };
+  CONFIG.Actor.documentClass = TestActor;
+  CONFIG.Item.documentClass = TestItem;
 
   // register V2 Actor sheets
   const DocumentSheetConfig = foundry.applications.apps.DocumentSheetConfig;
   // DocumentSheetConfig.unregisterSheet(Actor, "core", foundry.applications.sheets.ActorSheetV2);
-  DocumentSheetConfig.registerSheet(Actor, "test-system", CharacterActorSheet, {
+  DocumentSheetConfig.registerSheet(TestActor, "test-system", CharacterActorSheet, {
     types: ["character"],
     makeDefault: true,
     label: "Test System Character",
   });
-  DocumentSheetConfig.registerSheet(Item, "test-system", WeaponItemSheet, {
+  DocumentSheetConfig.registerSheet(TestItem, "test-system", WeaponItemSheet, {
     types: ["weapon"],
     makeDefault: true,
     label: "Test System Weapon",

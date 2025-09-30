@@ -1,25 +1,42 @@
-import { SchemaField } from "@client/data/fields.mjs";
 import { BaseItemDataModel } from "../abstract/base-item-data-model.mjs";
-import { StatItemDataModel } from "./stat-item-data-model.mjs";
 
-const { NumberField, StringField, ArrayField } = foundry.data.fields;
+const { NumberField, StringField, ArrayField, SchemaField } = foundry.data.fields;
 const defaultString = { required: false, blank: true, trim: true, }
-const defaultNumber = { required: false, integer: true, positive: true, initial: 0 }
+const defaultNumber = { required: false, integer: true, min: 0, initial: 0 }
 
-export class StatsItemDataModel extends BaseItemDataModel {
+
+export default class StatsItemDataModel extends BaseItemDataModel {
+
+  static get stat() {
+    return {
+      stat: new StringField(defaultString),
+      description: new StringField(defaultString),
+      temporary: new NumberField(defaultNumber),
+      potential: new NumberField(defaultNumber),
+      statBonus: new NumberField(defaultNumber),
+    };
+  }
+
+  static get stats() {
+
+    return {
+      Agility: new SchemaField(this.stat),
+      Constitution: new SchemaField(this.stat),
+      Memory: new SchemaField(this.stat),
+      Reasoning: new SchemaField(this.stat),
+      "Self Discipline": new SchemaField(this.stat),
+      Empathy: new SchemaField(this.stat),
+      Intuition: new SchemaField(this.stat),
+      Presence: new SchemaField(this.stat),
+      Quickness: new SchemaField(this.stat),
+      Strength: new SchemaField(this.stat),
+    };
+  }
+
   static defineSchema() {
     return {
       ...super.defineSchema(),
-      Agility: new SchemaField({ ...StatItemDataModel.stat() }),
-      Constitution: new SchemaField({ ...StatItemDataModel.stat() }),
-      Memory: new SchemaField({ ...StatItemDataModel.stat() }),
-      Reasoning: new SchemaField({ ...StatItemDataModel.stat() }),
-      SelfDiscipline: new SchemaField({ ...StatItemDataModel.stat() }),
-      Empathy: new SchemaField({ ...StatItemDataModel.stat() }),
-      Intuition: new SchemaField({ ...StatItemDataModel.stat() }),
-      Presence: new SchemaField({ ...StatItemDataModel.stat() }),
-      Quickness: new SchemaField({ ...StatItemDataModel.stat() }),
-      Strength: new SchemaField({ ...StatItemDataModel.stat() }),
+      ...statItemDataModel(),
     };
   }
 }
