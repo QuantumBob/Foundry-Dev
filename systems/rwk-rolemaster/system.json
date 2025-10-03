@@ -37,6 +37,8 @@
       }
     },
     "Item": {
+      "creation": {
+      },
       "stat-generation": {
       },
       "weapon": {

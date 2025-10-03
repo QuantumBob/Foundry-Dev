@@ -18,5 +18,12 @@ modules/lib-wrapper
 modules/lordudice
 modules/quench
 modules/scaleGrid
+modules/monks-combat-details
+modules/combat-tracker-dock
+modules/combatbooster
+modules/smarttarget
+modules/socketlib
+modules/token-action-hud-core
+modules/token-action-hud-dnd5e
 modules/README.txt
 .vscode-chrome

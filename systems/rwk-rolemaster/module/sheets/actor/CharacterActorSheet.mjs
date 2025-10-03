@@ -262,11 +262,12 @@ export class CharacterActorSheet extends BaseCharacterActorSheet {
   async _onDropItem(event, document) {
 
     let doc;
-    if (document.type === "stat-generation") {
-      if (this.actor.items.some(d => d.type === "stat-generation")) return;
+    if (document.type === "creation") {
+      if (this.actor.items.some(d => d.type === "creation")) return;
       await super._onDropItem(event, document);
-      // this.actor.system.creation = 1;
+      doc = await document.update({ "system.status": "underway" })
       doc = await this.actor.update({ "system.creation": 1 });
+
     }
 
     this.render({ window: { title: this.title } });

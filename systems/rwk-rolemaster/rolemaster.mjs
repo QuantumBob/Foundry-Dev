@@ -7,8 +7,9 @@ import { CharacterActorSheet } from "./module/sheets/actor/CharacterActorSheet.m
 import { WeaponItemSheet } from "./module/sheets/item/WeaponItemSheet.mjs";
 import { RolemasterItem } from "./module/documents/RolemasterItem.mjs";
 import { RolemasterActor } from "./module/documents/RolemasterActor.mjs";
-import { StatGenerationItemDataModel } from "./module/data/item/stat-generation-item-data-model.mjs";
+import { StatGenerationDataModel } from "./module/data/abstract/stat-generation-data-model.mjs";
 import { StatGenerationItemSheet } from "./module/sheets/item/StatGenerationItemSheet.mjs";
+import { CharacterCreationDataModel } from "./module/data/abstract/creation-data-model.mjs";
 
 globalThis.rolemaster = {
   config: ROLEMASTER,
@@ -77,7 +78,8 @@ const initFoundry = () => {
   CONFIG.Item.dataModels = {
     weapon: WeaponItemDataModel,
     spell: SpellItemDataModel,
-    statGeneration: StatGenerationItemDataModel
+    characterCreation: CharacterCreationDataModel,
+    statGeneration: StatGenerationDataModel
   };
 
   // CONFIG.Actor.trackableAttributes = {

@@ -1,7 +1,7 @@
-import { AbstractrDataModel } from "./abstract-data-model.mjs";
+import { AbstractDataModel } from "./abstract-data-model.mjs";
 const { NumberField, StringField, BooleanField } = foundry.data.fields;
 
-export class BaseItemDataModel extends AbstractrDataModel {
+export class BaseItemDataModel extends AbstractDataModel {
   static defineSchema() {
     // return this.mergeSchema(super.defineSchema(), {
     return {

@@ -1,0 +1,32 @@
+{
+  "id": "d20rules",
+  "title": "D20 Rules!",
+  "description": "An simple d20 system",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 13
+  },
+  "authors": [
+    {
+      "name": "rwk"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "./lang/en.json"
+    }
+  ],
+  "esmodules": ["./d20rules.mjs"],
+  "styles": ["./styles/d20rules.css"],
+  "documentTypes": {
+    "Actor": {
+      "character": {}
+    },
+    "Item": {
+      "creation": {}
+    }
+  }
+}

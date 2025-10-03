@@ -1,0 +1,27 @@
+<section class="{{cssClass}} {{actor.type}} flexcol"
+	autocomplete="off">
+
+	<div class="{{actor.type}}-stats flexleft">
+		<div class="stat-group">
+			{{#each stats}}
+				<div>{{@key}}: </div>
+			{{/each}}
+		</div>
+		<div class="stat-values">
+			{{#if editable}}
+				{{#each stats as | stat|}}
+					<input type="text"
+						class="stat"
+						name="stat"
+						autocomplete="off"
+						class="document-name uninput"
+						value="{{stat.name}}" />
+				{{/each}}
+			{{else}}
+				{{#each stats as | stat|}}
+					<div>{{stat}}</div>
+				{{/each}}
+			{{/if}}
+		</div>
+	</div>
+</section>
