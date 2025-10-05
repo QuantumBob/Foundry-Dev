@@ -1,19 +1,27 @@
 export class D20RulesActor extends Actor {
     /* -------------------------------------------- */
-    //#region #####
+    //#region Overrides
 
     async _preUpdate(changed, options, user) {
-        // const u = await super._preUpdate(changed, options, user);
+        let updateStat = false;
         for (const [key, value] of Object.entries(changed.system.stats)) {
             if (value !== this.system.stats[key]) {
-                return this.pointSpend(this.system.stats, key, value)
+                updateStat = this.pointSpend(this.system.stats, key, value);
+                if (!updateStat)
+                    this.render();
             }
         }
-        // return u;
+        return updateStat;
+    }
+    prepareData() {
+        console.log("RWK: in prepareData");
+        super.prepareData();
     }
 
     //#endregion
 
+    /* -------------------------------------------- */
+    //#region Methods
     pointSpend(stats, inStat, inValue) {
 
         const max = 24;
@@ -34,4 +42,6 @@ export class D20RulesActor extends Actor {
             }
         }
     }
+    //#endregion
+
 }

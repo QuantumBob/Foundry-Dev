@@ -57,10 +57,10 @@ export class CharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
     const mode = this.constructor.MODES.PLAY;
     if (this.isEditable && this._mode !== this.constructor.MODES.CREATION) {
       this._mode = this.constructor.MODES.CREATION;
-      console.log("RWK: Creating " + this.title);
+      // console.log("RWK: Creating " + this.title);
     } else {
       this._mode = this.constructor.MODES.PLAY;
-      console.log("RWK: Cannot create " + this.title);
+      // console.log("RWK: Cannot create " + this.title);
     }
     this.render(true);
   }
@@ -86,13 +86,6 @@ export class CharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
 
   /* -------------------------------------------- */
   //#region Overrides
-
-  _renderHTML(context, options) {
-    const html = super._renderHTML(context, options);
-    let statsHtml = this.element.querySelector(".stat-values");
-    return html;
-  }
-
   _getHeaderControls() {
     const controls = super._getHeaderControls();
     if (!game.user.isGM) {
@@ -107,6 +100,7 @@ export class CharacterActorSheet extends BaseSheetMixin(ActorSheetV2) {
   }
 
   async _prepareContext(options) {
+    console.log("RWK: in _prepareContext");
     const context = {
       ...(await super._prepareContext(options)),
       actor: this.actor,
