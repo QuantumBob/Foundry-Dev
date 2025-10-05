@@ -1,10 +1,7 @@
-<section class="{{cssClass}} {{actor.type}} flexcol"
+<section class="{{cssClass}} {{actor.type}}-header flexcol"
 	autocomplete="off">
-
-	<header class="sheet-header">
-
-		{{! Header stuff goes here }}
-		<div class="flexleft">
+	<div class=" header-container flexleft">
+		<div class="profile">
 			<img class="profile-img"
 				src="{{document.img}}"
 				{{#if editable}}
@@ -32,5 +29,31 @@
 				</div>
 			{{/if}}
 		</div>
-	</header>
+
+		<div class="{{actor.type}}-stats flexleft">
+			<div class="stat-group">
+				{{#each stats}}
+					<div>{{@key}}: </div>
+				{{/each}}
+			</div>
+			<div class="stat-values">
+				{{#if creation}}
+					{{#each stats as |stat key|}}
+						<input type="text"
+							class="stat"
+							name="system.stats.{{key}}"
+							autocomplete="off"
+							class="document-name uninput"
+							value="{{stat}}"
+							data-dtype="Number" />
+					{{/each}}
+				{{else}}
+					{{#each stats as | stat|}}
+						<div class="stat">{{stat}}</div>
+					{{/each}}
+				{{/if}}
+			</div>
+		</div>
+
+	</div>
 </section>

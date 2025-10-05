@@ -1,0 +1,33 @@
+<section class="{{cssClass}} {{actor.type}} flexcol"
+	autocomplete="off">
+	<div>
+		<ul class="creation">
+			{{#each items.statgeneration as |item|}}
+				<li class="item flexrow draggable"
+					data-item-id="{{item._id}}"
+					data-document-class="Item">
+					<img src="{{item.img}}"
+						title="{{item.name}}"
+						width="24"
+						height="24" />
+					<div class="item-name">{{item.name}}</div>
+					<div class="document-controls">
+						<a class="item-control item-delete"
+							title="{{localize 'DOCUMENT.Delete' type=item.name}}"
+							data-action="deleteStatGen"
+							data-item-id="{{item._id}}"
+							data-document-class="Item">
+							<i class="fas fa-trash"></i>
+						</a>
+					</div>
+					<div>
+						<button type="button"
+							data-action="showStatGen"
+							data-type="stat-gen">Show Stat Gen</button>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+
+	</div>
+</section>

@@ -15,11 +15,11 @@
 						name="stat"
 						autocomplete="off"
 						class="document-name uninput"
-						value="{{stat.name}}" />
+						value="{{stat}}" />
 				{{/each}}
 			{{else}}
 				{{#each stats as | stat|}}
-					<div>{{stat}}</div>
+					<div class="stat">{{stat}}</div>
 				{{/each}}
 			{{/if}}
 		</div>

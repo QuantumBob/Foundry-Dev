@@ -5,6 +5,7 @@ export default function BaseSheetMixin(Base) {
     static MODES = {
       PLAY: 1,
       EDIT: 2,
+      CREATION: 3,
     };
 
     _mode = null;
@@ -36,6 +37,7 @@ export default function BaseSheetMixin(Base) {
       }
       this.render(true);
     }
+
     _configureRenderOptions(options) {
       console.log(`RWK: _configureRenderOptions - ${this.document.documentName} : index ${CONFIG.rwkCount++}`);
       super._configureRenderOptions(options);

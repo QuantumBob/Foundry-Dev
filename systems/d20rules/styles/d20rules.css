@@ -15,3 +15,48 @@ body {
   flex-direction: row;
   gap: 1rem;
 }
+
+
+.d20rules.character.sheet .character-header .header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.d20rules.character.sheet .character-header .profile #name {
+  height: 1rem;
+  margin-top: 5px;
+}
+
+.d20rules.character.sheet .character-header .character-stats .stat-group > div {
+  margin-top: 5px;
+}
+.d20rules.character.sheet .character-header .stat-values {
+  display: flex;
+  flex-direction: column;
+}
+.d20rules.character.sheet .character-header .stat-values .stat{
+  height: 1rem;
+  width: 40px;
+  margin-top: 5px;
+}
+.d20rules.character.sheet .character-header div > button {
+  margin-top: 5px;
+}
+
+
+.d20rules.stat-gen .character-stats .stat-group .stat-name {
+  margin-top: 5px;
+}
+.d20rules.stat-gen .character .stat-values {
+  display: flex;
+  flex-direction: column;
+}
+.d20rules.stat-gen .character .stat-values .stat{
+  height: 1rem;
+  width: 40px;
+  margin-top: 5px;
+}
+.d20rules.stat-gen .character div > button {
+  margin-top: 5px;
+}

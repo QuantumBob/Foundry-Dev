@@ -1,4 +1,4 @@
-import { BaseDataModel } from "../abstract/base-data-model.mjs";
+import { BaseDataModel } from "./base-data-model.mjs";
 
 const { NumberField, StringField, SchemaField, BooleanField } = foundry.data.fields;
 
@@ -9,7 +9,6 @@ export class CharacterCreationDataModel extends BaseDataModel {
         return {
             ...super.defineSchema(),
             status: new StringField({ required: true, blank: false, choices: ['not started', 'underway', 'finished'], trim: true, gmOnly: true, initial: 'not started' }),
-            points: new NumberField(statNumberField),
         };
     }
 }

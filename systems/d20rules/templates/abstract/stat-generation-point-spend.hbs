@@ -1,0 +1,38 @@
+<section class="{{cssClass}} {{actor.type}} flexcol"
+	autocomplete="off">
+
+	<div>Point Spend</div>
+
+	<div class="{{actor.type}}-stats flexleft">
+		<div class="stat-group">
+			{{#each stats}}
+				<div class="stat-name">{{@key}}: </div>
+			{{/each}}
+		</div>
+
+		<div class="stat-values">
+			{{#each stats as | stat key|}}
+				<input type="number"
+					class="stat"
+					name="system.stats.{{key}}.value"
+					data-edit="number"
+					data-dtype="Number"
+					autocomplete="off"
+					class="document-name uninput"
+					value="{{stat}}" />
+			{{/each}}
+		</div>
+
+	</div>
+
+	<div>
+		<button type="
+					button"
+			data-action="cancelStatGen"
+			data-type="pointSpend">Cancel</button>
+	</div>
+	<div>
+		<button type="button"
+			data-action="confirmChoice"
+			data-type="pointSpend">Confirm</button>
+	</div>
